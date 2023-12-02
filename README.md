@@ -83,4 +83,4 @@ TODO
 
 ## Projects Using the RetroAchievements API
 
-Let us know about yours by [opening an issue](https://github.com/RetroAchievements/api-js/issues/new)!
+Let us know about yours by [opening an issue](https://github.com/RetroAchievements/api-docs/issues/new)!
