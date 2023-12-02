@@ -7,12 +7,12 @@
     "node": ">=20"
   },
   "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
     "format": "prettier --write . '**/*.{json,md,js,ts,tsx}'",
     "format:write": "prettier --write . '**/*.{json,md,js,ts,tsx}'",
     "format:check": "prettier --check . '**/*.{json,md,js,ts,tsx}'",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
     "prepare": "husky install"
   },
   "author": "",

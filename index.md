@@ -1,24 +1,30 @@
----
-# https://vitepress.dev/reference/default-theme-home-page
-layout: home
+# About
 
-hero:
-  name: "RetroAchievements API"
-  text: "A VitePress Site"
-  tagline: My great project tagline
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+@retroachievements/api is the official RetroAchievements JavaScript/TypeScript library for fetching achievement, user, and game data from RetroAchievements.
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
----
+## Features
+
+- Modular by design, and supports tree-shaking.
+- Officially-supported, aligns 1:1 with the RAWeb API.
+- Backwards-compatible, easy migration path to API v2.
+- Supports Node environments (14 and above).
+- Ships with TypeScript support and types.
+- Correctly maps types and properties from RAWeb PHP calls.
+- Small, <3Kb.
+
+## Getting started
+
+Are you starting from scratch? [Follow the starter tutorial](/getting-started).
+
+## Contact and support
+
+- Create a [GitHub issue](https://github.com/RetroAchievements/api-js/issues) for bug reports, feature requests, or questions.
+- Add a [⭐️ star on GitHub](https://github.com/RetroAchievements/api-js) to support the project!
+
+## How to Contribute
+
+Check out [CONTRIBUTING.md](https://github.com/RetroAchievements/api-js/blob/main/CONTRIBUTING.md) for how to get started.
+
+## License
+
+This project is licensed under the [MIT license](https://github.com/RetroAchievements/api-js/blob/main/LICENSE.md).
