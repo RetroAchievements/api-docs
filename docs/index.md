@@ -20,13 +20,13 @@ The API can be fully accessed at any time by hitting any of the endpoints we've 
 
 Retrieving data from an API endpoint requires your RetroAchievement account's API key, which can be retrieved on [your account's control panel](https://retroachievements.org/controlpanel.php).
 
-::: danger Due Diligence
+::: danger Rate Limiting and Usage Guidelines
 
 **Just because you _can_ hit the API for N requests a second does not mean that you should.**
 
-Our rate limit is intended to provide a fair amount of burst requests to each user. The API is used by many fellow RetroAchievements partners and it is expected of you to be reasonable about your usage and consider how often you really need to hit the site as well as if it's possible to cache/preload data.
+Our rate limit is intended to provide a fair amount of burst requests to each user. The API is used by many fellow RetroAchievements partners and it is expected of you to be reasonable about your usage and consider how often you really need to hit the site, as well as if it's possible to cache/preload data.
 
-Some content data, such as game data, is very static. Be wise with regards to your usage.
+Some content data, such as game data, tends to be very static. Be wise with regards to your usage.
 
 :::
 
