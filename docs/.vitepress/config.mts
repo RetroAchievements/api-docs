@@ -7,8 +7,9 @@ export default defineConfig({
     "The official documentation for how to get achievement, user, and game data from RetroAchievements.",
 
   themeConfig: {
-    siteTitle: "@retroachievements/api",
-    logo: "./favicon.webp",
+    siteTitle: "API",
+    logo: "/logo.webp",
+    aside: false,
 
     algolia: {
       appId: "3QMK5TQHQC",
@@ -19,7 +20,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/RetroAchievements/api-js",
+        link: "https://github.com/RetroAchievements/api-docs",
       },
       {
         icon: "discord",
@@ -212,7 +213,7 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        "https://github.com/RetroAchievements/api-js/edit/main/docs/:path",
+        "https://github.com/RetroAchievements/api-docs/edit/main/docs/:path",
       text: "Edit this page on GitHub",
     },
 
