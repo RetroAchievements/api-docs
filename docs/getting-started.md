@@ -1,40 +1,59 @@
 # Getting Started
 
-First, we'll install the package. Then, we'll create an authentication object. After these steps are completed, you are able to use any function provided by the library.
+The RetroAchievements API allows developers to access a wealth of data from the RetroAchievements platform, including information about games, users, and achievements. This page covers the primary ways to interact with the API: making direct HTTP requests or using a client library.
 
-## Quick Start
+## Get Your Web API Key
 
-Install the package:
+You will need a web API key. To get one, follow these steps:
 
-::: code-group
-
-```bash [npm]
-npm install --save @retroachievements/api
-```
-
-```bash [yarn]
-yarn add @retroachievements/api
-```
-
-:::
-
-You will need to be authenticated to use the official RetroAchievements API. To authenticate, follow these steps:
-
-1. Visit [your control panel](https://retroachievements.org/controlpanel.php) on the RA website.
-
-<br />
-
+1. While authenticated, visit [your control panel](https://retroachievements.org/controlpanel.php) on the RetroAchievements website.
 2. Find the "Keys" section on the page. Copy the web API key value.
+
+<img src="https://private-user-images.githubusercontent.com/3984985/292780090-02f69e79-02b1-435c-bed2-e2ec75a6fcd4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDM2MjcyNDIsIm5iZiI6MTcwMzYyNjk0MiwicGF0aCI6Ii8zOTg0OTg1LzI5Mjc4MDA5MC0wMmY2OWU3OS0wMmIxLTQzNWMtYmVkMi1lMmVjNzVhNmZjZDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTIyNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzEyMjZUMjE0MjIyWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDJmNDI2YWViNTBjZTczOGMzYTMyN2Q3YzZiYzBhODJjZjRlN2Q3ODdiMWU2NzIyMTAzMzhhODc0OTQzMmQwYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.eQM9qyQZLJppM2tkpzwzEE-jycLc6h33tJ57rhOJUrA" alt="Your API Key" style="border-radius:4px;">
 
 ::: warning
 Store your API key as though it is a secret, like a password. Avoid checking in your API key with your code.
 :::
 
+## Quick Start (HTTP Requests)
+
+With your username and web API key, you now have all you need to call any endpoint in the API.
+
+```bash
+curl https://retroachievements.org/API/API_GetTopTenUsers.php?z=[your_username]&y=[your_key]
+```
+
+## Quick Start (Client Library)
+
+| Platform / Language | Repo                                                                      |
+| :------------------ | :------------------------------------------------------------------------ |
+| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js) |
+
+Currently, our only official client library is for JavaScript/TypeScript/NodeJS. Additional client libraries will be added in the future for other tech stacks.
+
+To use our client library, you'll need to first install the package. Then, you'll create an authentication object. After these steps are completed, you are able to use any function provided by the library.
+
+::: code-group
+
+```bash [NodeJS]
+npm install --save @retroachievements/api
+```
+
+<!-- EXAMPLE OF HOW TO ADD OTHER PLATFORMS
+```bash [PHP]
+composer setup @retroachievements/api
+```
+-->
+
+:::
+
 <br />
 
-3. You can now create your authorization object using your web API key.
+You can now create your authorization object using your web API key.
 
-```ts
+::: code-group
+
+```ts [NodeJS]
 import { buildAuthorization } from "@retroachievements/api";
 
 const userName = "<your username on RA>";
@@ -43,14 +62,20 @@ const webApiKey = "<your web API key>";
 const authorization = buildAuthorization({ userName, webApiKey });
 ```
 
+:::
+
 <br />
 
-4. You now have all you need to use any function in the API. Each function takes this authorization object as its first argument. Here's an example:
+You now have all you need to use any function in the API. Each function takes this authorization object as its first argument. Here's an example:
 
-```ts
+::: code-group
+
+```ts [NodeJS]
 import { getGame } from "@retroachievements/api";
 
 // This returns basic metadata about the game on this page:
 // https://retroachievements.org/game/14402
 const game = await getGame(authorization, { gameId: 14402 });
 ```
+
+:::

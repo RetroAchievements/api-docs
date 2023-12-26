@@ -40,16 +40,8 @@ Provide your username to the `z` query param and your API key to the `y` query p
 https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?z=[your_username]&y=[your_key]
 ```
 
-## Getting Started
+## Client Libraries
 
-Basic curl request:
-
-```bash
-curl https://retroachievements.org/API/API_GetTopTenUsers.php?z=[your_username]&y=[your_key]
-```
-
-### Client Libraries
-
-| Language   | Repo                                                    |
-| :--------- | :------------------------------------------------------ |
-| JavaScript | [`api-js`](https://github.com/RetroAchievements/api-js) |
+| Platform / Language | Repo                                                                      |
+| :------------------ | :------------------------------------------------------------------------ |
+| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js) |
