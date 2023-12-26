@@ -9,7 +9,7 @@ You will need a web API key. To get one, follow these steps:
 1. While authenticated, visit [your control panel](https://retroachievements.org/controlpanel.php) on the RetroAchievements website.
 2. Find the "Keys" section on the page. Copy the web API key value.
 
-<img src="https://private-user-images.githubusercontent.com/3984985/292780090-02f69e79-02b1-435c-bed2-e2ec75a6fcd4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDM2MjcyNDIsIm5iZiI6MTcwMzYyNjk0MiwicGF0aCI6Ii8zOTg0OTg1LzI5Mjc4MDA5MC0wMmY2OWU3OS0wMmIxLTQzNWMtYmVkMi1lMmVjNzVhNmZjZDQucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQUlXTkpZQVg0Q1NWRUg1M0ElMkYyMDIzMTIyNiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyMzEyMjZUMjE0MjIyWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NDJmNDI2YWViNTBjZTczOGMzYTMyN2Q3YzZiYzBhODJjZjRlN2Q3ODdiMWU2NzIyMTAzMzhhODc0OTQzMmQwYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmYWN0b3JfaWQ9MCZrZXlfaWQ9MCZyZXBvX2lkPTAifQ.eQM9qyQZLJppM2tkpzwzEE-jycLc6h33tJ57rhOJUrA" alt="Your API Key" style="border-radius:4px;">
+![Your API Key](/controlpanelkey.png)
 
 ::: warning
 Store your API key as though it is a secret, like a password. Avoid checking in your API key with your code.
