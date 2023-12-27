@@ -98,8 +98,8 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "Achievement Count",
-            link: "/v1/games/get-achievement-count",
+            text: "Achievement IDs",
+            link: "/v1/games/achievement-ids",
           },
           {
             text: "Achievement Distribution",
