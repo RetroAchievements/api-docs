@@ -20,10 +20,10 @@ The current Achievement of the Week can be found on the site's home page:
 
 ### Query Parameters
 
-| Name | Description       |
-| :--- | :---------------- |
-| `z`  | Your username.    |
-| `y`  | Your web API key. |
+| Name | Required? | Description       |
+| :--- | :-------- | :---------------- |
+| `z`  | Yes       | Your username.    |
+| `y`  | Yes       | Your web API key. |
 
 ## Client Library
 
