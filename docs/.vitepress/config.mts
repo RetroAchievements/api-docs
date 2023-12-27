@@ -44,15 +44,15 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "User Recent Unlocks",
+            text: "User Unlocks (Recent)",
             link: "/v1/users/recent-achievements",
           },
           {
-            text: "Achievements Earned Between Days",
-            link: "/v1/users/get-achievements-earned-between",
+            text: "User Unlocks (Date Range)",
+            link: "/v1/users/achievements-earned-between",
           },
           {
-            text: "Achievements Earned On Day",
+            text: "User Unlocks (On Date)",
             link: "/v1/users/get-achievements-earned-on-day",
           },
           {

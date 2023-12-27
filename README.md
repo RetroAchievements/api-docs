@@ -27,8 +27,9 @@ Click the function names to open their complete docs on the docs site.
 
 ### Users
 
-- [`GetAchievementsEarnedBetween`](https://api-docs.retroachievements.org/v1/users/get-achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
-- [`GetAchievementsEarnedOnDay`](https://api-docs.retroachievements.org/v1/users/get-achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
+- [User Unlocks (Recent)](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
+- [User Unlocks (Date Range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
+- [User Unlocks (On Date)](https://api-docs.retroachievements.org/v1/users/get-achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
 - [`GetGameInfoAndUserProgress`](https://api-docs.retroachievements.org/v1/users/get-game-info-and-user-progress.html) - Get metadata about a game as well as a user's progress on that game.
 - [`GetUserAwards`](https://api-docs.retroachievements.org/v1/users/get-user-awards.html) - Get a list of a user's site awards/badges.
 - [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
@@ -38,7 +39,6 @@ Click the function names to open their complete docs on the docs site.
 - [`GetUserProgress`](https://api-docs.retroachievements.org/v1/users/get-user-progress.html) - Get a user's progress on a list of specified games.
 - [`GetUserRecentlyPlayedGames`](https://api-docs.retroachievements.org/v1/users/get-user-recently-played-games.html) - Get a list of games a user has recently played.
 - [`GetUserSummary`](https://api-docs.retroachievements.org/v1/users/get-user-summary.html) - Get a user's profile metadata.
-- [`User Recent Unlocks`](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
 
 ### Games
 
