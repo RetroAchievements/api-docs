@@ -103,7 +103,7 @@ export default defineConfig({
           },
           {
             text: "Achievement Distribution",
-            link: "/v1/games/get-achievement-distribution",
+            link: "/v1/games/achievement-distribution",
           },
           {
             text: "Game Info",

@@ -43,7 +43,7 @@ Click the function names to open their complete docs on the docs site.
 ### Games
 
 - [Achievement IDs](https://api-docs.retroachievements.org/v1/games/achievement-ids.html) - Get the list of achievement IDs for a game.
-- [`GetAchievementDistribution`](https://api-docs.retroachievements.org/v1/games/get-achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
+- [Achievement Distribution](https://api-docs.retroachievements.org/v1/games/achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
 - [`GetGame`](https://api-docs.retroachievements.org/v1/games/get-game.html) - Get basic metadata about a game.
 - [`GetGameExtended`](https://api-docs.retroachievements.org/v1/games/get-game-extended.html) - Get extended metadata about a game.
 - [`GetGameRankAndScore`](https://api-docs.retroachievements.org/v1/games/get-game-rank-and-score.html) - Get a list of either the latest masters or highest points earners for a game.
