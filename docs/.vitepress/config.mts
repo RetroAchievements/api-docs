@@ -53,7 +53,7 @@ export default defineConfig({
           },
           {
             text: "User Unlocks (On Date)",
-            link: "/v1/users/get-achievements-earned-on-day",
+            link: "/v1/users/achievements-earned-on-day",
           },
           {
             text: "Progress for Game with Game Info",

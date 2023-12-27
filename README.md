@@ -29,7 +29,7 @@ Click the function names to open their complete docs on the docs site.
 
 - [User Unlocks (Recent)](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
 - [User Unlocks (Date Range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
-- [User Unlocks (On Date)](https://api-docs.retroachievements.org/v1/users/get-achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
+- [User Unlocks (On Date)](https://api-docs.retroachievements.org/v1/users/achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
 - [`GetGameInfoAndUserProgress`](https://api-docs.retroachievements.org/v1/users/get-game-info-and-user-progress.html) - Get metadata about a game as well as a user's progress on that game.
 - [`GetUserAwards`](https://api-docs.retroachievements.org/v1/users/get-user-awards.html) - Get a list of a user's site awards/badges.
 - [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
