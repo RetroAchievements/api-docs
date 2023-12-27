@@ -2,6 +2,8 @@
 
 The RetroAchievements API allows developers to access a wealth of data from the RetroAchievements platform, including information about games, users, and achievements. This page covers the primary ways to interact with the API: making direct HTTP requests or using a client library.
 
+[[toc]]
+
 ## Get Your Web API Key
 
 You will need a web API key. To get one, follow these steps:

@@ -204,16 +204,6 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: "Utils",
-        collapsible: true,
-        items: [
-          {
-            text: "buildAuthorization()",
-            link: "/v1/utils/build-authorization",
-          },
-        ],
-      },
     ],
 
     editLink: {

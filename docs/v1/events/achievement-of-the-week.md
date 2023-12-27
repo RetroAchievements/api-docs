@@ -4,7 +4,13 @@ import SampleRequest from '../../components/SampleRequest.vue';
 
 # Achievement of the Week
 
-A call to this endpoint will retrieve comprehensive metadata about the current Achievement of the Week. The current achievement of the week can be found on the site's home page:
+A call to this endpoint will retrieve comprehensive metadata about the current Achievement of the Week.
+
+[[toc]]
+
+## On-site Representation
+
+The current Achievement of the Week can be found on the site's home page:
 
 ![AOTW](/aotw.png)
 
