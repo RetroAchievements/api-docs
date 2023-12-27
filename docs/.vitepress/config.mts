@@ -44,10 +44,6 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "Achievement of the Week",
-            link: "/v1/feed/get-achievement-of-the-week",
-          },
-          {
             text: "Claims",
             link: "/v1/feed/get-claims",
           },
@@ -166,6 +162,15 @@ export default defineConfig({
           {
             text: "Unlocks List",
             link: "/v1/achievements/get-achievement-unlocks",
+          },
+        ],
+      },
+      {
+        text: "Events",
+        items: [
+          {
+            text: "Achievement of the Week",
+            link: "/v1/events/achievement-of-the-week",
           },
         ],
       },
