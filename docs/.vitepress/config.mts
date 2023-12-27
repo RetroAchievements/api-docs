@@ -40,30 +40,12 @@ export default defineConfig({
         link: "/getting-started",
       },
       {
-        text: "Feed",
-        collapsible: true,
-        items: [
-          {
-            text: "Claims",
-            link: "/v1/feed/get-claims",
-          },
-          {
-            text: "Active Claims",
-            link: "/v1/feed/get-active-claims",
-          },
-          {
-            text: "Top Ten Users",
-            link: "/v1/feed/get-top-ten-users",
-          },
-        ],
-      },
-      {
         text: "Users",
         collapsible: true,
         items: [
           {
-            text: "Recent Achievements",
-            link: "/v1/users/get-user-recent-achievements",
+            text: "User Recent Unlocks",
+            link: "/v1/users/recent-achievements",
           },
           {
             text: "Achievements Earned Between Days",
@@ -162,6 +144,24 @@ export default defineConfig({
           {
             text: "Unlocks List",
             link: "/v1/achievements/get-achievement-unlocks",
+          },
+        ],
+      },
+      {
+        text: "Feed",
+        collapsible: true,
+        items: [
+          {
+            text: "Claims",
+            link: "/v1/feed/get-claims",
+          },
+          {
+            text: "Active Claims",
+            link: "/v1/feed/get-active-claims",
+          },
+          {
+            text: "Top Ten Users",
+            link: "/v1/feed/get-top-ten-users",
           },
         ],
       },

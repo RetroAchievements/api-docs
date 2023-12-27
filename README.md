@@ -1,7 +1,7 @@
 <h1 align="center">RetroAchievements API</h1>
 
 <p align="center">
-  <i>The official method to retrieve achievement, user, and game data from RetroAchievements.</i>
+  <i>Easily retrieve achievement, user, and game data from RetroAchievements.</i>
   <br /><br />
 </p>
 
@@ -36,9 +36,9 @@ Click the function names to open their complete docs on the docs site.
 - [`GetUserGameRankAndScore`](https://api-docs.retroachievements.org/v1/users/get-user-game-rank-and-score.html) - Get metadata about how a user has performed on a given game.
 - [`GetUserPoints`](https://api-docs.retroachievements.org/v1/users/get-user-points.html) - Get a user's total hardcore and softcore points.
 - [`GetUserProgress`](https://api-docs.retroachievements.org/v1/users/get-user-progress.html) - Get a user's progress on a list of specified games.
-- [`GetUserRecentAchievements`](https://api-docs.retroachievements.org/v1/users/get-user-recent-achievements.html) - Get a list of achievements recently earned by the user.
 - [`GetUserRecentlyPlayedGames`](https://api-docs.retroachievements.org/v1/users/get-user-recently-played-games.html) - Get a list of games a user has recently played.
 - [`GetUserSummary`](https://api-docs.retroachievements.org/v1/users/get-user-summary.html) - Get a user's profile metadata.
+- [`User Recent Unlocks`](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
 
 ### Games
 
@@ -77,10 +77,6 @@ Click the function names to open their complete docs on the docs site.
 - [Get Developer Ticket Stats](https://api-docs.retroachievements.org/v1/tickets/get-developer-ticket-stats.html)
 
 ## How to Contribute
-
-TODO
-
-## Examples
 
 TODO
 
