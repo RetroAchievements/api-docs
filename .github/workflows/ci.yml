@@ -13,11 +13,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
-          cache: "yarn"
       - name: Install
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Check formatting
-        run: yarn format:check
+        run: npm run format:check
 
   build:
     runs-on: ubuntu-22.04
@@ -31,8 +30,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "20"
-          cache: "yarn"
       - name: Install
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Build Vitepress
-        run: yarn build
+        run: npm run build
