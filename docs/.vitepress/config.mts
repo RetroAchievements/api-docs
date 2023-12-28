@@ -106,16 +106,16 @@ export default defineConfig({
             link: "/v1/games/summary",
           },
           {
+            text: "Extended Details",
+            link: "/v1/games/detailed-info",
+          },
+          {
             text: "Achievement IDs",
             link: "/v1/games/achievement-ids",
           },
           {
             text: "Unlocks Distribution",
             link: "/v1/games/achievement-distribution",
-          },
-          {
-            text: "Extended Game Info",
-            link: "/v1/games/get-game-extended",
           },
           {
             text: "Game Rank and Score",

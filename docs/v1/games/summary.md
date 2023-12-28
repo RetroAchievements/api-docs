@@ -16,7 +16,7 @@ Most of this data can be found on the game page, for example, [Sonic the Hedgeho
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGame?i=1</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGame.php?i=1</SampleRequest>
 
 ### Query Parameters
 
