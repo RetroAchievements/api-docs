@@ -1,5 +1,9 @@
 import { defineConfig } from "vitepress";
 
+/**
+ * Try your best not to have any sidebar page titles wrap to a 2nd line.
+ */
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "RetroAchievements API",
@@ -40,19 +44,19 @@ export default defineConfig({
         link: "/getting-started",
       },
       {
-        text: "Users",
+        text: "User",
         collapsible: true,
         items: [
           {
-            text: "User Unlocks (Recent)",
+            text: "Unlocks (most recent)",
             link: "/v1/users/recent-achievements",
           },
           {
-            text: "User Unlocks (Date Range)",
+            text: "Unlocks (by date range)",
             link: "/v1/users/achievements-earned-between",
           },
           {
-            text: "User Unlocks (On Date)",
+            text: "Unlocks (on date)",
             link: "/v1/users/achievements-earned-on-day",
           },
           {
@@ -94,20 +98,20 @@ export default defineConfig({
         ],
       },
       {
-        text: "Games",
+        text: "Game",
         collapsible: true,
         items: [
+          {
+            text: "Summary",
+            link: "/v1/games/summary",
+          },
           {
             text: "Achievement IDs",
             link: "/v1/games/achievement-ids",
           },
           {
-            text: "Achievement Distribution",
+            text: "Unlocks Distribution",
             link: "/v1/games/achievement-distribution",
-          },
-          {
-            text: "Game Info",
-            link: "/v1/games/get-game",
           },
           {
             text: "Extended Game Info",
@@ -124,7 +128,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Consoles",
+        text: "Console",
         collapsible: true,
         items: [
           {
@@ -138,7 +142,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Achievements",
+        text: "Achievement",
         collapsible: true,
         items: [
           {
@@ -166,7 +170,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Events",
+        text: "Event",
         items: [
           {
             text: "Achievement of the Week",
@@ -175,7 +179,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "Tickets",
+        text: "Ticket",
         collapsible: true,
         items: [
           {

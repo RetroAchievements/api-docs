@@ -2,7 +2,7 @@
 import SampleRequest from '../../components/SampleRequest.vue';
 </script>
 
-# User Unlocks (Recent)
+# User Unlocks (most recent)
 
 A call to this endpoint will retrieve a list of a target user's recently unlocked achievements, via their username. By default, it fetches achievements unlocked in the last hour.
 

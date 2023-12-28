@@ -2,7 +2,7 @@
 import SampleRequest from '../../components/SampleRequest.vue';
 </script>
 
-# Achievement Distribution
+# Game Unlocks Distribution
 
 A call to this endpoint will retrieve a dictionary of the number of players who have earned a specific number of achievements for a given game ID. This endpoint can be used to determine the total mastery count for a game, as well as how rare that overall mastery is.
 

@@ -2,7 +2,7 @@
 import SampleRequest from '../../components/SampleRequest.vue';
 </script>
 
-# Achievement IDs
+# Game Achievement IDs
 
 A call to this endpoint will retrieve the list of achievement IDs for a game, targeted by game ID. This can be useful if you'd like to quickly check how many achievements a particular game has. Using this, you can also detect if a game has received a revision. For example, if a game had 100 achievements last month and has 102 today, you know the game's achievement set has been revised.
 

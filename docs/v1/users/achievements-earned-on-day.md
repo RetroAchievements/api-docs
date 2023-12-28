@@ -2,7 +2,7 @@
 import SampleRequest from '../../components/SampleRequest.vue';
 </script>
 
-# User Unlocks (On Date)
+# User Unlocks (on date)
 
 A call to this endpoint will retrieve a list of achievements unlocked by a given user on a specified date.
 

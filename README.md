@@ -25,11 +25,11 @@ Learn how to authenticate and start pulling data from RetroAchievements on our d
 
 Click the function names to open their complete docs on the docs site.
 
-### Users
+### User
 
-- [User Unlocks (Recent)](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
-- [User Unlocks (Date Range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
-- [User Unlocks (On Date)](https://api-docs.retroachievements.org/v1/users/achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
+- [Unlocks (most recent)](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
+- [Unlocks (by date range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
+- [Unlocks (on date)](https://api-docs.retroachievements.org/v1/users/achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
 - [`GetGameInfoAndUserProgress`](https://api-docs.retroachievements.org/v1/users/get-game-info-and-user-progress.html) - Get metadata about a game as well as a user's progress on that game.
 - [`GetUserAwards`](https://api-docs.retroachievements.org/v1/users/get-user-awards.html) - Get a list of a user's site awards/badges.
 - [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
@@ -40,20 +40,20 @@ Click the function names to open their complete docs on the docs site.
 - [`GetUserRecentlyPlayedGames`](https://api-docs.retroachievements.org/v1/users/get-user-recently-played-games.html) - Get a list of games a user has recently played.
 - [`GetUserSummary`](https://api-docs.retroachievements.org/v1/users/get-user-summary.html) - Get a user's profile metadata.
 
-### Games
+### Game
 
+- [Summary](https://api-docs.retroachievements.org/v1/games/summary.html) - Get basic metadata about a game.
 - [Achievement IDs](https://api-docs.retroachievements.org/v1/games/achievement-ids.html) - Get the list of achievement IDs for a game.
-- [Achievement Distribution](https://api-docs.retroachievements.org/v1/games/achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
-- [`GetGame`](https://api-docs.retroachievements.org/v1/games/get-game.html) - Get basic metadata about a game.
+- [Unlocks Distribution](https://api-docs.retroachievements.org/v1/games/achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
 - [`GetGameExtended`](https://api-docs.retroachievements.org/v1/games/get-game-extended.html) - Get extended metadata about a game.
 - [`GetGameRankAndScore`](https://api-docs.retroachievements.org/v1/games/get-game-rank-and-score.html) - Get a list of either the latest masters or highest points earners for a game.
 - [`GetGameRating`](https://api-docs.retroachievements.org/v1/games/get-game-rating.html) - Get how users have rated a game.
 
-### Achievements
+### Achievement
 
 - [`GetAchievementUnlocks`](https://api-docs.retroachievements.org/v1/achievements/get-achievement-unlocks.html) - Get a list of users who have earned an achievement.
 
-### Consoles
+### Console
 
 - [`GetConsoleIds`](https://api-docs.retroachievements.org/v1/consoles/get-console-ids.html) - Get the complete list of console ID and name pairs on the site.
 - [`GetGameList`](https://api-docs.retroachievements.org/v1/consoles/get-game-list.html) - Get the complete list of games for a console.
@@ -64,11 +64,11 @@ Click the function names to open their complete docs on the docs site.
 - [`GetClaims`](https://api-docs.retroachievements.org/v1/feed/get-claims.html) - Get all claims of other kinds on the site.
 - [`GetTopTenUsers`](https://api-docs.retroachievements.org/v1/feed/get-top-ten-users.html) - Get the list of top ten points earners.
 
-### Events
+### Event
 
 - [Achievement of the Week](https://api-docs.retroachievements.org/v1/events/achievement-of-the-week.html) - Get comprehensive metadata about the current Achievement of the Week.
 
-### Tickets
+### Ticket
 
 - [Get Ticket by ID](https://api-docs.retroachievements.org/v1/tickets/get-ticket-by-id.html)
 - [Get Most Ticketed Games](https://api-docs.retroachievements.org/v1/tickets/get-most-ticketed-games.html)
