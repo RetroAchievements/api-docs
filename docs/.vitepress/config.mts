@@ -118,8 +118,8 @@ export default defineConfig({
             link: "/v1/games/achievement-distribution",
           },
           {
-            text: "Game Rank and Score",
-            link: "/v1/games/get-game-rank-and-score",
+            text: "High Scores",
+            link: "/v1/games/high-scores",
           },
           {
             text: "Game Rating",
