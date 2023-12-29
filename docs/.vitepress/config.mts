@@ -121,10 +121,6 @@ export default defineConfig({
             text: "High Scores",
             link: "/v1/games/high-scores",
           },
-          {
-            text: "Game Rating",
-            link: "/v1/games/get-game-rating",
-          },
         ],
       },
       {
