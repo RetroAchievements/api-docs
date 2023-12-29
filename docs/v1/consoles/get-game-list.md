@@ -1,6 +1,6 @@
 # getGameList
 
-A call to this function will retrieve the complete list of games for a specified console on the RetroAchievements.org platform, targeted by the console ID. If you do not know the console ID you're looking for, try using the [`getConsoleIds()`](/v1/consoles/get-console-ids) function.
+A call to this function will retrieve the complete list of games for a specified console on the RetroAchievements.org platform, targeted by the console ID. If you do not know the console ID you're looking for, try using the [all systems](/v1/consoles/all-systems) endpoint.
 
 ## Examples
 
@@ -37,12 +37,12 @@ const gameList = await getGameList(authorization, {
 
 ## Parameters
 
-| Name                                      | Type                                        | Description                                                                                                                                         |
-| :---------------------------------------- | :------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `authorization`                           | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object.                        |
-| `consoleId`                               | `string` or `number`                        | The unique console ID to retrieve a list of games from. This can be retrieved using the [`getConsoleIds()`](/v1/consoles/get-console-ids) function. |
-| `shouldOnlyRetrieveGamesWithAchievements` | `boolean`                                   | Optional. If truthy, will not return games that do not have achievements.                                                                           |
-| `shouldRetrieveGameHashes`                | `boolean`                                   | Optional. If truthy, will return valid hashes for game ROMs in a `string` array attached to each game in the list.                                  |
+| Name                                      | Type                                        | Description                                                                                                                    |
+| :---------------------------------------- | :------------------------------------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `authorization`                           | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object.   |
+| `consoleId`                               | `string` or `number`                        | The unique console ID to retrieve a list of games from. This can be retrieved using [this endpoint](/v1/consoles/all-systems). |
+| `shouldOnlyRetrieveGamesWithAchievements` | `boolean`                                   | Optional. If truthy, will not return games that do not have achievements.                                                      |
+| `shouldRetrieveGameHashes`                | `boolean`                                   | Optional. If truthy, will return valid hashes for game ROMs in a `string` array attached to each game in the list.             |
 
 ## Source
 
