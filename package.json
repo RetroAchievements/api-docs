@@ -16,7 +16,7 @@
     "prepare": "husky install"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "vitepress": "^1.0.0-rc.32",
     "vue": "3.3.13"

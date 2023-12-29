@@ -124,12 +124,12 @@ export default defineConfig({
         ],
       },
       {
-        text: "Console",
+        text: "System",
         collapsible: true,
         items: [
           {
-            text: "Get All IDs",
-            link: "/v1/consoles/get-console-ids",
+            text: "All Systems",
+            link: "/v1/consoles/all-systems",
           },
           {
             text: "Get All Games",

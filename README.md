@@ -52,9 +52,9 @@ Click the function names to open their complete docs on the docs site.
 
 - [`GetAchievementUnlocks`](https://api-docs.retroachievements.org/v1/achievements/get-achievement-unlocks.html) - Get a list of users who have earned an achievement.
 
-### Console
+### System
 
-- [`GetConsoleIds`](https://api-docs.retroachievements.org/v1/consoles/get-console-ids.html) - Get the complete list of console ID and name pairs on the site.
+- [Get All Systems](https://api-docs.retroachievements.org/v1/consoles/all-systems.html) - Get the complete list of system ID and name pairs on the site.
 - [`GetGameList`](https://api-docs.retroachievements.org/v1/consoles/get-game-list.html) - Get the complete list of games for a console.
 
 ### Feed
