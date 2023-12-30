@@ -132,8 +132,8 @@ export default defineConfig({
             link: "/v1/consoles/all-systems",
           },
           {
-            text: "Get All Games",
-            link: "/v1/consoles/get-game-list",
+            text: "All Games and Hashes",
+            link: "/v1/consoles/all-games",
           },
         ],
       },

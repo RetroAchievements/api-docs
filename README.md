@@ -55,7 +55,7 @@ Click the function names to open their complete docs on the docs site.
 ### System
 
 - [Get All Systems](https://api-docs.retroachievements.org/v1/consoles/all-systems.html) - Get the complete list of system ID and name pairs on the site.
-- [`GetGameList`](https://api-docs.retroachievements.org/v1/consoles/get-game-list.html) - Get the complete list of games for a console.
+- [Get All Games and Hashes](https://api-docs.retroachievements.org/v1/consoles/all-games.html) - Get the complete list of games for a console, including their hashes.
 
 ### Feed
 
