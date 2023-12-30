@@ -48,6 +48,10 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
+            text: "Profile",
+            link: "/v1/users/profile",
+          },
+          {
             text: "Unlocks (most recent)",
             link: "/v1/users/recent-achievements",
           },
