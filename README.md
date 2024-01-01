@@ -27,6 +27,7 @@ Click the function names to open their complete docs on the docs site.
 
 ### User
 
+- [Profile](https://api-docs.retroachievements.org/v1/users/profile.html) - Get a user's basic profile information.
 - [Unlocks (most recent)](https://api-docs.retroachievements.org/v1/users/recent-achievements.html) - Get a list of achievements recently earned by the user.
 - [Unlocks (by date range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
 - [Unlocks (on date)](https://api-docs.retroachievements.org/v1/users/achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
