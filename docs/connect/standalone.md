@@ -59,7 +59,7 @@ An example of a valid user agent is:
 | Name | Required? | Description                          |
 | :--- | :-------- | :----------------------------------- |
 | `u`  | Yes       | Your integration account's username. |
-| `p`  | Yes       | Your integration account's password  |
+| `p`  | Yes       | Your integration account's password. |
 | `r`  | Yes       | Must be `login2`.                    |
 
 ::: code-group
@@ -103,7 +103,7 @@ When a player begins playing your game (or logs in to your server), you must sen
 | Name | Required? | Description                                                                                    |
 | :--- | :-------- | :--------------------------------------------------------------------------------------------- |
 | `u`  | Yes       | Your integration account's username.                                                           |
-| `p`  | Yes       | Your integration account's password                                                            |
+| `t`  | Yes       | Your Connect API token.                                                                        |
 | `r`  | Yes       | Must be `startsession`.                                                                        |
 | `g`  | Yes       | Your game's primary game ID. Don't send the game ID of a bonus set.                            |
 | `k`  | Yes       | The RA username you're starting a session for (they should've already linked via their motto). |
@@ -149,7 +149,7 @@ m=This is a new rich presence
 | Name | Required? | Description                                                                                    |
 | :--- | :-------- | :--------------------------------------------------------------------------------------------- |
 | `u`  | Yes       | Your integration account's username.                                                           |
-| `p`  | Yes       | Your integration account's password                                                            |
+| `t`  | Yes       | Your Connect API token.                                                                        |
 | `r`  | Yes       | Must be `ping`.                                                                                |
 | `g`  | Yes       | Your game's primary game ID. Don't send the game ID of a bonus set.                            |
 | `k`  | Yes       | The RA username you're starting a session for (they should've already linked via their motto). |
@@ -179,7 +179,7 @@ When a player unlocks a single achievement, you can trigger an unlock on RetroAc
 | Name | Required? | Description                                                                                      |
 | :--- | :-------- | :----------------------------------------------------------------------------------------------- |
 | `u`  | Yes       | Your integration account's username.                                                             |
-| `p`  | Yes       | Your integration account's password                                                              |
+| `t`  | Yes       | Your Connect API token.                                                                          |
 | `r`  | Yes       | Must be `awardachievement`.                                                                      |
 | `k`  | Yes       | The RA username you're triggering an unlock for (they should've already linked via their motto). |
 | `a`  | Yes       | The achievement ID you want to trigger an unlock for                                             |
@@ -208,7 +208,7 @@ If you would like to unlock multiple achievements at once or resync all the user
 | Name | Required? | Description                                                                                    |
 | :--- | :-------- | :--------------------------------------------------------------------------------------------- |
 | `u`  | Yes       | Your integration account's username.                                                           |
-| `p`  | Yes       | Your integration account's password                                                            |
+| `t`  | Yes       | Your Connect API token.                                                                        |
 | `r`  | Yes       | Must be `syncachievements`.                                                                    |
 | `k`  | Yes       | The RA username you're triggering unlocks for (they should've already linked via their motto). |
 | `a`  | Yes       | The achievement IDs you want to trigger unlocks for                                            |
