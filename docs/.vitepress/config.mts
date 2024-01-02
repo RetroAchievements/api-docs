@@ -64,12 +64,12 @@ export default defineConfig({
             link: "/v1/users/achievements-earned-on-day",
           },
           {
-            text: "Progress for Game with Game Info",
-            link: "/v1/users/get-game-info-and-user-progress",
+            text: "Game Progress",
+            link: "/v1/users/game-progress",
           },
           {
             text: "Awards / Badges",
-            link: "/v1/users/get-user-awards",
+            link: "/v1/users/user-awards",
           },
           {
             text: "Set Claims",
