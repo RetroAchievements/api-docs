@@ -16,12 +16,7 @@ export default defineConfig({
     aside: false,
 
     search: {
-      provider: "algolia",
-      options: {
-        appId: "3QMK5TQHQC",
-        apiKey: "a5d33ec313db5c671171ca35d3de3cea",
-        indexName: "retroachievements-api-js",
-      },
+      provider: "local",
     },
 
     socialLinks: [
