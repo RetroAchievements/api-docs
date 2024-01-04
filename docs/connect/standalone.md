@@ -96,7 +96,7 @@ Mottos have a maximum length of 50 characters. Once you've confirmed the user mo
 
 When a player begins playing your game (or logs in to your server), you must send a ping to RetroAchievements.
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=startsession&g=YourCoreGameId&k=TheirUsername</SampleRequest>
+<SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=startsession&g=YourCoreGameId&k=TheirUsername</SampleRequest>
 
 ### Query Parameters
 
@@ -172,7 +172,19 @@ m=This is a new rich presence
 
 When a player unlocks a single achievement, you can trigger an unlock on RetroAchievements for them, based on the achievement's ID in our system. To find the achievement ID, the achievement itself must first be created on RetroAchievements. An admin can help with this. Once it's there, you'll see the achievement's ID in the URL bar for that achievement's page (eg: https://retroachievements.org/achievement/9).
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievement&k=TheirUsername&a=9&h=1</SampleRequest>
+These requests also require a valid verification hash in the `v` query parameter. This is an MD5 hash.
+
+```
+md5(achievementId + theirUsername + hardcore + achievementId)
+```
+
+<SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievement&k=TheirUsername&a=9&v=8f48cd6a05f875bf4c2818aec03523c1&h=1</SampleRequest>
+
+Here's how the `v` hash was generated:
+
+```
+md5("9TheirUsername19") // "8f48cd6a05f875bf4c2818aec03523c1"
+```
 
 ### Query Parameters
 
@@ -183,6 +195,7 @@ When a player unlocks a single achievement, you can trigger an unlock on RetroAc
 | `r`  | Yes       | Must be `awardachievement`.                                                                      |
 | `k`  | Yes       | The RA username you're triggering an unlock for (they should've already linked via their motto). |
 | `a`  | Yes       | The achievement ID you want to trigger an unlock for                                             |
+| `v`  | Yes       | The MD5 verification hash. `a` + `k` + `h` + `a`                                                 |
 | `h`  | Yes       | 1 for hardcore ("no cheats") mode. 0 for softcore ("cheats enabled") mode.                       |
 
 ### HTTP Response
@@ -201,18 +214,25 @@ When a player unlocks a single achievement, you can trigger an unlock on RetroAc
 
 If you would like to unlock multiple achievements at once or resync all the user's unlocks in your system to RetroAchievements, you'll want to use this Connect API function instead of `awardachievement`. Rather than `a` using a single achievement ID, it accepts a comma-separated list of achievement IDs you'd like to trigger unlocks for.
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=syncachievements&k=TheirUsername&a=147,141,145,142,146&h=1</SampleRequest>
+A comma-separated list for `v` is also required. These are MD5 hashes generated just like when you want to unlock a single achievement for a player. In the HTTP POST example below, "H1" should correspond to achievement ID 147. As a reminder, hashes are generated like:
+
+```
+md5(achievementId + theirUsername + hardcore + achievementId)
+```
+
+<SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievements&k=TheirUsername&a=147,141,145,142,146&v=H1,H2,H3,H4,H5&h=1</SampleRequest>
 
 ### Query Parameters
 
-| Name | Required? | Description                                                                                    |
-| :--- | :-------- | :--------------------------------------------------------------------------------------------- |
-| `u`  | Yes       | Your integration account's username.                                                           |
-| `t`  | Yes       | Your Connect API token.                                                                        |
-| `r`  | Yes       | Must be `syncachievements`.                                                                    |
-| `k`  | Yes       | The RA username you're triggering unlocks for (they should've already linked via their motto). |
-| `a`  | Yes       | The achievement IDs you want to trigger unlocks for                                            |
-| `h`  | Yes       | 1 for hardcore ("no cheats") mode. 0 for softcore ("cheats enabled") mode.                     |
+| Name | Required? | Description                                                                                            |
+| :--- | :-------- | :----------------------------------------------------------------------------------------------------- |
+| `u`  | Yes       | Your integration account's username.                                                                   |
+| `t`  | Yes       | Your Connect API token.                                                                                |
+| `r`  | Yes       | Must be `awardachievements`.                                                                           |
+| `k`  | Yes       | The RA username you're triggering unlocks for (they should've already linked via their motto).         |
+| `a`  | Yes       | The achievement IDs you want to trigger unlocks for                                                    |
+| `v`  | Yes       | The MD5 verification hashes for achievement IDs you want to trigger unlocks for. `a` + `k` + `h` + `a` |
+| `h`  | Yes       | 1 for hardcore ("no cheats") mode. 0 for softcore ("cheats enabled") mode.                             |
 
 ### HTTP Response
 
