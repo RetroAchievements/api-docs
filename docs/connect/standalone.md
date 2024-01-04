@@ -217,7 +217,7 @@ If you would like to unlock multiple achievements at once or resync all the user
 A comma-separated list for `v` is also required. These are MD5 hashes generated just like when you want to unlock a single achievement for a player. In the HTTP POST example below, "H1" should correspond to achievement ID 147. As a reminder, hashes are generated like:
 
 ```
-md5(achievementId + theirUsername + hardcore + achievementId)
+md5(achievementId + theirUsername + hardcore + achievementId) // "147TheirUsername1147"
 ```
 
 <SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievements&k=TheirUsername&a=147,141,145,142,146&v=H1,H2,H3,H4,H5&h=1</SampleRequest>
