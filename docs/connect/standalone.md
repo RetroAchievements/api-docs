@@ -156,9 +156,9 @@ m=This is a new rich presence
 
 ### Multipart Formdata Payload
 
-| Name | Required? | Description                              |
-| :--- | :-------- | :--------------------------------------- |
-| `m`  | No        | The user's current rich presence string. |
+| Name | Required? | Description                              | Example                                 |
+| :--- | :-------- | :--------------------------------------- | :-------------------------------------- |
+| `m`  | No        | The user's current rich presence string. | Level 30 • Running around in San d'Oria |
 
 ### HTTP Response
 
@@ -212,27 +212,35 @@ md5("9TheirUsername19") // "8f48cd6a05f875bf4c2818aec03523c1"
 
 ## Unlock multiple achievements for the player
 
-If you would like to unlock multiple achievements at once or resync all the user's unlocks in your system to RetroAchievements, you'll want to use this Connect API function instead of `awardachievement`. Rather than `a` using a single achievement ID, it accepts a comma-separated list of achievement IDs you'd like to trigger unlocks for.
+If you would like to unlock multiple achievements at once or resync all the user's unlocks in your system to RetroAchievements, you'll want to use this Connect API function instead of `awardachievement`.
 
-A verification hash sent by the `v` parameter is also required. This is an MD5 hash generated using the following pattern
+Rather than `a` using a single achievement ID, it accepts a comma-separated list in the POST payload of achievement IDs you'd like to trigger unlocks for. This is in the payload (multi-part form data), not as a query parameter.
 
-```
-md5(achievementIdsAsCsv + theirUsername + hardcore) // "147,141,145,142,146TheirUsername1"
-```
+A verification hash sent by the `v` key in the request payload is also required. This is an MD5 hash generated using the following pattern:
 
-<SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievements&k=TheirUsername&a=147,141,145,142,146&v=de4b6275cc8722872aa0fef6d4b30570&h=1</SampleRequest>
+### Endpoint and Request Method
 
-### Query Parameters
+- URL: `https://retroachievements.org/dorequest.php`
+- HTTP Method: `POST`
 
-| Name | Required? | Description                                                                                    |
-| :--- | :-------- | :--------------------------------------------------------------------------------------------- |
-| `u`  | Yes       | Your integration account's username.                                                           |
-| `t`  | Yes       | Your Connect API token.                                                                        |
-| `r`  | Yes       | Must be `awardachievements`.                                                                   |
-| `k`  | Yes       | The RA username you're triggering unlocks for (they should've already linked via their motto). |
-| `a`  | Yes       | The achievement IDs you want to trigger unlocks for                                            |
-| `v`  | Yes       | The MD5 verification hash for achievement IDs you want to trigger unlocks for. `a` + `k` + `h` |
-| `h`  | Yes       | 1 for hardcore ("no cheats") mode. 0 for softcore ("cheats enabled") mode.                     |
+### Required Query Parameters
+
+| Name | Description                                                                                                            |
+| :--- | :--------------------------------------------------------------------------------------------------------------------- |
+| `u`  | Your integration account's username.                                                                                   |
+| `t`  | Your Connect API token.                                                                                                |
+| `r`  | Must be set to `awardachievements`.                                                                                    |
+| `k`  | The RetroAchievements username for whom you're unlocking achievements (they should've already linked via their motto). |
+
+### Required Multipart Formdata Payload
+
+| Name | Description                                                                                                                                                                                                                          | Example                          |
+| :--- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
+| `a`  | The user's current rich presence string.                                                                                                                                                                                             | 147,141,145,142,146              |
+| `h`  | Whether the unlocks should be in hardcore ("no cheats") mode.                                                                                                                                                                        | 1                                |
+| `v`  | A verification MD5 hash. It's formed by concatenating the achievement IDs (as a CSV string), the user's RA username, and the `h` value, then applying the MD5 hash function. For example: `md5("147,141,145,142,146TheirUsername1")` | de4b6275cc8722872aa0fef6d4b30570 |
+
+<SampleRequest httpVerb="POST">https://retroachievements.org/dorequest.php?u=YourUsername&t=YourConnectToken&r=awardachievements&k=TheirUsername</SampleRequest>
 
 ### HTTP Response
 
