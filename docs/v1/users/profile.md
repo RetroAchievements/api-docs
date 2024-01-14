@@ -28,7 +28,24 @@ This information can be found near the top of [any user page](https://retroachie
 
 ## Client Library
 
-Not yet supported.
+::: code-group
+
+```ts [NodeJS]
+import { buildAuthorization, getUserProfile } from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
+const userProfile = await getUserProfile(authorization, {
+  userName: "xelnia",
+});
+```
+
+:::
 
 ## Response
 
@@ -54,6 +71,26 @@ Not yet supported.
 }
 ```
 
+```json [NodeJS]
+{
+  "user": "MaxMilyin",
+  "userPic": "/UserPic/MaxMilyin.png",
+  "memberSince": "2016-01-02 00:43:04",
+  "richPresenceMsg": "Playing ~Hack~ 11th Annual Vanilla Level Design Contest, The",
+  "lastGameId": 19504,
+  "contribCount": 0,
+  "contribYield": 0,
+  "totalPoints": 399597,
+  "totalSoftcorePoints": 0,
+  "totalTruePoints": 1599212,
+  "permissions": 1,
+  "untracked": false,
+  "id": 16446,
+  "userWallActive": true,
+  "motto": "Join me on Twitch! GameSquadSquad for live RA"
+}
+```
+
 :::
 
 ## Source
@@ -61,4 +98,4 @@ Not yet supported.
 | Repo                     | URL                                                                                      |
 | :----------------------- | :--------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserProfile.php |
-| RetroAchievements/api-js | not yet supported                                                                        |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserProfile.ts         |
