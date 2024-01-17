@@ -32,6 +32,7 @@ Click the function names to open their complete docs on the docs site.
 - [Unlocks (by date range)](https://api-docs.retroachievements.org/v1/users/achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
 - [Unlocks (on date)](https://api-docs.retroachievements.org/v1/users/achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
 - [Game Progress](https://api-docs.retroachievements.org/v1/users/game-progress.html) - Get metadata about a game as well as a user's progress on that game.
+- [All Completion Progress](https://api-docs.retroachievements.org/v1/users/completion-progress.html) - Get metadata about all the user's played games and any awards associated with them.
 - [Awards / Badges](https://api-docs.retroachievements.org/v1/users/user-awards.html) - Get a list of a user's site awards/badges.
 - [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
 - [`GetUserCompletedGames`](https://api-docs.retroachievements.org/v1/users/get-user-completed-games.html) - Get hardcore and softcore completion metadata about games a user has played.
