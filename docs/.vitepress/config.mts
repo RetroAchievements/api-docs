@@ -16,7 +16,12 @@ export default defineConfig({
     aside: false,
 
     search: {
-      provider: "local",
+      provider: "algolia",
+      options: {
+        appId: "3QMK5TQHQC",
+        apiKey: "a5d33ec313db5c671171ca35d3de3cea",
+        indexName: "retroachievements-api-js",
+      },
     },
 
     socialLinks: [
@@ -78,10 +83,6 @@ export default defineConfig({
             link: "/v1/users/get-user-claims",
           },
           {
-            text: "Completed Games",
-            link: "/v1/users/get-user-completed-games",
-          },
-          {
             text: "Rank and Score for Game",
             link: "/v1/users/get-user-game-rank-and-score",
           },
@@ -100,6 +101,10 @@ export default defineConfig({
           {
             text: "User Summary",
             link: "/v1/users/get-user-summary",
+          },
+          {
+            text: "Completed Games",
+            link: "/v1/users/completed-games",
           },
         ],
       },

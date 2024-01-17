@@ -18,7 +18,7 @@ Learn how to authenticate and start pulling data from RetroAchievements on our d
 
 - [Get started](https://api-docs.retroachievements.org/getting-started.html)
 - [Get a user's profile information](https://api-docs.retroachievements.org/v1/users/get-user-summary.html)
-- [Look up games a user has completed](https://api-docs.retroachievements.org/v1/users/get-user-completed-games.html)
+- [Look up games a user has completed](https://api-docs.retroachievements.org/v1/users/completion-progress.html)
 - [Get a game's metadata](https://api-docs.retroachievements.org/v1/games/detailed-info.html)
 
 ## API
@@ -35,12 +35,12 @@ Click the function names to open their complete docs on the docs site.
 - [All Completion Progress](https://api-docs.retroachievements.org/v1/users/completion-progress.html) - Get metadata about all the user's played games and any awards associated with them.
 - [Awards / Badges](https://api-docs.retroachievements.org/v1/users/user-awards.html) - Get a list of a user's site awards/badges.
 - [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
-- [`GetUserCompletedGames`](https://api-docs.retroachievements.org/v1/users/get-user-completed-games.html) - Get hardcore and softcore completion metadata about games a user has played.
 - [`GetUserGameRankAndScore`](https://api-docs.retroachievements.org/v1/users/get-user-game-rank-and-score.html) - Get metadata about how a user has performed on a given game.
 - [`GetUserPoints`](https://api-docs.retroachievements.org/v1/users/get-user-points.html) - Get a user's total hardcore and softcore points.
 - [`GetUserProgress`](https://api-docs.retroachievements.org/v1/users/get-user-progress.html) - Get a user's progress on a list of specified games.
 - [`GetUserRecentlyPlayedGames`](https://api-docs.retroachievements.org/v1/users/get-user-recently-played-games.html) - Get a list of games a user has recently played.
 - [`GetUserSummary`](https://api-docs.retroachievements.org/v1/users/get-user-summary.html) - Get a user's profile metadata.
+- [Completed Games](https://api-docs.retroachievements.org/v1/users/completed-games.html) - Legacy endpoint. Get hardcore and softcore completion metadata about games a user has played.
 
 ### Game
 
