@@ -66,6 +66,10 @@ export default defineConfig({
             link: "/v1/users/game-progress",
           },
           {
+            text: "All Completion Progress",
+            link: "/v1/users/completion-progress",
+          },
+          {
             text: "Awards / Badges",
             link: "/v1/users/user-awards",
           },
