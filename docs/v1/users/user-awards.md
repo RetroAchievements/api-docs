@@ -16,7 +16,7 @@ The easiest place to see a summary of user awards in the Progression Status comp
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php?u=MaxMilyin</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetUserAwards.php?u=MaxMilyin</SampleRequest>
 
 ### Query Parameters
 
