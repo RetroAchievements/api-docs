@@ -236,7 +236,7 @@ A verification hash sent by the `v` key in the request payload is also required.
 
 | Name | Description                                                                                                                                                                                                                          | Example                          |
 | :--- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
-| `a`  | The user's current rich presence string.                                                                                                                                                                                             | 147,141,145,142,146              |
+| `a`  | The concatenated list of achievement IDs to unlock. This is a CSV string with no whitespace.                                                                                                                                         | 147,141,145,142,146              |
 | `h`  | Whether the unlocks should be in hardcore ("no cheats") mode.                                                                                                                                                                        | 1                                |
 | `v`  | A verification MD5 hash. It's formed by concatenating the achievement IDs (as a CSV string), the user's RA username, and the `h` value, then applying the MD5 hash function. For example: `md5("147,141,145,142,146TheirUsername1")` | de4b6275cc8722872aa0fef6d4b30570 |
 
