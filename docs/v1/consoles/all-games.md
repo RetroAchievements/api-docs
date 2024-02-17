@@ -20,7 +20,7 @@ The system games list can be found by selecting any system in the "Games" menu f
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGamesList.php?i=1&h=1&f=1</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGameList.php?i=1&h=1&f=1</SampleRequest>
 
 ### Query Parameters
 
