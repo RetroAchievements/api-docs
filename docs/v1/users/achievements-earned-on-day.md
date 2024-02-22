@@ -21,7 +21,7 @@ A user's unlocks by date can be found via the user history:
 ### Query Parameters
 
 | Name | Required? | Description                |
-| :--- | :-------- | :------------------------- |
+|:-----|:----------|:---------------------------|
 | `z`  | Yes       | Your username.             |
 | `y`  | Yes       | Your web API key.          |
 | `u`  | Yes       | The target username.       |
@@ -48,6 +48,29 @@ const achievements = await getAchievementsEarnedOnDay(authorization, {
   userName: "MaxMilyin",
   onDate: new Date("2022-10-14"),
 });
+```
+
+```kotlin [Kotlin]
+// create dates
+val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+val date: Date = dateFormat.parse("2022-10-14")
+
+val response: NetworkResponse<GetUserRecentAchievements.Response, ErrorResponse> = api.getAchievementsEarnedOnDay(
+    username = "Jamiras",
+    date = date
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val achievements: GetUserRecentAchievements.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
 ```
 
 :::
@@ -108,7 +131,8 @@ const achievements = await getAchievementsEarnedOnDay(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                                  |
-| :----------------------- | :--------------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedOnDay.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedOnDay.ts         |
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedOnDay.php                     |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedOnDay.ts                             |

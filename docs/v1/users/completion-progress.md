@@ -21,7 +21,7 @@ A user's completion progress can be found in several places, most prolifically o
 ### Query Parameters
 
 | Name | Required? | Description                                          |
-| :--- | :-------- | :--------------------------------------------------- |
+|:-----|:----------|:-----------------------------------------------------|
 | `z`  | Yes       | Your username.                                       |
 | `y`  | Yes       | Your web API key.                                    |
 | `u`  | Yes       | The target username.                                 |
@@ -48,6 +48,27 @@ const authorization = buildAuthorization({ userName, webApiKey });
 const userCompletionProgress = await getUserCompletionProgress(authorization, {
   userName: "MaxMilyin",
 });
+```
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserCompletionProgress.Response, ErrorResponse> = api.getUserCompletionProgress(
+    username = "MaxMilyin",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val completionProgress: GetUserCompletionProgress.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
 ```
 
 :::
@@ -106,7 +127,8 @@ const userCompletionProgress = await getUserCompletionProgress(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                                 |
-| :----------------------- | :-------------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserCompletionProgress.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserCompletionProgress.ts         |
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserCompletionProgress.php                      |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserCompletionProgress.ts                              |

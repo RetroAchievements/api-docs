@@ -4,7 +4,9 @@ A call to this function will retrieve summary information about a given user, ta
 
 ## Examples
 
-```ts
+::: code-group
+
+```ts [NodeJS]
 import { getUserSummary } from "@retroachievements/api";
 
 // This gets the user's 10 most recently played games.
@@ -12,6 +14,29 @@ const userSummary = await getUserSummary(authorization, {
   userName: "xelnia",
 });
 ```
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserSummary.Response, ErrorResponse> = api.getUserSummary(
+    username = "xelnia",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userProgress: GetUserSummary.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+:::
 
 ## Returns
 
@@ -124,7 +149,7 @@ const userSummary = await getUserSummary(authorization, {
 ## Parameters
 
 | Name                      | Type                                        | Description                                                                                                                  |
-| :------------------------ | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
+|:--------------------------|:--------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
 | `authorization`           | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object. |
 | `userName`                | `string`                                    | The user for which to retrieve the summary for.                                                                              |
 | `recentGamesCount`        | `number?`                                   | Optional. How many recent games to fetch. The default is 0.                                                                  |
@@ -132,5 +157,8 @@ const userSummary = await getUserSummary(authorization, {
 
 ## Source
 
-[@retroachievements/api, getUserSummary.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts)  
-[RAWeb, API_GetUserSummary.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php)
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php                                 |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts                                         |

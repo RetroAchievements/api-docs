@@ -4,7 +4,9 @@ A call to this function will retrieve a given user's progress on a given list of
 
 ## Examples
 
-```ts
+::: code-group
+
+```ts [NodeJS]
 import { getUserProgress } from "@retroachievements/api";
 
 const userProgress = await getUserProgress(authorization, {
@@ -12,6 +14,30 @@ const userProgress = await getUserProgress(authorization, {
   gameIds: [1, 14402],
 });
 ```
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserProgress.Response, ErrorResponse> = api.getUserProgress(
+    username = "xelnia",
+    gameId = "1,14402"
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userProgress: GetUserProgress.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+:::
 
 ## Returns
 
@@ -39,12 +65,15 @@ const userProgress = await getUserProgress(authorization, {
 ## Parameters
 
 | Name            | Type                                        | Description                                                                                                                                                                        |
-| :-------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:----------------|:--------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `authorization` | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object.                                                       |
 | `userName`      | `string`                                    | The user for which to retrieve the point totals for.                                                                                                                               |
 | `gameIds`       | `string[]` or `number[]`                    | An array of RetroAchievements game IDs. If you aren't sure of the game IDs, visit the game's page on the RetroAchievements.org website and copy the numbers at the end of the URL. |
 
 ## Source
 
-[@retroachievements/api, getUserProgress.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/user/getUserProgress.ts)  
-[RAWeb, API_GetUserProgress.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserProgress.php)
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserProgress.php                                |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserProgress.ts                                        |

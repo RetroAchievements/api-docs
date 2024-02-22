@@ -25,7 +25,7 @@ The system games list can be found by selecting any system in the "Games" menu f
 ### Query Parameters
 
 | Name | Required? | Description                                                    |
-| :--- | :-------- | :------------------------------------------------------------- |
+|:-----|:----------|:---------------------------------------------------------------|
 | `z`  | Yes       | Your username.                                                 |
 | `y`  | Yes       | Your web API key.                                              |
 | `i`  | Yes       | The target system ID.                                          |
@@ -51,6 +51,25 @@ const gameList = await getGameList(authorization, {
   shouldOnlyRetrieveGamesWithAchievements: true,
   shouldRetrieveGameHashes: true,
 });
+```
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val response: NetworkResponse<GetGameList.Response, ErrorResponse> = api.getGameList(
+    consoleId = 1
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val gameList: GetGameList.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
 ```
 
 :::
@@ -104,7 +123,8 @@ const gameList = await getGameList(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                   |
-| :----------------------- | :------------------------------------------------------------------------------------ |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameList.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/console/getGameList.ts      |
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameList.php                                    |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/console/getGameList.ts                                         |

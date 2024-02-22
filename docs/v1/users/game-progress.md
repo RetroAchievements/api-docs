@@ -15,7 +15,7 @@ A call to this endpoint will retrieve extended metadata about a game, in additio
 ### Query Parameters
 
 | Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
+|:-----|:----------|:---------------------|
 | `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
@@ -45,6 +45,28 @@ const gameInfoAndUserProgress = await getGameInfoAndUserProgress(
     gameId: 14402,
   },
 );
+```
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetGameInfoAndUserProgress.Response, ErrorResponse> = api.getGameInfoAndUserProgress(
+    username = "MaxMilyin",
+    gameId = 14402
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val gameInfoAndUserProgress: GetGameInfoAndUserProgress.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
 ```
 
 :::
@@ -166,7 +188,8 @@ const gameInfoAndUserProgress = await getGameInfoAndUserProgress(
 
 ## Source
 
-| Repo                     | URL                                                                                                  |
-| :----------------------- | :--------------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameInfoAndUserProgress.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getGameInfoAndUserProgress.ts         |
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameInfoAndUserProgress.php                     |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getGameInfoAndUserProgress.ts                             |

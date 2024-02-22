@@ -21,7 +21,7 @@ This information can be found near the top of [any user page](https://retroachie
 ### Query Parameters
 
 | Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
+|:-----|:----------|:---------------------|
 | `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
@@ -43,6 +43,27 @@ const authorization = buildAuthorization({ userName, webApiKey });
 const userProfile = await getUserProfile(authorization, {
   userName: "xelnia",
 });
+```
+
+```kotlin
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserProfile.Response, ErrorResponse> = api.getUserProfile(
+    username = "xelnia",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userProfile: GetUserProfile.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
 ```
 
 :::
@@ -95,7 +116,8 @@ const userProfile = await getUserProfile(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                      |
-| :----------------------- | :--------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserProfile.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserProfile.ts         |
+| Repo                               | URL                                                                                                                      |
+|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserProfile.php                                 |
+| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
+| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserProfile.ts                                         |
