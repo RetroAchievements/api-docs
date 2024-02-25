@@ -82,7 +82,23 @@ Click the function names to open their complete docs on the docs site.
 
 ## How to Contribute
 
-TODO
+First, fork this repository and clone your fork. Then, in a terminal, `cd` into the repo directory on your local machine.
+
+### Installation
+
+```bash
+npm install
+```
+
+### Dev Server
+
+```bash
+npm run dev
+```
+
+You can now open your local docs site in your browser. By default, this can done by visiting http://localhost:5173/.
+
+Put your work on a branch and push it to your fork. When you are ready to contribute to this repository, open a PR with your branch targeting this repo's `main`.
 
 ## Projects Using the RetroAchievements API
 
