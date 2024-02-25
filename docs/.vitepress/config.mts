@@ -171,7 +171,7 @@ export default defineConfig({
             link: "/v1/feed/get-claims",
           },
           {
-            text: "Top Ten Users",
+            text: "Top Ten Ranked Users",
             link: "/v1/feed/get-top-ten-users",
           },
         ],
