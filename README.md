@@ -52,7 +52,7 @@ Click the function names to open their complete docs on the docs site.
 
 ### Achievement
 
-- [`GetAchievementUnlocks`](https://api-docs.retroachievements.org/v1/achievements/get-achievement-unlocks.html) - Get a list of users who have earned an achievement.
+- [All Unlocks](https://api-docs.retroachievements.org/v1/achievements/get-achievement-unlocks.html) - Get a list of users who have earned an achievement, targeted by achievement ID.
 
 ### System
 

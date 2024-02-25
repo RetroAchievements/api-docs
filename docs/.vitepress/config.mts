@@ -153,7 +153,7 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "Unlocks List",
+            text: "All Unlocks",
             link: "/v1/achievements/get-achievement-unlocks",
           },
         ],

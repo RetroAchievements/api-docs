@@ -1,41 +1,126 @@
-# getAchievementUnlocks
+<script setup>
+import SampleRequest from '../../components/SampleRequest.vue';
+</script>
+
+# Achievement Unlocks
 
 A call to this endpoint will retrieve a list of users who have earned an achievement, targeted by the achievement's ID.
 
-## Examples
+[[toc]]
 
-```ts
-import { getAchievementUnlocks } from "@retroachievements/api";
+## HTTP Request
 
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetAchievementUnlocks.php?a=9</SampleRequest>
+
+### Query Parameters
+
+| Name | Required? | Description                                              |
+| :--- | :-------- | :------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                           |
+| `y`  | Yes       | Your web API key.                                        |
+| `a`  | Yes       | The target achievement ID.                               |
+| `o`  |           | Offset, number of entries to skip (default: 0).          |
+| `c`  |           | Count, number of games to return (default: 50, max 500). |
+
+## Client Library
+
+::: code-group
+
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getAchievementUnlocks,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
 const achievementUnlocks = await getAchievementUnlocks(authorization, {
-  achievementId: 13876,
+  achievementId: 9,
 });
 ```
 
-## Returns
+:::
 
-```json
-[
-  {
-    "user": "Podgicus0305",
-    "raPoints": 15544,
-    "dateAwarded": "2022-07-12 19:06:34",
-    "hardcoreMode": true
-  }
-  // ...
-]
+## Response
+
+::: code-group
+
+```json [HTTP Response]
+{
+  "Achievement": {
+    "ID": 9,
+    "Title": "That Was Easy",
+    "Description": "Complete the first act in Green Hill Zone",
+    "Points": 4,
+    "TrueRatio": 4,
+    "Author": "Scott",
+    "DateCreated": "2012-11-02 00:03:12",
+    "DateModified": "2023-08-08 00:36:59",
+    "Type": "progression"
+  },
+  "Console": {
+    "ID": 1,
+    "Title": "Mega Drive"
+  },
+  "Game": {
+    "ID": 1,
+    "Title": "Sonic the Hedgehog"
+  },
+  "UnlocksCount": 24272,
+  "UnlocksHardcoreCount": 10830,
+  "TotalPlayers": 27079,
+  "Unlocks": [
+    {
+      "User": "vipotaenko02",
+      "RAPoints": 0,
+      "DateAwarded": "2023-10-27T00:19:05.000000Z",
+      "HardcoreMode": 0
+    }
+    // ...
+  ]
+}
 ```
 
-## Parameters
+```json [NodeJS]
+{
+  "achievement": {
+    "id": 9,
+    "title": "That Was Easy",
+    "description": "Complete the first act in Green Hill Zone",
+    "points": 4,
+    "trueRatio": 4,
+    "author": "Scott",
+    "dateCreated": "2012-11-02 00:03:12",
+    "dateModified": "2023-08-08 00:36:59",
+    "type": "progression"
+  },
+  "console": { "id": 1, "title": "Mega Drive" },
+  "game": { "id": 1, "title": "Sonic the Hedgehog" },
+  "unlocksCount": 24272,
+  "unlocksHardcoreCount": 10830,
+  "totalPlayers": 27079,
+  "unlocks": [
+    {
+      "user": "vipotaenko02",
+      "raPoints": 0,
+      "dateAwarded": "2023-10-27T00:19:05.000000Z",
+      "hardcoreMode": false
+    }
+    // ...
+  ]
+}
+```
 
-| Name            | Type                                        | Description                                                                                                                                                                                                                             |
-| :-------------- | :------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `authorization` | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object.                                                                                                            |
-| `achievementId` | `string` or `number`                        | The target achievement we want to retrieve the unlocks list for. If you're not sure of this, it can be found by navigating to the achievement's page on the RetroAchievements.org website and copying the number at the end of the URL. |
-| `count`         | `number?`                                   | Optional. How many unlock records to return. The default is 50. The max is 500.                                                                                                                                                         |
-| `offset`        | `number?`                                   | Optional. How many unlock records to skip. Useful for pagination. Zero-indexed. The default is 0.                                                                                                                                       |
+:::
 
 ## Source
 
-[@retroachievements/api, getAchievementUnlocks.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/achievement/getAchievementUnlocks.ts)  
-[RAWeb, API_GetAchievementUnlocks.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementUnlocks.php)
+| Repo                     | URL                                                                                             |
+| :----------------------- | :---------------------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementUnlocks.php |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/achievement/getAchievementUnlocks.ts  |
