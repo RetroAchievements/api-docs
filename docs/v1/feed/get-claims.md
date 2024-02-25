@@ -1,50 +1,103 @@
-# getClaims
+<script setup>
+import SampleRequest from '../../components/SampleRequest.vue';
+</script>
 
-A call to this endpoint returns information about all (1000 max) set claims of a specified kind: completed, dropped, or expired.
+# Inactive Claims
 
-## Examples
+A call to this endpoint returns information about all (1000 max) achievement set development claims of a specified kind: completed, dropped, or expired.
 
-```ts
-import { getClaims } from "@retroachievements/api";
+[[toc]]
 
-const claims = await getClaims(authorization, { claimKind: "dropped" });
+## HTTP Request
+
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetClaims.php?k=1</SampleRequest>
+
+### Query Parameters
+
+| Name | Required? | Description                                                                        |
+| :--- | :-------- | :--------------------------------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                                                     |
+| `y`  | Yes       | Your web API key.                                                                  |
+| `k`  |           | The desired claim kind: 1 (completed), 2 (dropped), or 3 (expired). Defaults to 1. |
+
+## Client Library
+
+::: code-group
+
+```ts [NodeJS]
+import { buildAuthorization, getClaims } from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
+const claims = await getClaims(authorization, { claimKind: "completed" });
 ```
 
-## Returns
+:::
 
-```json
+## Response
+
+::: code-group
+
+```json [HTTP Response]
 [
   {
-    "id": 7044,
-    "user": "blendedsea",
-    "gameId": 19212,
-    "gameTitle": "SpongeBob SquarePants: Battle for Bikini Bottom",
-    "gameIcon": "/Images/059776.png",
-    "consoleName": "PlayStation 2",
-    "consoleId": 22,
-    "claimType": 0,
-    "setType": 0,
-    "status": 0,
-    "extension": 0,
-    "special": 0,
-    "created": "2022-10-04 00:25:06",
-    "doneTime": "2023-01-04 00:25:06",
-    "updated": "2022-10-04 00:25:06",
-    "minutesLeft": 112523,
-    "userIsJrDev": false
+    "ID": 11245,
+    "User": "kmpers",
+    "GameID": 24541,
+    "GameTitle": "GP World",
+    "GameIcon": "/Images/076324.png",
+    "ConsoleID": 33,
+    "ConsoleName": "SG-1000",
+    "ClaimType": 0,
+    "SetType": 1,
+    "Status": 1,
+    "Extension": 0,
+    "Special": 1,
+    "Created": "2023-10-27 22:30:49",
+    "DoneTime": "2023-10-27 23:21:12",
+    "Updated": "2023-10-27 23:21:12",
+    "UserIsJrDev": 0,
+    "MinutesLeft": -173762
   }
   // ...
 ]
 ```
 
-## Parameters
+```json [NodeJS]
+[
+  {
+    "id": 11245,
+    "user": "kmpers",
+    "gameId": 24541,
+    "gameTitle": "GP World",
+    "gameIcon": "/Images/076324.png",
+    "consoleId": 33,
+    "consoleName": "SG-1000",
+    "claimType": 0,
+    "setType": 1,
+    "status": 1,
+    "extension": 0,
+    "special": 1,
+    "created": "2023-10-27 22:30:49",
+    "doneTime": "2023-10-27 23:21:12",
+    "updated": "2023-10-27 23:21:12",
+    "userIsJrDev": false,
+    "minutesLeft": -173762
+  }
+  // ...
+]
+```
 
-| Name            | Type                                        | Description                                                                                                                  |
-| :-------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| `authorization` | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object. |
-| `claimKind`     | "completed", "dropped", or "expired"        | The type of filter to apply to the list of fetched claims.                                                                   |
+:::
 
 ## Source
 
-[@retroachievements/api, getClaims.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/feed/getClaims.ts)  
-[RAWeb, API_GetClaims.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetClaims.php)
+| Repo                     | URL                                                                                 |
+| :----------------------- | :---------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetClaims.php |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getClaims.ts         |
