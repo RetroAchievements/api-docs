@@ -25,7 +25,7 @@ A call to `API_GetTicketData` in this manner will retrieve ticket metadata infor
 ::: code-group
 
 ```ts [NodeJS]
-import { buildAuthorization, getUserSummary } from "@retroachievements/api";
+import { buildAuthorization, getTicketData } from "@retroachievements/api";
 
 // First, build your authorization object.
 const userName = "<your username on RA>";

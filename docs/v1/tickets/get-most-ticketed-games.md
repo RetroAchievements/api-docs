@@ -1,20 +1,74 @@
+<script setup>
+import SampleRequest from '../../components/SampleRequest.vue';
+</script>
+
 # Get Most Ticketed Games
 
-A call to `getTicketData()` in this manner will retrieve the games on the site with the highest count of opened achievement tickets.
+A call to `API_GetTicketData` in this manner will retrieve the games on the site with the highest count of opened achievement tickets.
 
-## Examples
+[[toc]]
 
-```ts
-import { getTicketData } from "@retroachievements/api";
+## HTTP Request
 
-const mostTicketedGames = await getTicketData(authorization, {
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData?f=1</SampleRequest>
+
+### Query Parameters
+
+| Name | Required? | Description                                                 |
+| :--- | :-------- | :---------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                              |
+| `y`  | Yes       | Your web API key.                                           |
+| `f`  | Yes       | Must be set to 1.                                           |
+| `c`  |           | Count, number of records to return (default: 10, max: 100). |
+| `o`  |           | Offset, number of entries to skip (default: 0).             |
+
+## Client Library
+
+::: code-group
+
+```ts [NodeJS]
+import { buildAuthorization, getTicketData } from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
+const ticket = await getTicketData(authorization, {
   isGettingMostTicketedGames: true,
 });
 ```
 
-## Returns
+:::
 
-```json
+## Response
+
+::: code-group
+
+```json [HTTP Response]
+{
+	"MostReportedGames": [
+		{
+			"GameID": 9701,
+			"GameTitle": "Dead 'n' Furious | Touch the Dead",
+			"GameIcon": "\/Images\/070109.png",
+			"Console": "Nintendo DS",
+			"OpenTickets": 12
+		},
+		{
+			"GameID": 10438,
+			"GameTitle": "Crash Team Racing",
+			"GameIcon": "\/Images\/081550.png",
+			"Console": "PlayStation",
+			"OpenTickets": 11
+		},]
+    "URL": "https://retroachievements.org/ticketmanager.php?f=1"
+}
+```
+
+```json [NodeJS]
 {
   "mostReportedGames": [
     {
@@ -37,16 +91,11 @@ const mostTicketedGames = await getTicketData(authorization, {
 }
 ```
 
-## Parameters
-
-| Name                         | Type                                        | Description                                                                                                                  |
-| :--------------------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| `authorization`              | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object. |
-| `isGettingMostTicketedGames` | `true`                                      | This value must be set to `true`.                                                                                            |
-| `count`                      | `number?`                                   | Optional. How many games to fetch. The default is 10. The max is 100.                                                        |
-| `offset`                     | `number?`                                   | Optional. How many games to skip. Useful for pagination. Zero-indexed. The default is 0.                                     |
+:::
 
 ## Source
 
-[@retroachievements/api, getTicketData.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/ticket/getTicketData.ts)  
-[RAWeb, API_GetTicketData.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetTicketData.php)
+| Repo                     | URL                                                                                     |
+| :----------------------- | :-------------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetTicketData.php |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/ticket/getTicketData.ts       |
