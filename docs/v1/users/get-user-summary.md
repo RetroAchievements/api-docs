@@ -1,136 +1,279 @@
-# getUserSummary
+<script setup>
+import SampleRequest from '../../components/SampleRequest.vue';
+</script>
+
+# User Summary
 
 A call to this endpoint will retrieve summary information about a given user, targeted by username.
 
-## Examples
+::: warning
 
-```ts
-import { getUserSummary } from "@retroachievements/api";
+This endpoint is known to be slow, and often results in over-fetching. For basic user profile information, try the [Profile](/v1/users/profile.html) endpoint. For user completion and game progress information, try the [Completion Progress](/v1/users/completion-progress.html) endpoint.
 
-// This gets the user's 10 most recently played games.
+:::
+
+[[toc]]
+
+## HTTP Request
+
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetUserSummary.php?u=xelnia&g=1&a=2</SampleRequest>
+
+### Query Parameters
+
+| Name | Required? | Description                                               |
+| :--- | :-------- | :-------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                            |
+| `y`  | Yes       | Your web API key.                                         |
+| `u`  | Yes       | The target username.                                      |
+| `g`  |           | The number of recent games to return (default: 0).        |
+| `a`  |           | The number of recent achievements to return (default: 10) |
+
+::: warning
+
+Recent achievements are pulled from recent games, so if you ask for 1 game and 10 achievements, and the user has only earned 8 achievements in the most recent game, you'll only get 8 recent achievements back. Similarly, with the default of 0 recent games, no recent achievements will be returned.
+
+:::
+
+## Client Library
+
+::: code-group
+
+```ts [NodeJS]
+import { buildAuthorization, getUserSummary } from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
 const userSummary = await getUserSummary(authorization, {
   userName: "xelnia",
+  recentGamesCount: 1,
+  recentAchievementsCount: 2,
 });
 ```
 
-## Returns
+:::
 
-```json
+## Response
+
+::: code-group
+
+```json [HTTP Response]
 {
-  "recentlyPlayedCount": 2,
-  "recentlyPlayed": [
+  "User": "xelnia",
+  "MemberSince": "2021-12-20 03:13:20",
+  "LastActivity": {
+    "ID": 0,
+    "timestamp": null,
+    "lastupdate": null,
+    "activitytype": null,
+    "User": "xelnia",
+    "data": null,
+    "data2": null
+  },
+  "RichPresenceMsg": "L=08-1 | 1 lives | 189300 points",
+  "LastGameID": 15758,
+  "ContribCount": 0,
+  "ContribYield": 0,
+  "TotalPoints": 8317,
+  "TotalSoftcorePoints": 0,
+  "TotalTruePoints": 26760,
+  "Permissions": 1,
+  "Untracked": 0,
+  "ID": 224958,
+  "UserWallActive": 1,
+  "Motto": "",
+  "Rank": 4616,
+  "RecentlyPlayedCount": 1,
+  "RecentlyPlayed": [
     {
-      "gameId": 19_020,
-      "consoleId": 21,
-      "consoleName": "PlayStation 2",
-      "title": "Mortal Kombat: Deadly Alliance",
-      "imageIcon": "/Images/064938.png",
-      "lastPlayed": "2023-01-27 02:05:02"
-    },
-    {
-      "gameId": 15_922,
-      "consoleId": 7,
-      "consoleName": "NES",
-      "title": "~Hack~ Mega Man 3 Revamped",
-      "imageIcon": "/Images/061792.png",
-      "lastPlayed": "2022-11-07 21:49:09"
+      "GameID": 15758,
+      "ConsoleID": 27,
+      "ConsoleName": "Arcade",
+      "Title": "Crazy Kong",
+      "ImageIcon": "/Images/068578.png",
+      "ImageTitle": "/Images/068579.png",
+      "ImageIngame": "/Images/068580.png",
+      "ImageBoxArt": "/Images/068205.png",
+      "LastPlayed": "2023-03-09 08:20:34",
+      "AchievementsTotal": 43
     }
-    // ...
   ],
-  "memberSince": "2020-02-02 20:10:35",
-  "lastActivity": {
-    "id": 59_195_489,
-    "timestamp": "2023-01-27 02:13:21",
-    "lastupdate": "2023-01-27 02:13:21",
-    "activitytype": 1,
-    "user": "WCopeland",
-    "data": "281263",
-    "data2": "1"
-  },
-  "richPresenceMsg": "Arcade [Match 2] - Nitara vs Drahmin (Novice difficulty)",
-  "lastGameId": 19_020,
-  "lastGame": {
-    "id": 19_020,
-    "title": "Mortal Kombat: Deadly Alliance",
-    "consoleId": 21,
-    "forumTopicId": 19_339,
-    "flags": 0,
-    "imageIcon": "/Images/064938.png",
-    "imageTitle": "/Images/057355.png",
-    "imageIngame": "/Images/057356.png",
-    "imageBoxArt": "/Images/056153.png",
-    "publisher": "Midway",
-    "developer": "Midway",
-    "genre": "3D Fighting",
-    "released": "November 16, 2002",
-    "isFinal": false,
-    "consoleName": "PlayStation 2",
-    "richPresencePatch": "MockRichPresencePatch"
-  },
-  "contribCount": 0,
-  "contribYield": 0,
-  "totalPoints": 18_817,
-  "totalSoftcorePoints": 25,
-  "totalTruePoints": 56_984,
-  "permissions": 1,
-  "untracked": false,
-  "id": 117_089,
-  "userWallActive": true,
-  "motto": "https://i.imgur.com/ov30jeD.jpg",
-  "rank": 1372,
-  "awarded": {
-    "1829": {
-      "numPossibleAchievements": 80,
-      "possibleScore": 738,
-      "numAchieved": 16,
-      "scoreAchieved": 95,
-      "numAchievedHardcore": 16,
-      "scoreAchievedHardcore": 95
-    },
-    "6278": {
-      "numPossibleAchievements": 42,
-      "possibleScore": 478,
-      "numAchieved": 0,
-      "scoreAchieved": 0,
-      "numAchievedHardcore": 0,
-      "scoreAchievedHardcore": 0
+  "Awarded": {
+    "15758": {
+      "NumPossibleAchievements": 43,
+      "PossibleScore": 615,
+      "NumAchieved": 41,
+      "ScoreAchieved": 490,
+      "NumAchievedHardcore": 41,
+      "ScoreAchievedHardcore": 490
     }
-    // ...
   },
-  "recentAchievements": {
-    "19020": {
-      "281248": {
-        "id": 281_248,
-        "gameId": 19_020,
-        "gameTitle": "Mortal Kombat: Deadly Alliance",
-        "title": "Head Stomp",
-        "description": "Perform a Fatality as Jax.",
-        "points": 3,
-        "badgeName": "311063",
-        "isAwarded": true,
-        "dateAwarded": "2023-01-27 02:04:36",
-        "hardcoreAchieved": false
+  "RecentAchievements": {
+    "15758": {
+      "293505": {
+        "ID": 293505,
+        "GameID": 15758,
+        "GameTitle": "Crazy Kong",
+        "Title": "Prodigy of the Arcade",
+        "Description": "Score 200,000 points",
+        "Points": 25,
+        "Type": null,
+        "BadgeName": "325551",
+        "IsAwarded": "1",
+        "DateAwarded": "2023-03-09 08:20:34",
+        "HardcoreAchieved": 1
+      },
+      "293526": {
+        "ID": 293526,
+        "GameID": 15758,
+        "GameTitle": "Crazy Kong",
+        "Title": "Super Smasher III",
+        "Description": "Get 6 smashes with a single bottom hammer on any barrel board",
+        "Points": 10,
+        "Type": null,
+        "BadgeName": "325572",
+        "IsAwarded": "1",
+        "DateAwarded": "2023-03-09 08:19:37",
+        "HardcoreAchieved": 1
       }
     }
   },
-  "points": 18_817,
-  "softcorePoints": 25,
-  "userPic": "/UserPic/WCopeland.png",
-  "totalRanked": 34_572,
+  "LastGame": {
+    "ID": 15758,
+    "Title": "Crazy Kong",
+    "ConsoleID": 27,
+    "ConsoleName": "Arcade",
+    "ForumTopicID": 20415,
+    "Flags": 0,
+    "ImageIcon": "/Images/068578.png",
+    "ImageTitle": "/Images/068579.png",
+    "ImageIngame": "/Images/068580.png",
+    "ImageBoxArt": "/Images/068205.png",
+    "Publisher": "Falcon",
+    "Developer": "Falcon",
+    "Genre": "2D Platforming, Arcade",
+    "Released": "1981",
+    "IsFinal": 0
+  },
+  "UserPic": "/UserPic/xelnia.png",
+  "TotalRanked": 45654,
+  "Status": "Offline"
+}
+```
+
+```json [NodeJS]
+{
+  "user": "xelnia",
+  "memberSince": "2021-12-20 03:13:20",
+  "lastActivity": {
+    "id": 0,
+    "timestamp": null,
+    "lastupdate": null,
+    "activitytype": null,
+    "user": "xelnia",
+    "data": null,
+    "data2": null
+  },
+  "richPresenceMsg": "L=08-1 | 1 lives | 189300 points",
+  "lastGameId": 15758,
+  "contribCount": 0,
+  "contribYield": 0,
+  "totalPoints": 8317,
+  "totalSoftcorePoints": 0,
+  "totalTruePoints": 26760,
+  "permissions": 1,
+  "untracked": false,
+  "id": 224958,
+  "userWallActive": true,
+  "motto": "",
+  "rank": 4616,
+  "recentlyPlayedCount": 1,
+  "recentlyPlayed": [
+    {
+      "gameId": 15758,
+      "consoleId": 27,
+      "consoleName": "Arcade",
+      "title": "Crazy Kong",
+      "imageIcon": "/Images/068578.png",
+      "imageTitle": "/Images/068579.png",
+      "imageIngame": "/Images/068580.png",
+      "imageBoxArt": "/Images/068205.png",
+      "lastPlayed": "2023-03-09 08:20:34",
+      "achievementsTotal": 43
+    }
+  ],
+  "awarded": {
+    "15758": {
+      "numPossibleAchievements": 43,
+      "possibleScore": 615,
+      "numAchieved": 41,
+      "scoreAchieved": 490,
+      "numAchievedHardcore": 41,
+      "scoreAchievedHardcore": 490
+    }
+  },
+  "recentAchievements": {
+    "15758": {
+      "293505": {
+        "id": 293505,
+        "gameId": 15758,
+        "gameTitle": "Crazy Kong",
+        "title": "Prodigy of the Arcade",
+        "description": "Score 200,000 points",
+        "points": 25,
+        "type": null,
+        "badgeName": "325551",
+        "isAwarded": true,
+        "dateAwarded": "2023-03-09 08:20:34",
+        "hardcoreAchieved": true
+      },
+      "293526": {
+        "id": 293526,
+        "gameId": 15758,
+        "gameTitle": "Crazy Kong",
+        "title": "Super Smasher III",
+        "description": "Get 6 smashes with a single bottom hammer on any barrel board",
+        "points": 10,
+        "type": null,
+        "badgeName": "325572",
+        "isAwarded": true,
+        "dateAwarded": "2023-03-09 08:19:37",
+        "hardcoreAchieved": true
+      }
+    }
+  },
+  "lastGame": {
+    "id": 15758,
+    "title": "Crazy Kong",
+    "consoleId": 27,
+    "consoleName": "Arcade",
+    "forumTopicId": 20415,
+    "flags": 0,
+    "imageIcon": "/Images/068578.png",
+    "imageTitle": "/Images/068579.png",
+    "imageIngame": "/Images/068580.png",
+    "imageBoxArt": "/Images/068205.png",
+    "publisher": "Falcon",
+    "developer": "Falcon",
+    "genre": "2D Platforming, Arcade",
+    "released": "1981",
+    "isFinal": 0
+  },
+  "userPic": "/UserPic/xelnia.png",
+  "totalRanked": 45654,
   "status": "Offline"
 }
 ```
 
-## Parameters
-
-| Name                      | Type                                        | Description                                                                                                                  |
-| :------------------------ | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| `authorization`           | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object. |
-| `userName`                | `string`                                    | The user for which to retrieve the summary for.                                                                              |
-| `recentGamesCount`        | `number?`                                   | Optional. How many recent games to fetch. The default is 0.                                                                  |
-| `recentAchievementsCount` | `number?`                                   | Optional. How many recent achievements to fetch. The default is 5.                                                           |
+:::
 
 ## Source
 
-[@retroachievements/api, getUserSummary.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts)  
-[RAWeb, API_GetUserSummary.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php)
+| Repo                     | URL                                                                                      |
+| :----------------------- | :--------------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts         |
