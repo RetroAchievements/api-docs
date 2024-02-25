@@ -163,12 +163,12 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "Claims",
-            link: "/v1/feed/get-claims",
-          },
-          {
             text: "Active Claims",
             link: "/v1/feed/get-active-claims",
+          },
+          {
+            text: "Inactive Claims",
+            link: "/v1/feed/get-claims",
           },
           {
             text: "Top Ten Users",
