@@ -34,7 +34,7 @@ Click the function names to open their complete docs on the docs site.
 - [Game Progress](https://api-docs.retroachievements.org/v1/users/game-progress.html) - Get metadata about a game as well as a user's progress on that game.
 - [All Completion Progress](https://api-docs.retroachievements.org/v1/users/completion-progress.html) - Get metadata about all the user's played games and any awards associated with them.
 - [Awards / Badges](https://api-docs.retroachievements.org/v1/users/user-awards.html) - Get a list of a user's site awards/badges.
-- [`GetUserClaims`](https://api-docs.retroachievements.org/v1/users/get-user-claims.html) - Get a list of set claims made over the lifetime of a user.
+- [Set Development Claims](https://api-docs.retroachievements.org/v1/users/claims.html) - Get a list of set development claims made over the lifetime of a user.
 - [`GetUserGameRankAndScore`](https://api-docs.retroachievements.org/v1/users/get-user-game-rank-and-score.html) - Get metadata about how a user has performed on a given game.
 - [`GetUserPoints`](https://api-docs.retroachievements.org/v1/users/get-user-points.html) - Get a user's total hardcore and softcore points.
 - [`GetUserProgress`](https://api-docs.retroachievements.org/v1/users/get-user-progress.html) - Get a user's progress on a list of specified games.
