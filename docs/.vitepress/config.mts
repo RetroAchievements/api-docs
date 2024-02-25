@@ -83,8 +83,8 @@ export default defineConfig({
             link: "/v1/users/claims",
           },
           {
-            text: "Rank and Score for Game",
-            link: "/v1/users/get-user-game-rank-and-score",
+            text: "Game Rank and Score",
+            link: "/v1/users/game-rank-and-score",
           },
           {
             text: "Point Totals",
