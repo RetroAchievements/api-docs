@@ -79,8 +79,8 @@ export default defineConfig({
             link: "/v1/users/user-awards",
           },
           {
-            text: "Set Claims",
-            link: "/v1/users/get-user-claims",
+            text: "Set Development Claims",
+            link: "/v1/users/claims",
           },
           {
             text: "Rank and Score for Game",
