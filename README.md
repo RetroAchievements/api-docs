@@ -17,9 +17,9 @@
 Learn how to authenticate and start pulling data from RetroAchievements on our documentation website.
 
 - [Get started](https://api-docs.retroachievements.org/getting-started.html)
-- [Get a user's profile information](https://api-docs.retroachievements.org/v1/users/get-user-summary.html)
-- [Look up games a user has completed](https://api-docs.retroachievements.org/v1/users/completion-progress.html)
-- [Get a game's metadata](https://api-docs.retroachievements.org/v1/games/detailed-info.html)
+- [Get a user's profile information](https://api-docs.retroachievements.org/v1/get-user-profile.html)
+- [Look up games a user has completed](https://api-docs.retroachievements.org/v1/get-user-progress.html)
+- [Get a game's metadata](https://api-docs.retroachievements.org/v1/get-game-extended.html)
 
 ## API
 
@@ -32,7 +32,7 @@ Click the function names to open their complete docs on the docs site.
 - [Unlocks (by date range)](https://api-docs.retroachievements.org/v1/get-achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.
 - [Unlocks (on date)](https://api-docs.retroachievements.org/v1/get-achievements-earned-on-day.html) - Get a list of achievements earned by a user on a given date.
 - [Game Progress](https://api-docs.retroachievements.org/v1/get-game-info-and-user-progress.html) - Get metadata about a game as well as a user's progress on that game.
-- [All Completion Progress](https://api-docs.retroachievements.org/v1/get-user-progress.html) - Get metadata about all the user's played games and any awards associated with them.
+- [All Completion Progress](https://api-docs.retroachievements.org/v1/get-user-completion-progress.html) - Get metadata about all the user's played games and any awards associated with them.
 - [Awards / Badges](https://api-docs.retroachievements.org/v1/get-user-awards.html) - Get a list of a user's site awards/badges.
 - [Set Development Claims](https://api-docs.retroachievements.org/v1/get-user-claims.html) - Get a list of set development claims made over the lifetime of a user.
 - [Game Rank and Score](https://api-docs.retroachievements.org/v1/get-user-game-rank-and-score.html) - Get metadata about how a user has performed on a given game.
@@ -76,6 +76,7 @@ Click the function names to open their complete docs on the docs site.
 - [Get Most Recent Tickets](https://api-docs.retroachievements.org/v1/get-ticket-data/get-most-recent-tickets.html)
 - [Get Game Ticket Stats](https://api-docs.retroachievements.org/v1/get-ticket-data/get-game-ticket-stats.html)
 - [Get Developer Ticket Stats](https://api-docs.retroachievements.org/v1/get-ticket-data/get-developer-ticket-stats.html)
+- [Get Achievement Ticket Stats](https://api-docs.retroachievements.org/v1/get-ticket-data/get-achievement-ticket-stats.html)
 
 ## How to Contribute
 

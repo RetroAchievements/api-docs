@@ -72,7 +72,7 @@ export default defineConfig({
           },
           {
             text: "All Completion Progress",
-            link: "/v1/get-user-progress",
+            link: "/v1/get-user-completion-progress",
           },
           {
             text: "Awards / Badges",
