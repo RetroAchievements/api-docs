@@ -61,8 +61,8 @@ Click the function names to open their complete docs on the docs site.
 
 ### Feed
 
-- [`GetActiveClaims`](https://api-docs.retroachievements.org/v1/feed/get-active-claims.html) - Get all active set claims on the site.
-- [`GetClaims`](https://api-docs.retroachievements.org/v1/feed/get-claims.html) - Get all claims of other kinds on the site.
+- [`GetClaims`](https://api-docs.retroachievements.org/v1/feed/get-claims.html) - Retrieve achievement set development claims.
+- [Active Claims](https://api-docs.retroachievements.org/v1/feed/get-active-claims.html) - Retrieve active achievement set development claims.
 - [`GetTopTenUsers`](https://api-docs.retroachievements.org/v1/feed/get-top-ten-users.html) - Get the list of top ten points earners.
 
 ### Event

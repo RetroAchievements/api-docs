@@ -1,49 +1,102 @@
-# getActiveClaims
+<script setup>
+import SampleRequest from '../../components/SampleRequest.vue';
+</script>
+
+# Active Claims
 
 A call to this endpoint returns information about all (1000 max) active set claims.
 
-## Examples
+[[toc]]
 
-```ts
-import { getActiveClaims } from "@retroachievements/api";
+## HTTP Request
 
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetActiveClaims.php</SampleRequest>
+
+### Query Parameters
+
+| Name | Required? | Description       |
+| :--- | :-------- | :---------------- |
+| `z`  | Yes       | Your username.    |
+| `y`  | Yes       | Your web API key. |
+
+## Client Library
+
+::: code-group
+
+```ts [NodeJS]
+import { buildAuthorization, getActiveClaims } from "@retroachievements/api";
+
+// First, build your authorization object.
+const userName = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ userName, webApiKey });
+
+// Then, make the API call.
 const activeClaims = await getActiveClaims(authorization);
 ```
 
-## Returns
+:::
 
-```json
+## Response
+
+::: code-group
+
+```json [HTTP Response]
 [
   {
-    "id": 7044,
-    "user": "blendedsea",
-    "gameId": 19212,
-    "gameTitle": "SpongeBob SquarePants: Battle for Bikini Bottom",
-    "gameIcon": "/Images/059776.png",
-    "consoleName": "PlayStation 2",
-    "consoleId": 22,
-    "claimType": 0,
-    "setType": 0,
-    "status": 0,
-    "extension": 0,
-    "special": 0,
-    "created": "2022-10-04 00:25:06",
-    "doneTime": "2023-01-04 00:25:06",
-    "updated": "2022-10-04 00:25:06",
-    "minutesLeft": 112523,
-    "userIsJrDev": false
+    "ID": 11246,
+    "User": "WanderingHeiho",
+    "GameID": 26971,
+    "GameTitle": "~Homebrew~ No Place To Hide",
+    "GameIcon": "/Images/084916.png",
+    "ConsoleID": 18,
+    "ConsoleName": "Nintendo DS",
+    "ClaimType": 0,
+    "SetType": 0,
+    "Status": 0,
+    "Extension": 0,
+    "Special": 0,
+    "Created": "2023-10-27 23:27:16",
+    "DoneTime": "2024-01-27 23:27:16",
+    "Updated": "2023-10-27 23:27:16",
+    "UserIsJrDev": 0,
+    "MinutesLeft": -41266 // Negative minutes left means the claim is expired.
   }
   // ...
 ]
 ```
 
-## Parameters
+```json [NodeJS]
+[
+  {
+    "id": 11246,
+    "user": "WanderingHeiho",
+    "gameId": 26971,
+    "gameTitle": "~Homebrew~ No Place To Hide",
+    "gameIcon": "/Images/084916.png",
+    "consoleId": 18,
+    "consoleName": "Nintendo DS",
+    "claimType": 0,
+    "setType": 0,
+    "status": 0,
+    "extension": 0,
+    "special": 0,
+    "created": "2023-10-27 23:27:16",
+    "doneTime": "2024-01-27 23:27:16",
+    "updated": "2023-10-27 23:27:16",
+    "userIsJrDev": false,
+    "minutesLeft": -41268 // Negative minutes left means the claim is expired.
+  }
+  // ...
+]
+```
 
-| Name            | Type                                        | Description                                                                                                                  |
-| :-------------- | :------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------- |
-| `authorization` | [`AuthObject`](/v1/data-models/auth-object) | An object that must contain a `userName` and a `webApiKey`. See [this page](/getting-started) for how to create this object. |
+:::
 
 ## Source
 
-[@retroachievements/api, getActiveClaims.ts](https://github.dev/RetroAchievements/api-js/blob/main/src/feed/getActiveClaims.ts)  
-[RAWeb, API_GetActiveClaims.php](https://github.dev/RetroAchievements/RAWeb/blob/master/public/API/API_GetActiveClaims.php)
+| Repo                     | URL                                                                                       |
+| :----------------------- | :---------------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetActiveClaims.php |
+| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getActiveClaims.ts         |
