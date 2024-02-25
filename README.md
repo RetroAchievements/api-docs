@@ -63,7 +63,7 @@ Click the function names to open their complete docs on the docs site.
 
 - [Active Claims](https://api-docs.retroachievements.org/v1/feed/get-active-claims.html) - Retrieve active achievement set development claims.
 - [Inactive Claims](https://api-docs.retroachievements.org/v1/feed/get-claims.html) - Retrieve achievement set development claims that have been completed, dropped, or are expired.
-- [`GetTopTenUsers`](https://api-docs.retroachievements.org/v1/feed/get-top-ten-users.html) - Get the list of top ten points earners.
+- [Top Ten Ranked Users](https://api-docs.retroachievements.org/v1/feed/get-top-ten-users.html) - Get the list of top ten points earners.
 
 ### Event
 
