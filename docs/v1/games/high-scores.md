@@ -4,7 +4,7 @@ import SampleRequest from '../../components/SampleRequest.vue';
 
 # High Scores
 
-A call to this function will retrieve metadata about either the latest masters for a game, or the highest points earners for a game. The game is targeted via its unique ID.
+A call to this endpoint will retrieve metadata about either the latest masters for a game, or the highest points earners for a game. The game is targeted via its unique ID.
 
 [[toc]]
 

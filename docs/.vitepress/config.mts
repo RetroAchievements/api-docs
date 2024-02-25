@@ -96,7 +96,7 @@ export default defineConfig({
           },
           {
             text: "Recently Played Games",
-            link: "/v1/users/get-user-recently-played-games",
+            link: "/v1/users/recently-played-games",
           },
           {
             text: "User Summary",
