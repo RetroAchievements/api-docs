@@ -52,59 +52,59 @@ export default defineConfig({
         items: [
           {
             text: "Profile",
-            link: "/v1/users/profile",
+            link: "/v1/get-user-profile",
           },
           {
             text: "Unlocks (most recent)",
-            link: "/v1/users/recent-achievements",
+            link: "/v1/get-user-recent-achievements",
           },
           {
             text: "Unlocks (by date range)",
-            link: "/v1/users/achievements-earned-between",
+            link: "/v1/get-achievements-earned-between",
           },
           {
             text: "Unlocks (on date)",
-            link: "/v1/users/achievements-earned-on-day",
+            link: "/v1/get-achievements-earned-on-day",
           },
           {
             text: "Game Progress",
-            link: "/v1/users/game-progress",
+            link: "/v1/get-game-info-and-user-progress",
           },
           {
             text: "All Completion Progress",
-            link: "/v1/users/completion-progress",
+            link: "/v1/get-user-progress",
           },
           {
             text: "Awards / Badges",
-            link: "/v1/users/user-awards",
+            link: "/v1/get-user-awards",
           },
           {
             text: "Set Development Claims",
-            link: "/v1/users/claims",
+            link: "/v1/get-user-claims",
           },
           {
             text: "Game Rank and Score",
-            link: "/v1/users/game-rank-and-score",
+            link: "/v1/get-user-game-rank-and-score",
           },
           {
             text: "Point Totals",
-            link: "/v1/users/points",
+            link: "/v1/get-user-points",
           },
           {
             text: "Specific Games Progress",
-            link: "/v1/users/specific-games-progress",
+            link: "/v1/get-user-progress",
           },
           {
             text: "Recently Played Games",
-            link: "/v1/users/recently-played-games",
+            link: "/v1/get-user-recently-played-games",
           },
           {
             text: "Summary",
-            link: "/v1/users/get-user-summary",
+            link: "/v1/get-user-summary",
           },
           {
             text: "Completed Games",
-            link: "/v1/users/completed-games",
+            link: "/v1/get-user-completed-games",
           },
         ],
       },
@@ -114,23 +114,23 @@ export default defineConfig({
         items: [
           {
             text: "Summary",
-            link: "/v1/games/summary",
+            link: "/v1/get-game",
           },
           {
             text: "Extended Details",
-            link: "/v1/games/detailed-info",
+            link: "/v1/get-game-extended",
           },
           {
             text: "Achievement IDs",
-            link: "/v1/games/achievement-ids",
+            link: "/v1/get-achievement-count",
           },
           {
             text: "Unlocks Distribution",
-            link: "/v1/games/achievement-distribution",
+            link: "/v1/get-achievement-distribution",
           },
           {
             text: "High Scores",
-            link: "/v1/games/high-scores",
+            link: "/v1/get-game-rank-and-score",
           },
         ],
       },
@@ -140,11 +140,11 @@ export default defineConfig({
         items: [
           {
             text: "All Systems",
-            link: "/v1/consoles/all-systems",
+            link: "/v1/get-console-ids",
           },
           {
             text: "All Games and Hashes",
-            link: "/v1/consoles/all-games",
+            link: "/v1/get-game-list",
           },
         ],
       },
@@ -154,7 +154,7 @@ export default defineConfig({
         items: [
           {
             text: "All Unlocks",
-            link: "/v1/achievements/get-achievement-unlocks",
+            link: "/v1/get-achievement-unlocks",
           },
         ],
       },
@@ -164,15 +164,15 @@ export default defineConfig({
         items: [
           {
             text: "Active Claims",
-            link: "/v1/feed/get-active-claims",
+            link: "/v1/get-active-claims",
           },
           {
             text: "Inactive Claims",
-            link: "/v1/feed/get-claims",
+            link: "/v1/get-claims",
           },
           {
             text: "Top Ten Ranked Users",
-            link: "/v1/feed/get-top-ten-users",
+            link: "/v1/get-top-ten-users",
           },
         ],
       },
@@ -181,7 +181,7 @@ export default defineConfig({
         items: [
           {
             text: "Achievement of the Week",
-            link: "/v1/events/achievement-of-the-week",
+            link: "/v1/get-achievement-of-the-week",
           },
         ],
       },
@@ -191,27 +191,27 @@ export default defineConfig({
         items: [
           {
             text: "Get Ticket by ID",
-            link: "/v1/tickets/get-ticket-by-id",
+            link: "/v1/get-ticket-data/get-ticket-by-id",
           },
           {
             text: "Get Most Ticketed Games",
-            link: "/v1/tickets/get-most-ticketed-games",
+            link: "/v1/get-ticket-data/get-most-ticketed-games",
           },
           {
             text: "Get Most Recent Tickets",
-            link: "/v1/tickets/get-most-recent-tickets",
+            link: "/v1/get-ticket-data/get-most-recent-tickets",
           },
           {
             text: "Get Game Ticket Stats",
-            link: "/v1/tickets/get-game-ticket-stats",
+            link: "/v1/get-ticket-data/get-game-ticket-stats",
           },
           {
             text: "Get Developer Ticket Stats",
-            link: "/v1/tickets/get-developer-ticket-stats",
+            link: "/v1/get-ticket-data/get-developer-ticket-stats",
           },
           {
             text: "Get Achievement Ticket Stats",
-            link: "/v1/tickets/get-achievement-ticket-stats",
+            link: "/v1/get-ticket-data/get-achievement-ticket-stats",
           },
         ],
       },
