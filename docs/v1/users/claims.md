@@ -25,10 +25,7 @@ A call to this endpoint will retrieve a list of achievement set claims made over
 ::: code-group
 
 ```ts [NodeJS]
-import {
-  buildAuthorization,
-  getGameInfoAndUserProgress,
-} from "@retroachievements/api";
+import { buildAuthorization, getUserClaims } from "@retroachievements/api";
 
 // First, build your authorization object.
 const userName = "<your username on RA>";
