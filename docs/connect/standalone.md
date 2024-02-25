@@ -88,7 +88,7 @@ For now, you can follow this process:
 1. Ask the user what their RA username is.
 2. Once they provide their username, ask them to insert some GUID/key that you generate into their account motto [on this page](https://retroachievements.org/controlpanel.php). If the user is logged in, this URL will always link to the place they can update their motto.
 3. Ask the user to confirm that the key is inserted into their motto.
-4. Once the user gives confirmation, verify that the motto has been updated with the Web API's [user profile endpoint](/v1/users/profile).
+4. Once the user gives confirmation, verify that the motto has been updated with the Web API's [user profile endpoint](/v1/get-user-profile).
 
 Mottos have a maximum length of 50 characters. Once you've confirmed the user motto, it's probably worth reminding the user to reset the motto.
 
