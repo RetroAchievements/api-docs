@@ -14,13 +14,13 @@ A call to this endpoint will retrieve a list of users who have earned an achieve
 
 ### Query Parameters
 
-| Name | Required? | Description                                              |
-| :--- | :-------- | :------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                           |
-| `y`  | Yes       | Your web API key.                                        |
-| `a`  | Yes       | The target achievement ID.                               |
-| `o`  |           | Offset, number of entries to skip (default: 0).          |
-| `c`  |           | Count, number of games to return (default: 50, max 500). |
+| Name | Required? | Description                                                 |
+| :--- | :-------- | :---------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                              |
+| `y`  | Yes       | Your web API key.                                           |
+| `a`  | Yes       | The target achievement ID.                                  |
+| `c`  |           | Count, number of records to return (default: 50, max: 500). |
+| `o`  |           | Offset, number of entries to skip (default: 0).             |
 
 ## Client Library
 

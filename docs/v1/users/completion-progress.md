@@ -20,13 +20,13 @@ A user's completion progress can be found in several places, most prolifically o
 
 ### Query Parameters
 
-| Name | Required? | Description                                          |
-| :--- | :-------- | :--------------------------------------------------- |
-| `z`  | Yes       | Your username.                                       |
-| `y`  | Yes       | Your web API key.                                    |
-| `u`  | Yes       | The target username.                                 |
-| `c`  |           | How many records to return (default: 100, max: 500). |
-| `o`  |           | Number of entries to skip (default: 0)               |
+| Name | Required? | Description                                                  |
+| :--- | :-------- | :----------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                               |
+| `y`  | Yes       | Your web API key.                                            |
+| `u`  | Yes       | The target username.                                         |
+| `c`  |           | Count, number of records to return (default: 100, max: 500). |
+| `o`  |           | Offset, number of entries to skip (default: 0).              |
 
 ## Client Library
 
