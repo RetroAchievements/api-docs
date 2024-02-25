@@ -88,7 +88,7 @@ export default defineConfig({
           },
           {
             text: "Point Totals",
-            link: "/v1/users/get-user-points",
+            link: "/v1/users/points",
           },
           {
             text: "Progress for Multiple Games",
