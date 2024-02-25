@@ -1,6 +1,6 @@
 # getActiveClaims
 
-A call to this function returns information about all (1000 max) active set claims.
+A call to this endpoint returns information about all (1000 max) active set claims.
 
 ## Examples
 

@@ -1,6 +1,6 @@
 # getClaims
 
-A call to this function returns information about all (1000 max) set claims of a specified kind: completed, dropped, or expired.
+A call to this endpoint returns information about all (1000 max) set claims of a specified kind: completed, dropped, or expired.
 
 ## Examples
 

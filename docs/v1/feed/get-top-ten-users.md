@@ -1,6 +1,6 @@
 # getTopTenUsers
 
-A call to this function will retrieve the current top ten users on the site.
+A call to this endpoint will retrieve the current top ten users on the site.
 
 ## Examples
 

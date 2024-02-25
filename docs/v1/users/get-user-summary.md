@@ -1,6 +1,6 @@
 # getUserSummary
 
-A call to this function will retrieve summary information about a given user, targeted by username.
+A call to this endpoint will retrieve summary information about a given user, targeted by username.
 
 ## Examples
 

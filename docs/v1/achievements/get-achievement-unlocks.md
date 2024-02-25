@@ -1,6 +1,6 @@
 # getAchievementUnlocks
 
-A call to this function will retrieve a list of users who have earned an achievement, targeted by the achievement's ID.
+A call to this endpoint will retrieve a list of users who have earned an achievement, targeted by the achievement's ID.
 
 ## Examples
 

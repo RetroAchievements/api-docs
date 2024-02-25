@@ -38,7 +38,7 @@ Click the function names to open their complete docs on the docs site.
 - [Game Rank and Score](https://api-docs.retroachievements.org/v1/users/game-rank-and-score.html) - Get metadata about how a user has performed on a given game.
 - [Point Totals](https://api-docs.retroachievements.org/v1/users/points.html) - Get a user's total hardcore and softcore points.
 - [Specific Games Progress](https://api-docs.retroachievements.org/v1/users/specific-games-progress.html) - Get a user's progress on a list of specified games.
-- [`GetUserRecentlyPlayedGames`](https://api-docs.retroachievements.org/v1/users/get-user-recently-played-games.html) - Get a list of games a user has recently played.
+- [Recently Played Games](https://api-docs.retroachievements.org/v1/users/recently-played-games.html) - Get a list of games a user has recently played.
 - [`GetUserSummary`](https://api-docs.retroachievements.org/v1/users/get-user-summary.html) - Get a user's profile metadata.
 - [Completed Games](https://api-docs.retroachievements.org/v1/users/completed-games.html) - Legacy endpoint. Get hardcore and softcore completion metadata about games a user has played.
 

@@ -4,7 +4,7 @@ import SampleRequest from '../../components/SampleRequest.vue';
 
 # User Specific Games Progress
 
-A call to this function will retrieve a given user's progress on a given list of games, targeted by a list of game IDs.
+A call to this endpoint will retrieve a given user's progress on a given list of games, targeted by a list of game IDs.
 
 ::: warning
 
