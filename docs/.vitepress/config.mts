@@ -91,8 +91,8 @@ export default defineConfig({
             link: "/v1/users/points",
           },
           {
-            text: "Progress for Multiple Games",
-            link: "/v1/users/get-user-progress",
+            text: "Specific Games Progress",
+            link: "/v1/users/specific-games-progress",
           },
           {
             text: "Recently Played Games",
