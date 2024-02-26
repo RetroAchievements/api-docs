@@ -172,8 +172,8 @@ if (response is NetworkResponse.Success) {
 
 ## Source
 
-| Repo                               | URL                                                                                                                      |
-|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameExtended.php                                |
-| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
-| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameExtended.ts                                        |
+| Repo                         | URL                                                                                                                  |
+|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameExtended.php                            |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameExtended.ts                                    |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

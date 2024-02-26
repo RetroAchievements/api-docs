@@ -130,8 +130,8 @@ Possible `AwardType` values are "Mastery/Completion", "Achievement Unlocks Yield
 
 ## Source
 
-| Repo                               | URL                                                                                                                      |
-|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserAwards.php                                  |
-| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
-| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserAwards.ts                                          |
+| Repo                         | URL                                                                                                                  |
+|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserAwards.php                              |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserAwards.ts                                      |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

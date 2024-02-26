@@ -55,6 +55,8 @@ const gameList = await getGameList(authorization, {
 
 ```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
 val response: NetworkResponse<GetGameList.Response, ErrorResponse> = api.getGameList(
     consoleId = 1
 )
@@ -123,8 +125,8 @@ if (response is NetworkResponse.Success) {
 
 ## Source
 
-| Repo                               | URL                                                                                                                      |
-|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameList.php                                    |
-| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
-| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/console/getGameList.ts                                         |
+| Repo                         | URL                                                                                                                  |
+|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameList.php                                |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/console/getGameList.ts                                     |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

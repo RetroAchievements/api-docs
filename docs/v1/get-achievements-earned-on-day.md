@@ -51,6 +51,9 @@ const achievements = await getAchievementsEarnedOnDay(authorization, {
 ```
 
 ```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
 // create dates
 val dateFormat = SimpleDateFormat("yyyy-MM-dd")
 val date: Date = dateFormat.parse("2022-10-14")
@@ -131,8 +134,8 @@ if (response is NetworkResponse.Success) {
 
 ## Source
 
-| Repo                               | URL                                                                                                                      |
-|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedOnDay.php                     |
-| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
-| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedOnDay.ts                             |
+| Repo                         | URL                                                                                                                  |
+|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedOnDay.php                 |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedOnDay.ts                         |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

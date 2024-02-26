@@ -44,6 +44,9 @@ const consoleIds = await getConsoleIds(authorization);
 
 ```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val credentials = RetroCredentials("<username>", "<web api key>")
 val response: NetworkResponse<GetConsoleID.Response, ErrorResponse> = api.getConsoleIds()
 
 if (response is NetworkResponse.Success) {
@@ -83,8 +86,8 @@ if (response is NetworkResponse.Success) {
 
 ## Source
 
-| Repo                               | URL                                                                                                                      |
-|:-----------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| RetroAchievements/RAWeb            | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetConsoleIDs.php                                  |
-| Daijishou/RetroAchievements-Kotlin | https://github.com/Daijishou/RetroAchievements-Kotlin/blob/master/src/main/kotlin/retroachivements/api/RetroInterface.kt |
-| RetroAchievements/api-js           | https://github.com/RetroAchievements/api-js/blob/main/src/console/getConsoleIds.ts                                       |
+| Repo                         | URL                                                                                                                  |
+|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetConsoleIDs.php                              |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/console/getConsoleIds.ts                                   |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
