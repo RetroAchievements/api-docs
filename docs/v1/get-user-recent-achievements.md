@@ -25,7 +25,7 @@ The recent unlocks can also be found on the "Unlocked Achievements" page:
 ### Query Parameters
 
 | Name | Required? | Description                           |
-|:-----|:----------|:--------------------------------------|
+| :--- | :-------- | :------------------------------------ |
 | `z`  | Yes       | Your username.                        |
 | `y`  | Yes       | Your web API key.                     |
 | `u`  | Yes       | The target username.                  |
@@ -129,7 +129,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserRecentAchievements.php                  |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserRecentAchievements.ts                          |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

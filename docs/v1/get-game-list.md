@@ -25,7 +25,7 @@ The system games list can be found by selecting any system in the "Games" menu f
 ### Query Parameters
 
 | Name | Required? | Description                                                    |
-|:-----|:----------|:---------------------------------------------------------------|
+| :--- | :-------- | :------------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                                 |
 | `y`  | Yes       | Your web API key.                                              |
 | `i`  | Yes       | The target system ID.                                          |
@@ -126,7 +126,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameList.php                                |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/console/getGameList.ts                                     |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

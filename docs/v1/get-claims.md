@@ -15,7 +15,7 @@ A call to this endpoint returns information about all (1000 max) achievement set
 ### Query Parameters
 
 | Name | Required? | Description                                                                        |
-|:-----|:----------|:-----------------------------------------------------------------------------------|
+| :--- | :-------- | :--------------------------------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                                                     |
 | `y`  | Yes       | Your web API key.                                                                  |
 | `k`  |           | The desired claim kind: 1 (completed), 2 (dropped), or 3 (expired). Defaults to 1. |
@@ -119,7 +119,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetClaims.php                                  |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getClaims.ts                                          |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

@@ -21,7 +21,7 @@ Most of this data can be found on the game page, for example, [Sonic the Hedgeho
 ### Query Parameters
 
 | Name | Required? | Description                                                       |
-|:-----|:----------|:------------------------------------------------------------------|
+| :--- | :-------- | :---------------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                                    |
 | `y`  | Yes       | Your web API key.                                                 |
 | `i`  | Yes       | The target game ID.                                               |
@@ -173,7 +173,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameExtended.php                            |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameExtended.ts                                    |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

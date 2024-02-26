@@ -21,7 +21,7 @@ The current Achievement of the Week can be found on the site's home page:
 ### Query Parameters
 
 | Name | Required? | Description       |
-|:-----|:----------|:------------------|
+| :--- | :-------- | :---------------- |
 | `z`  | Yes       | Your username.    |
 | `y`  | Yes       | Your web API key. |
 
@@ -145,7 +145,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementOfTheWeek.php                    |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getAchievementOfTheWeek.ts                            |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

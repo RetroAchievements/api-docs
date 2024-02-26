@@ -15,7 +15,7 @@ A call to `API_GetTicketData` in this manner will retrieve ticket metadata infor
 ### Query Parameters
 
 | Name | Required? | Description                                                 |
-|:-----|:----------|:------------------------------------------------------------|
+| :--- | :-------- | :---------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                              |
 | `y`  | Yes       | Your web API key.                                           |
 | `c`  |           | Count, number of records to return (default: 10, max: 100). |
@@ -138,7 +138,7 @@ if (response is NetworkResponse.Success) {
 ## Source
 
 | Repo                         | URL                                                                                                                  |
-|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
 | RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetTicketData.php                              |
 | RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/ticket/getTicketData.ts                                    |
 | RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
