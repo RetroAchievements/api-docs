@@ -42,6 +42,7 @@ https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?z=[your_userna
 
 ## Client Libraries
 
-| Platform / Language | Repo                                                                      |
-| :------------------ | :------------------------------------------------------------------------ |
-| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js) |
+| Platform / Language | Repo                                                                              |
+| :------------------ | :-------------------------------------------------------------------------------- |
+| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js)         |
+| JVM (Kotlin)        | [`RetroAchievements/api-kotlin`](https://github.com/RetroAchievements/api-kotlin) |

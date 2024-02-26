@@ -50,6 +50,27 @@ const gameRankAndScore = await getGameRankAndScore(authorization, {
 });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetGameRankAndScore.Response, ErrorResponse> = api.getGameRankAndScore(
+    gameId = 14402
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val rankAndScore: GetGameRankAndScore.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -86,7 +107,8 @@ How entities are ordered in this response should be noted. For `latest-masters`,
 
 ## Source
 
-| Repo                     | URL                                                                                           |
-| :----------------------- | :-------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameRankAndScore.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameRankAndScore.ts         |
+| Repo                         | URL                                                                                                                  |
+| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameRankAndScore.php                        |
+| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameRankAndScore.ts                                |
+| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
