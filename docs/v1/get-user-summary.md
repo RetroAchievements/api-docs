@@ -294,8 +294,8 @@ if (response is NetworkResponse.Success) {
 
 ## Source
 
-| Repo                         | URL                                                                                                                  |
-| :--------------------------- | :------------------------------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php                             |
-| RetroAchievements/api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts                                     |
-| RetroAchievements/api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php                             |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts                                     |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
