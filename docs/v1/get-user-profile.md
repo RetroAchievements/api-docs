@@ -45,7 +45,7 @@ const userProfile = await getUserProfile(authorization, {
 });
 ```
 
-```kotlin
+```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
 
