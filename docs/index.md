@@ -45,4 +45,4 @@ https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?z=[your_userna
 | Platform / Language | Repo                                                                              |
 | :------------------ | :-------------------------------------------------------------------------------- |
 | NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js)         |
-| Kotlin              | [`RetroAchievements/api-kotlin`](https://github.com/RetroAchievements/api-kotlin) |
+| JVM (Kotlin)              | [`RetroAchievements/api-kotlin`](https://github.com/RetroAchievements/api-kotlin) |
