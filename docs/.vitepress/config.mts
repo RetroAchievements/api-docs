@@ -163,6 +163,10 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
+            text: "All Recent Game Awards",
+            link: "/v1/get-recent-game-awards",
+          },
+          {
             text: "Active Claims",
             link: "/v1/get-active-claims",
           },
