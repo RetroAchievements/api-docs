@@ -52,6 +52,34 @@ const achievements = await getAchievementsEarnedBetween(authorization, {
 });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+// create dates
+val dateFormat = SimpleDateFormat("yyyy-MM-dd")
+val fromDate: Date = dateFormat.parse("2022-01-01")
+val toDate: Date = dateFormat.parse("2022-01-08")
+
+val response: NetworkResponse<GetUserRecentAchievements.Response, ErrorResponse> = api.getAchievementsEarnedBetween(
+    username = "Jamiras",
+    fromDate = fromDate,
+    toDate = toDate
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val achievements: GetUserRecentAchievements.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -110,7 +138,8 @@ const achievements = await getAchievementsEarnedBetween(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                                    |
-| :----------------------- | :----------------------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedBetween.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedBetween.ts         |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetAchievementsEarnedBetween.php               |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getAchievementsEarnedBetween.ts                       |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

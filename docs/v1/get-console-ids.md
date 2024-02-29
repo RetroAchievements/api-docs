@@ -42,6 +42,26 @@ const authorization = buildAuthorization({ userName, webApiKey });
 const consoleIds = await getConsoleIds(authorization);
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val credentials = RetroCredentials("<username>", "<web api key>")
+val response: NetworkResponse<GetConsoleID.Response, ErrorResponse> = api.getConsoleIds()
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val consoleIds: GetConsoleID.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -70,7 +90,8 @@ const consoleIds = await getConsoleIds(authorization);
 
 ## Source
 
-| Repo                     | URL                                                                                     |
-| :----------------------- | :-------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetConsoleIDs.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/console/getConsoleIds.ts      |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetConsoleIDs.php                              |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/console/getConsoleIds.ts                                   |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

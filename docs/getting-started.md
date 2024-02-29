@@ -27,18 +27,53 @@ curl https://retroachievements.org/API/API_GetTopTenUsers.php?z=[your_username]&
 
 ## Quick Start (Client Library)
 
-| Platform / Language | Repo                                                                      |
-| :------------------ | :------------------------------------------------------------------------ |
-| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js) |
+| Platform / Language | Repo                                                                              |
+| :------------------ | :-------------------------------------------------------------------------------- |
+| NodeJS (JavaScript) | [`RetroAchievements/api-js`](https://github.com/RetroAchievements/api-js)         |
+| JVM (Kotlin)        | [`RetroAchievements/api-kotlin`](https://github.com/RetroAchievements/api-kotlin) |
 
-Currently, our only official client library is for JavaScript/TypeScript/NodeJS. Additional client libraries will be added in the future for other tech stacks.
+Currently, our official client libraries are for JavaScript/TypeScript/NodeJS and Kotlin.
+Additional client libraries will be added in the future for other tech stacks and platforms.
 
-To use our client library, you'll need to first install the package. Then, you'll create an authentication object. After these steps are completed, you are able to use any function provided by the library.
+To use one of our client libraries, you'll need to first install the package corresponding to your tech stack.
+Then, you'll create an authentication object.
+After these steps are completed, you are able to use any function provided by the library.
 
 ::: code-group
 
 ```bash [NodeJS]
 npm install --save @retroachievements/api
+```
+
+```xml [Kotlin + Maven]
+<!-- add the jitpack.io repository to your `pom.xml` </repositories> -->
+<repository>
+    <id>jitpack.io</id>
+    <url>https://www.jitpack.io</url>
+</repository>
+
+<!-- Then you'll be able to import the kotlin library by adding the following dependency to your `pom.xml` </dependencies> -->
+<dependency>
+    <groupId>com.github.RetroAchievements</groupId>
+    <artifactId>api-kotlin</artifactId>
+    <version>1.0.1</version>
+</dependency>
+```
+
+```groovy [Kotlin + Gradle]
+// Add it in your root build.gradle at the end of repositories:
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+// Add the dependency
+dependencies {
+    implementation 'com.github.RetroAchievements:api-kotlin:1.0.1'
+}
 ```
 
 <!-- EXAMPLE OF HOW TO ADD OTHER PLATFORMS
@@ -51,7 +86,7 @@ composer setup @retroachievements/api
 
 <br />
 
-You can now create your authorization object using your web API key.
+You can now create your authorization object using your RA username & web API key.
 
 ::: code-group
 
@@ -64,20 +99,37 @@ const webApiKey = "<your web API key>";
 const authorization = buildAuthorization({ userName, webApiKey });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+// access the api interface in `api`
+```
+
 :::
 
 <br />
 
-You now have all you need to use any function in the API. Each function takes this authorization object as its first argument. Here's an example:
+You now have all you need to use any function in the API.
+Here's a basic example of how to access the API:
 
 ::: code-group
 
 ```ts [NodeJS]
 import { getGame } from "@retroachievements/api";
 
+// Each function takes this authorization object as its first argument. Here's an example:
 // This returns basic metadata about the game on this page:
 // https://retroachievements.org/game/14402
 const game = await getGame(authorization, { gameId: 14402 });
+```
+
+```kotlin [Kotlin]
+// This returns basic metadata about the game on this page:
+// https://retroachievements.org/game/14402
+val response: NetworkResponse<GetGame.Response, ErrorResponse> = api.getGame(
+    gameId = 14402
+)
 ```
 
 :::

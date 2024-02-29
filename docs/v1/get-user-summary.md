@@ -55,6 +55,27 @@ const userSummary = await getUserSummary(authorization, {
 });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserSummary.Response, ErrorResponse> = api.getUserSummary(
+    username = "xelnia",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userProgress: GetUserSummary.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -273,7 +294,8 @@ const userSummary = await getUserSummary(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                      |
-| :----------------------- | :--------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts         |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSummary.php                             |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSummary.ts                                     |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
