@@ -70,7 +70,11 @@ if (response is NetworkResponse.Success) {
 
 ```json [HTTP Response]
 [
-  { "ID": 1, "Name": "Mega Drive" }
+  {
+    "ID": 1,
+    "Name": "Mega Drive",
+    "IconURL": "https://static.retroachievements.org/assets/images/system/md.png"
+  }
   // ...
 ]
 ```
