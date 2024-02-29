@@ -39,6 +39,27 @@ const userPoints = await getUserPoints(authorization, {
 });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserPoints.Response, ErrorResponse> = api.getUserPoints(
+    username = "Hexadigital"
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userPoints: GetUserPoints.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -63,7 +84,8 @@ const userPoints = await getUserPoints(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                     |
-| :----------------------- | :-------------------------------------------------------------------------------------- |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserPoints.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserPoints.ts         |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserPoints.php                              |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserPoints.ts                                      |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |

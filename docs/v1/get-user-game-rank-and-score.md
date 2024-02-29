@@ -44,6 +44,28 @@ const userGameRankAndScore = await getUserGameRankAndScore(authorization, {
 });
 ```
 
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserGameRankAndScore.Response, ErrorResponse> = api.getUserGameRankAndScore(
+    username = "WCopeland",
+    gameId = 14402
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userGameRankAndScore: GetUserGameRankAndScore.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -78,7 +100,8 @@ const userGameRankAndScore = await getUserGameRankAndScore(authorization, {
 
 ## Source
 
-| Repo                     | URL                                                                                               |
-| :----------------------- | :------------------------------------------------------------------------------------------------ |
-| RetroAchievements/RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserGameRankAndScore.php |
-| RetroAchievements/api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserGameRankAndScore.ts         |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserGameRankAndScore.php                    |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserGameRankAndScore.ts                            |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
