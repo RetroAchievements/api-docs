@@ -20,10 +20,12 @@ The systems list can be found by selecting the "Games" menu from the site navbar
 
 ### Query Parameters
 
-| Name | Required? | Description       |
-| :--- | :-------- | :---------------- |
-| `z`  | Yes       | Your username.    |
-| `y`  | Yes       | Your web API key. |
+| Name | Required? | Description                                                              |
+| :--- | :-------- | :----------------------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                                           |
+| `y`  | Yes       | Your web API key.                                                        |
+| `a`  |           | If 1, only return active systems. Defaults to 0.                         |
+| `g`  |           | If 1, only return gaming systems (not Hubs, Events, etc). Defaults to 0. |
 
 ## Client Library
 
@@ -73,7 +75,9 @@ if (response is NetworkResponse.Success) {
   {
     "ID": 1,
     "Name": "Mega Drive",
-    "IconURL": "https://static.retroachievements.org/assets/images/system/md.png"
+    "IconURL": "https://static.retroachievements.org/assets/images/system/md.png",
+    "Active": true,
+    "IsGameSystem": true
   }
   // ...
 ]
