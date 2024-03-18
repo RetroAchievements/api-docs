@@ -26,6 +26,7 @@ This data can be found on the Recent Game Awards page, for example:
 | `y`  | Yes       | Your web API key.                                                                                                                                                          |
 | `d`  |           | Starting date (YYYY-MM-DD) (default: now).                                                                                                                                 |
 | `o`  |           | Offset, number of entries to skip (default: 0).                                                                                                                            |
+| `c`  |           | Count, number of entries to return (default: 25, maximum: 100).                                                                                                            |
 | `k`  |           | A comma-separated list of desired game award kinds. Possible values are "beaten-softcore", "beaten-hardcore", "completed", and "mastered" (default: all game award kinds). |
 
 ## Client Library
