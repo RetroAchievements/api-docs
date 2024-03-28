@@ -63,6 +63,7 @@ Click the function names to open their complete docs on the docs site.
 
 ### Feed
 
+- [All Recent Game Awards](https://api-docs.retroachievements.org/v1/get-recent-game-awards.html) - Retrieve all recent game awards granted to players.
 - [Active Claims](https://api-docs.retroachievements.org/v1/get-active-claims.html) - Retrieve active achievement set development claims.
 - [Inactive Claims](https://api-docs.retroachievements.org/v1/get-claims.html) - Retrieve achievement set development claims that have been completed, dropped, or are expired.
 - [Top Ten Ranked Users](https://api-docs.retroachievements.org/v1/get-top-ten-users.html) - Get the list of top ten points earners.
