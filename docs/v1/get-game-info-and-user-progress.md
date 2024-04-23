@@ -14,12 +14,13 @@ A call to this endpoint will retrieve extended metadata about a game, in additio
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
-| `g`  | Yes       | The target game ID.  |
+| Name | Required? | Description                                                        |
+| :--- | :-------- | :----------------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                                     |
+| `y`  | Yes       | Your web API key.                                                  |
+| `u`  | Yes       | The target username.                                               |
+| `g`  | Yes       | The target game ID.                                                |
+| `a`  |           | Set to "1" if user award metadata should be included (default: 0). |
 
 ## Client Library
 
@@ -126,7 +127,9 @@ if (response is NetworkResponse.Success) {
   "NumDistinctPlayersCasual": 27080,
   "NumDistinctPlayersHardcore": 27080,
   "UserCompletion": "100.00%",
-  "UserCompletionHardcore": "100.00%"
+  "UserCompletionHardcore": "100.00%",
+  "HighestAwardKind": "mastered",
+  "HighestAwardDate": "2024-04-23T21:28:49+00:00"
 }
 ```
 
@@ -180,7 +183,9 @@ if (response is NetworkResponse.Success) {
   "numAwardedToUser": 4,
   "numAwardedToUserHardcore": 4,
   "userCompletion": "12.00%",
-  "userCompletionHardcore": "12.00%"
+  "userCompletionHardcore": "12.00%",
+  "highestAwardKind": "mastered",
+  "highestAwardDate": "2024-04-23T21:28:49+00:00"
 }
 ```
 
