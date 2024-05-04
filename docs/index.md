@@ -1,5 +1,11 @@
 # Welcome
 
+::: warning Are you an emulator developer?
+
+This documentation is for the web API. [rcheevos](https://github.com/RetroAchievements/rcheevos) is our emulator integration library. We have a handy [integration guide](https://github.com/RetroAchievements/rcheevos/wiki/rc_client-integration) that you may find useful if you're looking to add RetroAchievements support to your emulator.
+
+:::
+
 The RetroAchievements API provides a massive amount of data from RetroAchievements in JSON format. You can fetch information on all sorts of platform content, including game, user, and achievement data.
 
 In addition to making raw HTTP requests, you can also use a client library which directly integrates with your tech stack.
