@@ -88,13 +88,13 @@ First, fork this repository and clone your fork. Then, in a terminal, `cd` into 
 ### Installation
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Dev Server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 You can now open your local docs site in your browser. By default, this can done by visiting http://localhost:5173/.
