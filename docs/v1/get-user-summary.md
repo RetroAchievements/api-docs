@@ -42,14 +42,14 @@ Recent achievements are pulled from recent games, so if you ask for 1 game and 1
 import { buildAuthorization, getUserSummary } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
 const userSummary = await getUserSummary(authorization, {
-  userName: "xelnia",
+  username: "xelnia",
   recentGamesCount: 1,
   recentAchievementsCount: 2,
 });

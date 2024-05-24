@@ -31,7 +31,25 @@ This data can be found on the Recent Game Awards page, for example:
 
 ## Client Library
 
-Not yet supported.
+::: code-group
+
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getRecentGameAwards,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const game = await getRecentGameAwards(authorization);
+```
+
+:::
 
 ## Response
 
@@ -56,10 +74,30 @@ Not yet supported.
 }
 ```
 
+```json [NodeJS]
+{
+  "count": 25,
+  "total": 452857,
+  "results": [
+    {
+      "user": "renanbrj",
+      "awardKind": "mastered",
+      "awardDate": "2022-01-01T23:48:04+00:00",
+      "gameId": 14_284,
+      "gameTitle": "Batman Returns",
+      "consoleId": 15,
+      "consoleName": "Game Gear"
+    }
+    // ...
+  ]
+}
+```
+
 :::
 
 ## Source
 
-| Repo  | URL                                                                                           |
-| :---- | :-------------------------------------------------------------------------------------------- |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetRecentGameAwards.php |
+| Repo   | URL                                                                                           |
+| :----- | :-------------------------------------------------------------------------------------------- |
+| RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetRecentGameAwards.php |
+| api-js | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getRecentGameAwards.ts         |

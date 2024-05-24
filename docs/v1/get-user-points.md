@@ -28,14 +28,14 @@ A call to this endpoint will retrieve a given user's hardcore and softcore point
 import { buildAuthorization, getUserPoints } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
 const userPoints = await getUserPoints(authorization, {
-  userName: "Hexadigital",
+  username: "Hexadigital",
 });
 ```
 
