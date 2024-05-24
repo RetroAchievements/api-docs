@@ -27,10 +27,10 @@ A call to this endpoint will retrieve the current top ten users, ranked by hardc
 import { buildAuthorization, getTopTenUsers } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
 const topTenUsers = await getTopTenUsers(authorization);
@@ -75,7 +75,7 @@ if (response is NetworkResponse.Success) {
 ```json [NodeJS]
 [
   {
-    "userName": "MaxMilyin",
+    "username": "MaxMilyin",
     "totalPoints": 399597,
     "totalRatioPoints": 1599212
   }

@@ -39,14 +39,14 @@ import {
 } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
 const achievements = await getAchievementsEarnedBetween(authorization, {
-  userName: "Jamiras",
+  username: "Jamiras",
   fromDate: new Date("2022-01-01"),
   toDate: new Date("2022-01-08"),
 });

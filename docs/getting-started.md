@@ -93,10 +93,10 @@ You can now create your authorization object using your RA username & web API ke
 ```ts [NodeJS]
 import { buildAuthorization } from "@retroachievements/api";
 
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 ```
 
 ```kotlin [Kotlin]

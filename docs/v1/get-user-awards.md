@@ -34,13 +34,13 @@ The easiest place to see a summary of user awards in the Progression Status comp
 import { buildAuthorization, getUserAwards } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
-const userAwards = await getUserAwards(authorization, { userName: "xelnia" });
+const userAwards = await getUserAwards(authorization, { username: "xelnia" });
 ```
 
 ```kotlin [Kotlin]

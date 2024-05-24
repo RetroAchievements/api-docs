@@ -38,14 +38,14 @@ import {
 } from "@retroachievements/api";
 
 // First, build your authorization object.
-const userName = "<your username on RA>";
+const username = "<your username on RA>";
 const webApiKey = "<your web API key>";
 
-const authorization = buildAuthorization({ userName, webApiKey });
+const authorization = buildAuthorization({ username, webApiKey });
 
 // Then, make the API call.
 const achievements = await getAchievementsEarnedOnDay(authorization, {
-  userName: "MaxMilyin",
+  username: "MaxMilyin",
   onDate: new Date("2022-10-14"),
 });
 ```
