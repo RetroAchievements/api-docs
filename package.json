@@ -1,7 +1,6 @@
 {
   "name": "api-docs",
-  "version": "1.0.0",
-  "description": "",
+  "private": true,
   "main": "index.js",
   "engines": {
     "node": ">=20"
@@ -15,7 +14,6 @@
     "format:check": "prettier --check . '**/*.{json,md,js,ts,tsx}'",
     "prepare": "husky install"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "vitepress": "^1.0.0-rc.32",
@@ -31,5 +29,6 @@
   },
   "lint-staged": {
     "*.{json,md,js,ts,tsx}": "prettier --write"
-  }
+  },
+  "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7"
 }
