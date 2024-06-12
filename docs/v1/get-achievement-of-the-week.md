@@ -100,6 +100,7 @@ if (response is NetworkResponse.Success) {
     {
       "User": "Agnam",
       "RAPoints": 56120,
+      "RASoftcorePoints": 1267,
       "DateAwarded": "2023-10-26T22:13:34.000000Z",
       "HardcoreMode": 1
     }
@@ -131,6 +132,7 @@ if (response is NetworkResponse.Success) {
     {
       "user": "Tirbaba2",
       "rAPoints": "72",
+      "rASoftcorePoints": "150",
       "dateAwarded": "2022-10-10 01:42:19",
       "hardcoreMode": "1"
     }
