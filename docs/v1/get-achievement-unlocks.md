@@ -99,6 +99,7 @@ if (response is NetworkResponse.Success) {
     {
       "User": "vipotaenko02",
       "RAPoints": 0,
+      "RASoftcorePoints": 0,
       "DateAwarded": "2023-10-27T00:19:05.000000Z",
       "HardcoreMode": 0
     }
@@ -129,6 +130,7 @@ if (response is NetworkResponse.Success) {
     {
       "user": "vipotaenko02",
       "raPoints": 0,
+      "raSoftcorePoints": 0,
       "dateAwarded": "2023-10-27T00:19:05.000000Z",
       "hardcoreMode": false
     }
