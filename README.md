@@ -29,6 +29,7 @@ Click the function names to open their complete docs on the docs site.
 
 ### User
 
+- [Login](https://api-docs.retroachievements.org/v2/login.html) - Exchange a user's credentials for their web API key.
 - [Profile](https://api-docs.retroachievements.org/v1/get-user-profile.html) - Get a user's basic profile information.
 - [Unlocks (most recent)](https://api-docs.retroachievements.org/v1/get-user-recent-achievements.html) - Get a list of achievements recently earned by the user.
 - [Unlocks (by date range)](https://api-docs.retroachievements.org/v1/get-achievements-earned-between.html) - Get a list of achievements earned by a user between two dates.

@@ -51,6 +51,10 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
+            text: "Login",
+            link: "/v2/login",
+          },
+          {
             text: "Profile",
             link: "/v1/get-user-profile",
           },
