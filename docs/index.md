@@ -24,7 +24,7 @@ It is your responsibility to maintain your usage of the API. Much care is taken 
 
 The API can be fully accessed at any time by hitting any of the endpoints we've published in this documentation. Rate limiting is enabled.
 
-Retrieving data from an API endpoint requires your RetroAchievement account's API key, which can be retrieved on [your account's control panel](https://retroachievements.org/controlpanel.php).
+Retrieving data from an API endpoint requires your RetroAchievements account's API key, which can be retrieved on [your account's control panel](https://retroachievements.org/controlpanel.php).
 
 ::: danger Rate Limiting and Usage Guidelines
 
