@@ -87,8 +87,8 @@ if (response is NetworkResponse.Success) {
       "Title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
       "ImageIcon": "/Images/074560.png",
       "ConsoleID": 1,
-      "TotalPoints": 1500,
-      "NumPossibleAchievements": 50
+      "PointsTotal": 1500,
+      "AchievementsPublished": 50
     }
     // ...
   ]
@@ -105,8 +105,8 @@ if (response is NetworkResponse.Success) {
       "title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
       "imageIcon": "/Images/074560.png",
       "consoleId": 1,
-      "totalPoints": 1500,
-      "numPossibleAchievements": 50
+      "pointsTotal": 1500,
+      "achievementsPublished": 50
     }
     // ...
   ]
