@@ -88,7 +88,7 @@ if (response is NetworkResponse.Success) {
       "ImageIcon": "/Images/074560.png",
       "ConsoleID": 1,
       "TotalPoints": 1500,
-      "NumPossibleAchievements": 50,
+      "NumPossibleAchievements": 50
     }
     // ...
   ]
@@ -106,7 +106,7 @@ if (response is NetworkResponse.Success) {
       "imageIcon": "/Images/074560.png",
       "consoleId": 1,
       "totalPoints": 1500,
-      "numPossibleAchievements": 50,
+      "numPossibleAchievements": 50
     }
     // ...
   ]
@@ -119,6 +119,6 @@ if (response is NetworkResponse.Success) {
 
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
-| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                  |
-| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserWantToPlayList.ts                          |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                      |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserWantToPlayList.ts                              |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
