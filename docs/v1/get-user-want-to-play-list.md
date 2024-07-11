@@ -30,46 +30,7 @@ A user's want to play list can be found on on the user's Want to Play Games page
 
 ## Client Library
 
-::: code-group
-
-```ts [NodeJS]
-import {
-  buildAuthorization,
-  getUserWantToPlayList,
-} from "@retroachievements/api";
-
-// First, build your authorization object.
-const username = "<your username on RA>";
-const webApiKey = "<your web API key>";
-
-const authorization = buildAuthorization({ username, webApiKey });
-
-// Then, make the API call.
-const userWantToPlayList = await getUserWantToPlayList(authorization, {
-  username: "MaxMilyin",
-});
-```
-
-```kotlin [Kotlin]
-val credentials = RetroCredentials("<username>", "<web api key>")
-val api: RetroInterface = RetroClient(credentials).api
-
-val response: NetworkResponse<GetUserWantToPlayList.Response, ErrorResponse> = api.getUserWantToPlayList(
-    username = "MaxMilyin",
-)
-
-if (response is NetworkResponse.Success) {
-    // handle the data
-    val completionProgress: GetUserWantToPlayList.Response = response.body
-
-} else if (response is NetworkResponse.Error) {
-    // if the server returns an error it be found here
-    val errorResponse: ErrorResponse? = response.body
-
-    // if the api (locally) had an internal error, it'll be found here
-    val internalError: Throwable? = response.error
-}
-```
+Not yet supported.
 
 :::
 
@@ -95,24 +56,6 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
-```json [NodeJS]
-{
-  "count": 100,
-  "total": 1287,
-  "results": [
-    {
-      "gameId": 20246,
-      "title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
-      "imageIcon": "/Images/074560.png",
-      "consoleId": 1,
-      "pointsTotal": 1500,
-      "achievementsPublished": 50
-    }
-    // ...
-  ]
-}
-```
-
 :::
 
 ## Source
@@ -120,5 +63,3 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                      |
-| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserWantToPlayList.ts                              |
-| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
