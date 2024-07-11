@@ -60,6 +60,6 @@ Not yet supported.
 
 ## Source
 
-| Repo       | URL                                                                                                                  |
-| :--------- | :------------------------------------------------------------------------------------------------------------------- |
-| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                      |
+| Repo  | URL                                                                                             |
+| :---- | :---------------------------------------------------------------------------------------------- |
+| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php |
