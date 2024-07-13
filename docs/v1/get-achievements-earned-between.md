@@ -92,7 +92,7 @@ if (response is NetworkResponse.Success) {
     "Date": "2022-01-01 22:41:48",
     "HardcoreMode": 1,
     "AchievementID": 175333,
-    "Title": "Solo Adventurer - Golden Bettles",
+    "Title": "Solo Adventurer - Golden Beetles",
     "Description": "Solo defeat Golden Beetles at 2nd block (normal or above)",
     "BadgeName": "228985",
     "Points": 10,
