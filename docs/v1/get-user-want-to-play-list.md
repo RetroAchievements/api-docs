@@ -48,7 +48,7 @@ Not yet supported.
       "Title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
       "ImageIcon": "/Images/074560.png",
       "ConsoleID": 1,
-      "ConsoleID": "Genesis/Mega Drive",
+      "ConsoleName": "Genesis/Mega Drive",
       "PointsTotal": 1500,
       "AchievementsPublished": 50
     }
