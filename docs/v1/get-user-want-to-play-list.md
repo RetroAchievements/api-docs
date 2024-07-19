@@ -2,7 +2,7 @@
 import SampleRequest from '../components/SampleRequest.vue';
 </script>
 
-# User Want to Play Lost
+# User Want to Play List
 
 A call to this endpoint will retrieve a giver user's want to play list, targeted by their username.
 
