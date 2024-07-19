@@ -24,7 +24,7 @@ A games's list of leaderboards can be found on on the game's page:
 | :--- | :-------- | :----------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                               |
 | `y`  | Yes       | Your web API key.                                            |
-| `i`  | Yes       | The target game ID.                                         |
+| `i`  | Yes       | The target game ID.                                          |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |
 | `o`  |           | Offset, number of entries to skip (default: 0).              |
 
@@ -57,6 +57,6 @@ Not yet supported.
 
 ## Source
 
-| Repo  | URL                                                                                             |
-| :---- | :---------------------------------------------------------------------------------------------- |
+| Repo  | URL                                                                                           |
+| :---- | :-------------------------------------------------------------------------------------------- |
 | RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameLeaderboards.php |
