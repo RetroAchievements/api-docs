@@ -4,7 +4,7 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # User Want to Play List
 
-A call to this endpoint will retrieve a giver user's want to play list, targeted by their username.
+A call to this endpoint will retrieve a given user's want to play list, targeted by their username.
 
 [[toc]]
 
