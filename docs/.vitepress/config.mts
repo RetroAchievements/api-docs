@@ -135,6 +135,16 @@ export default defineConfig({
         ],
       },
       {
+        text: "Leaderboards",
+        collapsible: true,
+        items: [
+          {
+            text: "Leaderboards (by gameID)",
+            link: "/v1/get-game-leaderboards",
+          },
+        ],
+      },
+      {
         text: "System",
         collapsible: true,
         items: [
