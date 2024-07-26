@@ -44,7 +44,7 @@ Not yet supported.
     {
       "Rank": 1,
       "User": "vani11a",
-      "Score": "390490",
+      "Score": 390490,
       "FormattedScore": "390490",
       "DateSubmitted": "2024-07-25T15:51:00Z"
     }
