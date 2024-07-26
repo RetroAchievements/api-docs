@@ -16,7 +16,7 @@ A games's list of leaderboards can be found on on the game's page:
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGameLeaderboards.php?i=9190</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetGameLeaderboards.php?i=1</SampleRequest>
 
 ### Query Parameters
 
@@ -32,21 +32,26 @@ A games's list of leaderboards can be found on on the game's page:
 
 Not yet supported.
 
-:::
-
 ## Response
 
 ::: code-group
 
 ```json [HTTP Response]
 {
-  "Count": 10,
-  "Total": 10,
+  "Count": 29,
+  "Total": 29,
   "Results": [
     {
-      "ID": 90099,
-      "Title": "Ninja Warrior I",
-      "Description": "Reach the end of Niko's first obstacle course as quickly as you can."
+      "ID": 104370,
+      "RankAsc": false,
+      "Title": " South Island Conqueror",
+      "Description": "Complete the game with the highest score possible",
+      "Format": "VALUE",
+      "TopEntry": {
+        "User": "vani11a",
+        "Score": "390490",
+        "FormattedScore": "390,490"
+      }
     }
     // ...
   ]
