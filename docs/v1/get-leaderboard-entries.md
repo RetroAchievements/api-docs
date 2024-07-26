@@ -32,8 +32,6 @@ A leaderboards's entries can be found on the leaderboard info page:
 
 Not yet supported.
 
-:::
-
 ## Response
 
 ::: code-group
