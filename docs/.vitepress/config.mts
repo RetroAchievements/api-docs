@@ -135,6 +135,16 @@ export default defineConfig({
         ],
       },
       {
+        text: "Leaderboard",
+        collapsible: true,
+        items: [
+          {
+            text: "Leaderboard Entries",
+            link: "/v1/get-leaderboard-entries",
+          },
+        ],
+      },
+      {
         text: "System",
         collapsible: true,
         items: [
