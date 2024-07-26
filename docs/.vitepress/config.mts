@@ -139,7 +139,7 @@ export default defineConfig({
         collapsible: true,
         items: [
           {
-            text: "Leaderboard Entries",
+            text: "Entries",
             link: "/v1/get-leaderboard-entries",
           },
         ],
