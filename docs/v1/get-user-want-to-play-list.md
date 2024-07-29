@@ -32,7 +32,6 @@ A user's want to play list can be found on on the user's Want to Play Games page
 
 Not yet supported.
 
-
 ## Response
 
 ::: code-group
