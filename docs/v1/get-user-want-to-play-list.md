@@ -12,7 +12,7 @@ A call to this endpoint will retrieve a giver user's want to play list, targeted
 
 The user's Want to Play Games list page looks like:
 
-![Want to Play](/want-to-play-list.png)
+![Want to Play Games List](/want-to-play-list.png)
 
 ## HTTP Request
 
