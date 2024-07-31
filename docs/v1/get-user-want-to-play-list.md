@@ -4,7 +4,7 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # User Want to Play List
 
-A call to this endpoint will retrieve a giver user's want to play list, targeted by their username. Results will only show if the user calling matches the username provided or both users follow each other on the website.
+A call to this endpoint will retrieve a given user's "Want to Play Games" list, targeted by their username. Results will only be returned if the target user is yourself, or if both you and the target user follow each other.
 
 [[toc]]
 
