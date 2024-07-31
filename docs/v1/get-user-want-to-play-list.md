@@ -10,7 +10,7 @@ A call to this endpoint will retrieve a giver user's want to play list, targeted
 
 ## On-site Representation
 
-A user's want to play list can be found on on the user's Want to Play Games page:
+The user's Want to Play Games list page looks like:
 
 ![Want to Play](/want-to-play-list.png)
 
