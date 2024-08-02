@@ -43,7 +43,7 @@ Click the function names to open their complete docs on the docs site.
 - [Recently Played Games](https://api-docs.retroachievements.org/v1/get-user-recently-played-games.html) - Get a list of games a user has recently played.
 - [Summary](https://api-docs.retroachievements.org/v1/get-user-summary.html) - Get a user's profile metadata.
 - [Completed Games](https://api-docs.retroachievements.org/v1/get-user-completed-games.html) - Legacy endpoint. Get hardcore and softcore completion metadata about games a user has played.
-- [Want to Play List](https://api-docs.retroachievements.org/v1/get-user-want-to-play-list.html) - Get a user's list of Want to Play Games.
+- [Want to Play Games List](https://api-docs.retroachievements.org/v1/get-user-want-to-play-list.html) - Get a user's list of Want to Play Games.
 
 ### Game
 
