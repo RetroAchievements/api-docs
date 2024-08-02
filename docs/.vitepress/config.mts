@@ -107,7 +107,7 @@ export default defineConfig({
             link: "/v1/get-user-completed-games",
           },
           {
-            text: "Want to Play List",
+            text: "Want to Play Games List",
             link: "/v1/get-user-want-to-play-list",
           },
         ],
