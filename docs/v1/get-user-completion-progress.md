@@ -4,7 +4,7 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # User Completion Progress
 
-A call to this endpoint will retrieve a giver user's completion progress, targeted by their username.
+A call to this endpoint will retrieve a given user's completion progress, targeted by their username.
 
 [[toc]]
 
