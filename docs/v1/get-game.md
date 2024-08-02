@@ -89,7 +89,8 @@ if (response is NetworkResponse.Success) {
   "Publisher": "",
   "Developer": "",
   "Genre": "",
-  "Released": "June 23, 1991"
+  "Released": "1992-06-02 00:00:00",
+  "ReleasedAtGranularity": "day"
 }
 ```
 
@@ -110,7 +111,8 @@ if (response is NetworkResponse.Success) {
   "publisher": "Activision",
   "developer": "David Crane",
   "genre": "Racing",
-  "released": 1980
+  "released": "1992-06-02 00:00:00",
+  "releasedAtGranularity": "day"
 }
 ```
 
