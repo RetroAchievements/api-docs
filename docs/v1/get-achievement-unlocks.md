@@ -16,7 +16,6 @@ A call to this endpoint will retrieve a list of users who have earned an achieve
 
 | Name | Required? | Description                                                 |
 | :--- | :-------- | :---------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                              |
 | `y`  | Yes       | Your web API key.                                           |
 | `a`  | Yes       | The target achievement ID.                                  |
 | `c`  |           | Count, number of records to return (default: 50, max: 500). |

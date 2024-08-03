@@ -16,7 +16,6 @@ A call to `API_GetTicketData` in this manner will retrieve the games on the site
 
 | Name | Required? | Description                                                 |
 | :--- | :-------- | :---------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                              |
 | `y`  | Yes       | Your web API key.                                           |
 | `f`  | Yes       | Must be set to 1.                                           |
 | `c`  |           | Count, number of records to return (default: 10, max: 100). |

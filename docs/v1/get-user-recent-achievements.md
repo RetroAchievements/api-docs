@@ -26,7 +26,6 @@ The recent unlocks can also be found on the "Unlocked Achievements" page:
 
 | Name | Required? | Description                           |
 | :--- | :-------- | :------------------------------------ |
-| `z`  | Yes       | Your username.                        |
 | `y`  | Yes       | Your web API key.                     |
 | `u`  | Yes       | The target username.                  |
 | `m`  |           | Minutes to look back. Defaults to 60. |

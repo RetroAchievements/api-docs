@@ -22,7 +22,6 @@ Most of this data can be found on the game page, for example, [Sonic the Hedgeho
 
 | Name | Required? | Description         |
 | :--- | :-------- | :------------------ |
-| `z`  | Yes       | Your username.      |
 | `y`  | Yes       | Your web API key.   |
 | `i`  | Yes       | The target game ID. |
 
