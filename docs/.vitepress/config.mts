@@ -141,6 +141,7 @@ export default defineConfig({
           {
             text: "Leaderboards (by gameID)",
             link: "/v1/get-game-leaderboards",
+          },
           {
             text: "Entries",
             link: "/v1/get-leaderboard-entries",
