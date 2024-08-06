@@ -169,6 +169,16 @@ export default defineConfig({
         ],
       },
       {
+        text: "Comment",
+        collapsible: true,
+        items: [
+          {
+            text: "Comments",
+            link: "/v1/get-comments",
+          },
+        ],
+      },
+      {
         text: "Feed",
         collapsible: true,
         items: [
