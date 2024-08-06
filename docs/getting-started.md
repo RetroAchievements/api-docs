@@ -19,7 +19,7 @@ Store your API key as though it is a secret, like a password. Avoid checking in 
 
 ## Quick Start (HTTP Requests)
 
-With web API key, you now have all you need to call any endpoint in the API.
+With your web API key, you now have all you need to call any endpoint in the API.
 
 ```bash
 curl https://retroachievements.org/API/API_GetTopTenUsers.php?&y=[your_key]
