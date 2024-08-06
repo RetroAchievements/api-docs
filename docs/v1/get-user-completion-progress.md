@@ -22,7 +22,6 @@ A user's completion progress can be found in several places, most prolifically o
 
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                               |
 | `y`  | Yes       | Your web API key.                                            |
 | `u`  | Yes       | The target username.                                         |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |

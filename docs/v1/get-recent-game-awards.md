@@ -22,7 +22,6 @@ This data can be found on the Recent Game Awards page, for example:
 
 | Name | Required? | Description                                                                                                                                                                |
 | :--- | :-------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                                                                                                                             |
 | `y`  | Yes       | Your web API key.                                                                                                                                                          |
 | `d`  |           | Starting date (YYYY-MM-DD) (default: now).                                                                                                                                 |
 | `o`  |           | Offset, number of entries to skip (default: 0).                                                                                                                            |

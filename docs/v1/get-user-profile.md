@@ -22,7 +22,6 @@ This information can be found near the top of [any user page](https://retroachie
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 

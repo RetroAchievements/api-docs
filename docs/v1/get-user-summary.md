@@ -22,7 +22,6 @@ This endpoint is known to be slow, and often results in over-fetching. For basic
 
 | Name | Required? | Description                                               |
 | :--- | :-------- | :-------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                            |
 | `y`  | Yes       | Your web API key.                                         |
 | `u`  | Yes       | The target username.                                      |
 | `g`  |           | The number of recent games to return (default: 0).        |

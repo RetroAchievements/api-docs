@@ -16,7 +16,6 @@ A call to this endpoint will retrieve metadata about how a given user has perfor
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 | `g`  | Yes       | The target game ID.  |

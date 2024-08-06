@@ -22,7 +22,6 @@ A call to this endpoint will retrieve completion metadata about the games a give
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 

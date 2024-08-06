@@ -16,7 +16,6 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a ga
 
 | Name | Required? | Description                                                                  |
 | :--- | :-------- | :--------------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                               |
 | `y`  | Yes       | Your web API key.                                                            |
 | `g`  | Yes       | The target game ID.                                                          |
 | `f`  |           | Set to 5 if you want ticket data for unofficial achievements.                |

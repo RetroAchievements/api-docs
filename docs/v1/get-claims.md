@@ -16,7 +16,6 @@ A call to this endpoint returns information about all (1000 max) achievement set
 
 | Name | Required? | Description                                                                        |
 | :--- | :-------- | :--------------------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                                     |
 | `y`  | Yes       | Your web API key.                                                                  |
 | `k`  |           | The desired claim kind: 1 (completed), 2 (dropped), or 3 (expired). Defaults to 1. |
 

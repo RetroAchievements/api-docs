@@ -16,7 +16,6 @@ A call to this endpoint returns information about all (1000 max) active set clai
 
 | Name | Required? | Description       |
 | :--- | :-------- | :---------------- |
-| `z`  | Yes       | Your username.    |
 | `y`  | Yes       | Your web API key. |
 
 ## Client Library

@@ -16,7 +16,6 @@ A call to this endpoint will retrieve the current top ten users, ranked by hardc
 
 | Name | Required? | Description       |
 | :--- | :-------- | :---------------- |
-| `z`  | Yes       | Your username.    |
 | `y`  | Yes       | Your web API key. |
 
 ## Client Library

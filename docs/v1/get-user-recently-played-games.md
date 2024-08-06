@@ -16,7 +16,6 @@ A call to this endpoint will retrieve a list of a target user's recently played 
 
 | Name | Required? | Description                                                |
 | :--- | :-------- | :--------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                             |
 | `y`  | Yes       | Your web API key.                                          |
 | `u`  | Yes       | The target username.                                       |
 | `c`  |           | Count, number of records to return (default: 10, max: 50). |

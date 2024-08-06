@@ -16,7 +16,6 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for an a
 
 | Name | Required? | Description                                          |
 | :--- | :-------- | :--------------------------------------------------- |
-| `z`  | Yes       | Your username.                                       |
 | `y`  | Yes       | Your web API key.                                    |
 | `a`  | Yes       | The target achievement ID to fetch ticket stats for. |
 

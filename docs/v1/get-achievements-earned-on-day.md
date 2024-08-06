@@ -22,7 +22,6 @@ A user's unlocks by date can be found via the user history:
 
 | Name | Required? | Description                |
 | :--- | :-------- | :------------------------- |
-| `z`  | Yes       | Your username.             |
 | `y`  | Yes       | Your web API key.          |
 | `u`  | Yes       | The target username.       |
 | `d`  | Yes       | Date in YYYY-MM-DD format. |

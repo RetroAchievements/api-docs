@@ -16,7 +16,6 @@ A call to this endpoint will retrieve a given user's hardcore and softcore point
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 
