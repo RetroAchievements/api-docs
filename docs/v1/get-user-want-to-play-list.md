@@ -2,7 +2,7 @@
 import SampleRequest from '../components/SampleRequest.vue';
 </script>
 
-# User Want to Play List
+# User Want to Play Games List
 
 A call to this endpoint will retrieve a given user's "Want to Play Games" list, targeted by their username. Results will only be returned if the target user is yourself, or if both you and the target user follow each other.
 
