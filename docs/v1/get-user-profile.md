@@ -87,7 +87,7 @@ if (response is NetworkResponse.Success) {
   "Permissions": 1,
   "Untracked": 0,
   "ID": 16446,
-  "UserWallActive": 1,
+  "UserWallActive": true,
   "Motto": "Join me on Twitch! GameSquadSquad for live RA"
 }
 ```
