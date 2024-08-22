@@ -16,7 +16,6 @@ A call to this endpoint will retrieve a list of achievement set claims made over
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 

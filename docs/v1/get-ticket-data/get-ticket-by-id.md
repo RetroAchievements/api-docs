@@ -16,7 +16,6 @@ A call to `API_GetTicketData` in this manner will retrieve ticket metadata infor
 
 | Name | Required? | Description           |
 | :--- | :-------- | :-------------------- |
-| `z`  | Yes       | Your username.        |
 | `y`  | Yes       | Your web API key.     |
 | `i`  | Yes       | The target ticket ID. |
 

@@ -22,7 +22,6 @@ When browsing a game page, for example, [Sonic the Hedgehog](https://retroachiev
 
 | Name | Required? | Description                                                                |
 | :--- | :-------- | :------------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                             |
 | `y`  | Yes       | Your web API key.                                                          |
 | `i`  | Yes       | The target game ID.                                                        |
 | `h`  |           | 1 to only query hardcore unlocks. 0 to query all unlocks. Defaults to 0.   |
