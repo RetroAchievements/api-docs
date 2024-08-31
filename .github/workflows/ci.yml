@@ -1,7 +1,7 @@
 on: [pull_request]
 
 env:
-  PNPM_VERSION: 9.1.2
+  PNPM_VERSION: 9.9.0
 
 jobs:
   prettier:
