@@ -22,7 +22,6 @@ This information can be found near the top of [any user page](https://retroachie
 
 | Name | Required? | Description          |
 | :--- | :-------- | :------------------- |
-| `z`  | Yes       | Your username.       |
 | `y`  | Yes       | Your web API key.    |
 | `u`  | Yes       | The target username. |
 
@@ -87,7 +86,7 @@ if (response is NetworkResponse.Success) {
   "Permissions": 1,
   "Untracked": 0,
   "ID": 16446,
-  "UserWallActive": 1,
+  "UserWallActive": true,
   "Motto": "Join me on Twitch! GameSquadSquad for live RA"
 }
 ```

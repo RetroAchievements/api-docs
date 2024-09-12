@@ -106,6 +106,10 @@ export default defineConfig({
             text: "Completed Games",
             link: "/v1/get-user-completed-games",
           },
+          {
+            text: "Want to Play Games List",
+            link: "/v1/get-user-want-to-play-list",
+          },
         ],
       },
       {
@@ -135,9 +139,13 @@ export default defineConfig({
         ],
       },
       {
-        text: "Leaderboard",
+        text: "Leaderboards",
         collapsible: true,
         items: [
+          {
+            text: "Leaderboards (by gameID)",
+            link: "/v1/get-game-leaderboards",
+          },
           {
             text: "Entries",
             link: "/v1/get-leaderboard-entries",

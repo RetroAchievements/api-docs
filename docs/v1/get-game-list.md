@@ -24,13 +24,15 @@ The system games list can be found by selecting any system in the "Games" menu f
 
 ### Query Parameters
 
-| Name | Required? | Description                                                    |
-| :--- | :-------- | :------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                 |
-| `y`  | Yes       | Your web API key.                                              |
-| `i`  | Yes       | The target system ID.                                          |
-| `f`  |           | If 1, only return games that have achievements. Defaults to 0. |
-| `h`  |           | If 1, also return supported hashes for games. Defaults to 0.   |
+| Name | Required? | Description                                                                                                             |
+| :--- | :-------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `z`  | Yes       | Your username.                                                                                                          |
+| `y`  | Yes       | Your web API key.                                                                                                       |
+| `i`  | Yes       | The target system ID.                                                                                                   |
+| `f`  |           | If 1, only return games that have achievements. Defaults to 0.                                                          |
+| `h`  |           | If 1, also return supported hashes for games. Defaults to 0.                                                            |
+| `o`  |           | Offset of the list of results. Ignores the first X results set in this parameter. Defaults to 0. Useful for pagination. |
+| `c`  |           | Number of max results desired. Defaults to 0, which means, all the results. Useful for pagination.                      |
 
 ## Client Library
 

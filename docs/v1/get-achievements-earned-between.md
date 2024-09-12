@@ -22,7 +22,6 @@ A user's unlocks by a date range can be found manually via the user history:
 
 | Name | Required? | Description                        |
 | :--- | :-------- | :--------------------------------- |
-| `z`  | Yes       | Your username.                     |
 | `y`  | Yes       | Your web API key.                  |
 | `u`  | Yes       | The target username.               |
 | `f`  | Yes       | Epoch timestamp. Time range start. |

@@ -22,7 +22,6 @@ Most of this data can be found on the game page, for example, [Sonic the Hedgeho
 
 | Name | Required? | Description         |
 | :--- | :-------- | :------------------ |
-| `z`  | Yes       | Your username.      |
 | `y`  | Yes       | Your web API key.   |
 | `i`  | Yes       | The target game ID. |
 
@@ -89,7 +88,8 @@ if (response is NetworkResponse.Success) {
   "Publisher": "",
   "Developer": "",
   "Genre": "",
-  "Released": "June 23, 1991"
+  "Released": "1992-06-02 00:00:00",
+  "ReleasedAtGranularity": "day"
 }
 ```
 
@@ -110,7 +110,8 @@ if (response is NetworkResponse.Success) {
   "publisher": "Activision",
   "developer": "David Crane",
   "genre": "Racing",
-  "released": 1980
+  "released": "1992-06-02 00:00:00",
+  "releasedAtGranularity": "day"
 }
 ```
 

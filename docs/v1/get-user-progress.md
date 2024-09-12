@@ -22,7 +22,6 @@ Unless you are explicitly wanting summary progress details for specific game IDs
 
 | Name | Required? | Description                                      |
 | :--- | :-------- | :----------------------------------------------- |
-| `z`  | Yes       | Your username.                                   |
 | `y`  | Yes       | Your web API key.                                |
 | `u`  | Yes       | The target username.                             |
 | `i`  | Yes       | The target game IDs, as a comma-separated value. |

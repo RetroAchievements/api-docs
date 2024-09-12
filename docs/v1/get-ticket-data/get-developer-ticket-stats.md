@@ -16,7 +16,6 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a de
 
 | Name | Required? | Description                      |
 | :--- | :-------- | :------------------------------- |
-| `z`  | Yes       | Your username.                   |
 | `y`  | Yes       | Your web API key.                |
 | `u`  | Yes       | The target developer's username. |
 

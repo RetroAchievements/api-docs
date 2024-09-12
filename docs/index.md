@@ -40,10 +40,10 @@ If your individual rate limit is not enough for your use case, then please reach
 
 ### Using your key
 
-Provide your username to the `z` query param and your API key to the `y` query param.
+Provide your API key to the `y` query param.
 
 ```
-https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?z=[your_username]&y=[your_key]
+https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?&y=[your_key]
 ```
 
 ## Client Libraries
