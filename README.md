@@ -64,7 +64,7 @@ Click the function names to open their complete docs on the docs site.
 
 ### Comment
 
-- [Get Comments](https://api-docs.retroachievements.org/v1/get-comments.html) - Get comments of a specified kind: game, achievement, or user.
+- [Comments](https://api-docs.retroachievements.org/v1/get-comments.html) - Get comments of a specified kind: game, achievement, or user.
 
 ### Feed
 
