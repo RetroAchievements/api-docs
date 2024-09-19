@@ -125,6 +125,10 @@ export default defineConfig({
             link: "/v1/get-game-extended",
           },
           {
+            text: "Hashes",
+            link: "/v1/get-game-hashes",
+          },
+          {
             text: "Achievement IDs",
             link: "/v1/get-achievement-count",
           },
