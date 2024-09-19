@@ -63,6 +63,10 @@ Click the function names to open their complete docs on the docs site.
 
 - [All Unlocks](https://api-docs.retroachievements.org/v1/get-achievement-unlocks.html) - Get a list of users who have earned an achievement, targeted by achievement ID.
 
+### Comment
+
+- [Comments](https://api-docs.retroachievements.org/v1/get-comments.html) - Get comments of a specified kind: game, achievement, or user.
+
 ### Feed
 
 - [All Recent Game Awards](https://api-docs.retroachievements.org/v1/get-recent-game-awards.html) - Retrieve all recent game awards granted to players.
