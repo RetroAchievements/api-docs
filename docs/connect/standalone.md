@@ -4,10 +4,6 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # Standalones Integration Guide
 
-::: warning
-This content is subject to change, pending [this PR in RAWeb](https://github.com/RetroAchievements/RAWeb/pull/2129).
-:::
-
 [[toc]]
 
 ## Getting Started
