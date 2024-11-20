@@ -22,9 +22,8 @@ When browsing a game page, for example, [Sonic the Hedgehog](https://retroachiev
 
 | Name | Required? | Description                                                        |
 | :--- | :-------- | :----------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                     |
 | `y`  | Yes       | Your web API key.                                                  |
-| `i`  | Yes       | The target game ID.                                                |
+| `g`  | Yes       | The target game ID.                                                |
 | `t`  |           | 1 for latest masters. 0 for non-master high scores. Defaults to 0. |
 
 ## Client Library
