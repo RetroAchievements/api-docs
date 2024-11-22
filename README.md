@@ -57,7 +57,7 @@ Click the function names to open their complete docs on the docs site.
 ### Leaderboards
 
 - [Leaderboards (by gameID)](https://api-docs.retroachievements.org/v1/get-game-leaderboards.html) - Get a given games's list of leaderboards.
-- [Entries](https://api-docs.retroachievements.org/v1/get-leaderboard-entries.html) - Get a given leadboard's entires.
+- [Entries](https://api-docs.retroachievements.org/v1/get-leaderboard-entries.html) - Get a given leadboard's entries.
 
 ### System
 
