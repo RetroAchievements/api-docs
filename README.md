@@ -54,6 +54,11 @@ Click the function names to open their complete docs on the docs site.
 - [Unlocks Distribution](https://api-docs.retroachievements.org/v1/get-achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
 - [High Scores](https://api-docs.retroachievements.org/v1/get-game-rank-and-score.html) - Get a list of either the latest masters or highest hardcore points earners for a game.
 
+### Leaderboards
+
+- [Leaderboards (by gameID)](https://api-docs.retroachievements.org/v1/get-game-leaderboards.html) - Get a given games's list of leaderboards.
+- [Entries](https://api-docs.retroachievements.org/v1/get-leaderboard-entries.html) - Get a given leadboard's entires.
+
 ### System
 
 - [Get All Systems](https://api-docs.retroachievements.org/v1/get-console-ids.html) - Get the complete list of system ID and name pairs on the site.

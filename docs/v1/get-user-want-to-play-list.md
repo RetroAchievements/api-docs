@@ -22,7 +22,6 @@ The user's Want to Play Games list page looks like:
 
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                               |
 | `y`  | Yes       | Your web API key.                                            |
 | `u`  | Yes       | The target username.                                         |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |
@@ -42,7 +41,7 @@ Not yet supported.
   "Total": 1287,
   "Results": [
     {
-      "GameID": 20246,
+      "ID": 20246,
       "Title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
       "ImageIcon": "/Images/074560.png",
       "ConsoleID": 1,

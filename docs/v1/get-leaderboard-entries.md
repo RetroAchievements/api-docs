@@ -22,7 +22,6 @@ A leaderboards's entries can be found on the leaderboard info page:
 
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                               |
 | `y`  | Yes       | Your web API key.                                            |
 | `i`  | Yes       | The target leaderboard ID.                                   |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |
@@ -46,7 +45,7 @@ Not yet supported.
       "User": "vani11a",
       "Score": 390490,
       "FormattedScore": "390,490",
-      "DateSubmitted": "2024-07-25T15:51:00Z"
+      "DateSubmitted": "2024-07-25T15:51:00+00:00"
     }
     // ...
   ]
