@@ -95,7 +95,7 @@ if (response is NetworkResponse.Success) {
     }
   ],
   "OpenTickets": 1109,
-  "URL": "https://retroachievements.org/ticketmanager.php"
+  "URL": "https://retroachievements.org/tickets"
 }
 ```
 

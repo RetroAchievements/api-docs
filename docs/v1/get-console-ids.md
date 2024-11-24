@@ -22,7 +22,6 @@ The systems list can be found by selecting the "Games" menu from the site navbar
 
 | Name | Required? | Description                                                              |
 | :--- | :-------- | :----------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                           |
 | `y`  | Yes       | Your web API key.                                                        |
 | `a`  |           | If 1, only return active systems. Defaults to 0.                         |
 | `g`  |           | If 1, only return gaming systems (not Hubs, Events, etc). Defaults to 0. |

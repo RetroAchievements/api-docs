@@ -26,7 +26,6 @@ The system games list can be found by selecting any system in the "Games" menu f
 
 | Name | Required? | Description                                                                                                             |
 | :--- | :-------- | :---------------------------------------------------------------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                                                                          |
 | `y`  | Yes       | Your web API key.                                                                                                       |
 | `i`  | Yes       | The target system ID.                                                                                                   |
 | `f`  |           | If 1, only return games that have achievements. Defaults to 0.                                                          |

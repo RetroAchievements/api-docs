@@ -70,7 +70,8 @@ if (response is NetworkResponse.Success) {
   "AchievementID": 284759,
   "AchievementTitle": "The End of The Beginning",
   "AchievementDescription": "Receive the Package from the King of Baron and begin your quest to the Mist Cavern",
-  "URL": "https://retroachievements.org/ticketmanager.php?a=284759",
+  "AchievementType": "progression",
+  "URL": "https://retroachievements.org/achievement/284759/tickets",
   "OpenTickets": 1
 }
 ```
@@ -80,7 +81,7 @@ if (response is NetworkResponse.Success) {
   "achievementId": 284759,
   "achievementTitle": "The End of The Beginning",
   "achievementDescription": "Receive the Package from the King of Baron and begin your quest to the Mist Cavern",
-  "url": "https://retroachievements.org/ticketmanager.php?a=284759",
+  "url": "https://retroachievements.org/achievement/284759/tickets",
   "openTickets": 1
 }
 ```
