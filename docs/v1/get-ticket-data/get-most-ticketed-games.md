@@ -82,8 +82,8 @@ if (response is NetworkResponse.Success) {
 			"Console": "PlayStation",
 			"OpenTickets": 11
 		},
-  ],
-  "URL": "https://retroachievements.org/manage/most-reported-games"
+	],
+	"URL": "https://retroachievements.org/manage/most-reported-games"
 }
 ```
 
