@@ -71,7 +71,7 @@ if (response is NetworkResponse.Success) {
   "GameTitle": "Dragster",
   "ConsoleName": "Atari 2600",
   "OpenTickets": 0,
-  "URL": "https://retroachievements.org/ticketmanager.php?g=14402"
+  "URL": "https://retroachievements.org/game/14402/tickets"
 }
 ```
 
@@ -81,7 +81,7 @@ if (response is NetworkResponse.Success) {
   "gameTitle": "Dragster",
   "consoleName": "Atari 2600",
   "openTickets": 0,
-  "url": "https://retroachievements.org/ticketmanager.php?g=14402"
+  "url": "https://retroachievements.org/game/14402/tickets"
 }
 ```
 

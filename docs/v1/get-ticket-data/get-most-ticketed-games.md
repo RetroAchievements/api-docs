@@ -81,8 +81,9 @@ if (response is NetworkResponse.Success) {
 			"GameIcon": "\/Images\/081550.png",
 			"Console": "PlayStation",
 			"OpenTickets": 11
-		},]
-    "URL": "https://retroachievements.org/ticketmanager.php?f=1"
+		},
+  ],
+  "URL": "https://retroachievements.org/manage/most-reported-games"
 }
 ```
 
