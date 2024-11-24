@@ -14,13 +14,13 @@ A call to this endpoint returns comments of a specified kind: game, achievement,
 
 ### Query Parameters
 
-| Name | Required? | Description                                                                                                            |
-| :--- | :-------- | :--------------------------------------------------------------------------------------------------------------------- |
-| `y`  | Yes       | Your web API key.                                                                                                      |
-| `i`  | Yes       | The target game or achievement ID (if type is 1 or 2). The target username (if type is 3).                             |
-| `t`  | Sometimes | The target comment kind: 1 (game), 2 (achievement), or 3 (user). Required if type is 1 or 2.                           |
-| `c`  |           | Count, number of records to return (default: 100, max: 500).                                                           |
-| `o`  |           | Offset, number of entries to skip (default: 0).                                                                        |
+| Name | Required? | Description                                                                                  |
+| :--- | :-------- | :------------------------------------------------------------------------------------------- |
+| `y`  | Yes       | Your web API key.                                                                            |
+| `i`  | Yes       | The target game or achievement ID (if type is 1 or 2). The target username (if type is 3).   |
+| `t`  | Sometimes | The target comment kind: 1 (game), 2 (achievement), or 3 (user). Required if type is 1 or 2. |
+| `c`  |           | Count, number of records to return (default: 100, max: 500).                                 |
+| `o`  |           | Offset, number of entries to skip (default: 0).                                              |
 
 ## Client Library
 

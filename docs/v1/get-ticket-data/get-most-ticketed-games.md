@@ -67,23 +67,23 @@ if (response is NetworkResponse.Success) {
 
 ```json [HTTP Response]
 {
-	"MostReportedGames": [
-		{
-			"GameID": 9701,
-			"GameTitle": "Dead 'n' Furious | Touch the Dead",
-			"GameIcon": "\/Images\/070109.png",
-			"Console": "Nintendo DS",
-			"OpenTickets": 12
-		},
-		{
-			"GameID": 10438,
-			"GameTitle": "Crash Team Racing",
-			"GameIcon": "\/Images\/081550.png",
-			"Console": "PlayStation",
-			"OpenTickets": 11
-		},
-	],
-	"URL": "https://retroachievements.org/manage/most-reported-games"
+  "MostReportedGames": [
+    {
+      "GameID": 9701,
+      "GameTitle": "Dead 'n' Furious | Touch the Dead",
+      "GameIcon": "/Images/070109.png",
+      "Console": "Nintendo DS",
+      "OpenTickets": 12
+    },
+    {
+      "GameID": 10438,
+      "GameTitle": "Crash Team Racing",
+      "GameIcon": "/Images/081550.png",
+      "Console": "PlayStation",
+      "OpenTickets": 11
+    }
+  ],
+  "URL": "https://retroachievements.org/manage/most-reported-games"
 }
 ```
 
