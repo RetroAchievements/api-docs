@@ -44,6 +44,8 @@ Click the function names to open their complete docs on the docs site.
 - [Summary](https://api-docs.retroachievements.org/v1/get-user-summary.html) - Get a user's profile metadata.
 - [Completed Games](https://api-docs.retroachievements.org/v1/get-user-completed-games.html) - Legacy endpoint. Get hardcore and softcore completion metadata about games a user has played.
 - [Want to Play Games List](https://api-docs.retroachievements.org/v1/get-user-want-to-play-list.html) - Get a user's list of Want to Play Games.
+- [Following Users List](https://api-docs.retroachievements.org/v1/get-followed-users-list.html) - Get the caller's list of followed users.
+- [Followers Users List](https://api-docs.retroachievements.org/v1/get-follower-users-list.html) - Get the caller's list of followers users.
 
 ### Game
 

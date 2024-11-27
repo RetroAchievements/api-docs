@@ -110,6 +110,14 @@ export default defineConfig({
             text: "Want to Play Games List",
             link: "/v1/get-user-want-to-play-list",
           },
+          {
+            text: "Followed Users List",
+            link: "/v1/get-followed-users-list",
+          },
+          {
+            text: "Follower Users List",
+            link: "/v1/get-follower-users-list",
+          },
         ],
       },
       {
