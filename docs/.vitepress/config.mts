@@ -111,12 +111,12 @@ export default defineConfig({
             link: "/v1/get-user-want-to-play-list",
           },
           {
-            text: "Followed Users List",
-            link: "/v1/get-followed-users-list",
+            text: "Users I Follow",
+            link: "/v1/get-users-i-follow",
           },
           {
-            text: "Follower Users List",
-            link: "/v1/get-follower-users-list",
+            text: "Users Following Me",
+            link: "/v1/get-users-following-me",
           },
         ],
       },

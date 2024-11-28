@@ -2,7 +2,7 @@
 import SampleRequest from '../components/SampleRequest.vue';
 </script>
 
-# Following Users List
+# Users I Follow
 
 A call to this endpoint will retrieve the caller's "Following" users list.
 
@@ -12,11 +12,11 @@ A call to this endpoint will retrieve the caller's "Following" users list.
 
 The user's Followers Users List page looks like:
 
-![Followed Users List](/user-following-followed.png)
+![Users I Follow](/user-friends.png)
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetFollowedUsersList.php</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetUsersIFollow.php</SampleRequest>
 
 ### Query Parameters
 
@@ -43,7 +43,7 @@ Not yet supported.
       "User": "zuliman92",
       "Points": 1882,
       "PointsSoftcore": 258,
-      "FollowsBack": true
+      "IsFollowingMe": true
     }
     // ...
   ]
@@ -54,6 +54,6 @@ Not yet supported.
 
 ## Source
 
-| Repo  | URL                                                                                            |
-| :---- | :--------------------------------------------------------------------------------------------- |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetFollowedUsersList.php |
+| Repo  | URL                                                                                       |
+| :---- | :---------------------------------------------------------------------------------------- |
+| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUsersIFollow.php |
