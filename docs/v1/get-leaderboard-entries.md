@@ -4,7 +4,7 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # Leaderboard Entries
 
-A call to this endpoint will retrieve a given leadboard's entires, targeted by its ID.
+A call to this endpoint will retrieve a given leaderboard's entries, targeted by its ID.
 
 [[toc]]
 
