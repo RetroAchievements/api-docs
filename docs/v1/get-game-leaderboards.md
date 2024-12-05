@@ -4,7 +4,7 @@ import SampleRequest from '../components/SampleRequest.vue';
 
 # Game Leaderboards
 
-A call to this endpoint will retrieve a given games's list of leaderboards, targeted by the game's ID.
+A call to this endpoint will retrieve a given game's list of leaderboards, targeted by the game's ID.
 
 [[toc]]
 
@@ -22,7 +22,6 @@ A games's list of leaderboards can be found on on the game's page:
 
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                               |
 | `y`  | Yes       | Your web API key.                                            |
 | `i`  | Yes       | The target game ID.                                          |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |
