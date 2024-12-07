@@ -24,7 +24,72 @@ A call to this endpoint returns comments of a specified kind: game, achievement,
 
 ## Client Library
 
-Not yet supported.
+::: code-group
+
+```Kotlin [User]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetComments.Response, ErrorResponse> = api.getCommentsOnUserWall(
+    username = "MaxMilyin",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val comments: GetComments.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+```Kotlin [Game]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetComments.Response, ErrorResponse> = api.getCommentsOnGameWall(
+    gameId = 14402,
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val comments: GetComments.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+```Kotlin [Achievement]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetComments.Response, ErrorResponse> = api.getCommentsOnAchievementWall(
+    achievementId = 14402,
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val comments: GetComments.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+:::
 
 ## Response
 
@@ -49,6 +114,7 @@ Not yet supported.
 
 ## Source
 
-| Repo  | URL                                                                                   |
-| :---- | :------------------------------------------------------------------------------------ |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetComments.php |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetComments.php                                |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
