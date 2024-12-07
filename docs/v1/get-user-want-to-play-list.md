@@ -29,7 +29,30 @@ The user's Want to Play Games list page looks like:
 
 ## Client Library
 
-Not yet supported.
+::: code-group
+
+```Kotlin
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserWantToPlayList.Response, ErrorResponse> = api.getUserWantToPlayList(
+    username = "MaxMilyin",
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val wantToPlayList: GetUserWantToPlayList.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+:::
 
 ## Response
 
@@ -58,6 +81,7 @@ Not yet supported.
 
 ## Source
 
-| Repo  | URL                                                                                             |
-| :---- | :---------------------------------------------------------------------------------------------- |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                      |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
