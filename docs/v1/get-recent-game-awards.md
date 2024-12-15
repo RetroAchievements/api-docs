@@ -48,6 +48,25 @@ const authorization = buildAuthorization({ username, webApiKey });
 const game = await getRecentGameAwards(authorization);
 ```
 
+```Kotlin
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetRecentGameAwards.Response, ErrorResponse> = api.getRecentGameAwards()
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val topUsers: GetRecentGameAwards.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
 :::
 
 ## Response
@@ -96,7 +115,8 @@ const game = await getRecentGameAwards(authorization);
 
 ## Source
 
-| Repo   | URL                                                                                           |
-| :----- | :-------------------------------------------------------------------------------------------- |
-| RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetRecentGameAwards.php |
-| api-js | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getRecentGameAwards.ts         |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetRecentGameAwards.php                        |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/feed/getRecentGameAwards.ts                                |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
