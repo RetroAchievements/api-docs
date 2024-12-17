@@ -45,7 +45,7 @@ Not yet supported.
   "Results": [
     {
       "ID": 19062,
-      "RankAsc": "true",
+      "RankAsc": true,
       "Title": "New Zealand One",
       "Description": "Complete New Zealand S1 in least time",
       "Format": "MILLISECS",
