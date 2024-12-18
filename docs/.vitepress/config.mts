@@ -118,6 +118,10 @@ export default defineConfig({
             text: "Users Following Me",
             link: "/v1/get-users-following-me",
           },
+          {
+            text: "User Set Requests",
+            link: "/v1/get-user-set-requests",
+          },
         ],
       },
       {
