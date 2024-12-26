@@ -166,6 +166,10 @@ export default defineConfig({
             text: "Entries",
             link: "/v1/get-leaderboard-entries",
           },
+          {
+            text: "User Leaderboards (by gameID)",
+            link: "/v1/get-user-game-leaderboards",
+          },
         ],
       },
       {
