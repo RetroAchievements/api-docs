@@ -46,6 +46,7 @@ Click the function names to open their complete docs on the docs site.
 - [Want to Play Games List](https://api-docs.retroachievements.org/v1/get-user-want-to-play-list.html) - Get a user's list of Want to Play Games.
 - [Users I Follow](https://api-docs.retroachievements.org/v1/get-users-i-follow.html) - Get the caller's list of followed users.
 - [Users Following Me](https://api-docs.retroachievements.org/v1/get-users-following-me.html) - Get the caller's list of followers users.
+- [User Set Requests](https://api-docs.retroachievements.org/v1/get-user-set-requests.html) - Get a user's list of set requests.
 
 ### Game
 
