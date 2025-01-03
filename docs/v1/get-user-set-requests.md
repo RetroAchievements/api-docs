@@ -18,11 +18,11 @@ A call to this endpoint will retrieve a given user's set requests, maximum total
 
 ### Query Parameters
 
-| Name | Required? | Description                                                   |
-| :--- | :-------- | :------------------------------------------------------------ |
-| `y`  | Yes       | Your web API key.                                             |
-| `u`  | Yes       | The target username.                                          |
-| `t`  | No        | Request List Type: 0 for active requests, 1 for all requests. |
+| Name | Required? | Description                                                                  |
+| :--- | :-------- | :--------------------------------------------------------------------------- |
+| `y`  | Yes       | Your web API key.                                                            |
+| `u`  | Yes       | The target username.                                                         |
+| `t`  | No        | Request List Type: 0 for active requests, 1 for all requests. Defaults to 0. |
 
 ## Client Library
 
