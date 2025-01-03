@@ -18,10 +18,11 @@ A call to this endpoint will retrieve a given user's set requests, maximum total
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
+| Name | Required? | Description                                                   |
+| :--- | :-------- | :------------------------------------------------------------ |
+| `y`  | Yes       | Your web API key.                                             |
+| `u`  | Yes       | The target username.                                          |
+| `t`  | No        | Request List Type: 0 for active requests, 1 for all requests. |
 
 ## Client Library
 
@@ -35,11 +36,11 @@ Not Yet Supported
 {
   "RequestedSets": [
     {
-      "GameID": 1,
-      "Title": "Sonic the Hedgehog",
-      "ConsoleID": 1,
-      "ConsoleName": "Genesis/Mega Drive",
-      "ImageIcon": "/Images/085573.png"
+      "GameID": 8149,
+      "Title": "Jurassic Park Institute Tour: Dinosaur Rescue",
+      "ConsoleID": 5,
+      "ConsoleName": "Game Boy Advance",
+      "ImageIcon": "/Images/000001.png"
     },
     {
       "GameID": 600,
@@ -49,11 +50,11 @@ Not Yet Supported
       "ImageIcon": "/Images/039797.png"
     },
     {
-      "GameID": 8149,
-      "Title": "Jurassic Park Institute Tour: Dinosaur Rescue",
-      "ConsoleID": 5,
-      "ConsoleName": "Game Boy Advance",
-      "ImageIcon": "/Images/000001.png"
+      "GameID": 1,
+      "Title": "Sonic the Hedgehog",
+      "ConsoleID": 1,
+      "ConsoleName": "Genesis/Mega Drive",
+      "ImageIcon": "/Images/085573.png"
     }
   ],
   "TotalRequests": 5,
