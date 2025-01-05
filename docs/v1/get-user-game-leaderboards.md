@@ -26,7 +26,7 @@ This endpoint will only return the leaderboards for the user given in the reques
 | :--- | :-------- | :----------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                            |
 | `i`  | Yes       | The target game ID.                                          |
-| `u`  | Yes       | The username of the user to retrieve leaderboards for.       |
+| `u`  | Yes       | The target username.                                         |
 | `c`  |           | Count, number of records to return (default: 200, max: 500). |
 | `o`  |           | Offset, number of entries to skip (default: 0).              |
 
