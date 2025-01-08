@@ -29,7 +29,22 @@ This data can be found on the Supported Game Files page, for example, [Sonic the
 
 ::: code-group
 
-```Kotlin
+```ts [NodeJS]
+import { buildAuthorization, getGameHashes } from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const game = await getGameHashes(authorization, {
+  gameId: 14402,
+});
+```
+
+```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
 
@@ -75,6 +90,25 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "results": [
+    {
+      "md5": "1b1d9ac862c387367e904036114c4825",
+      "name": "Sonic The Hedgehog (USA, Europe) (Ru) (NewGame).md",
+      "labels": ["nointro", "rapatches"],
+      "patchUrl": "https://github.com/RetroAchievements/RAPatches/raw/main/MD/Translation/Russian/1-Sonic1-Russian.zip"
+    },
+    {
+      "md5": "1bc674be034e43c96b86487ac69d9293",
+      "name": "Sonic The Hedgehog (USA, Europe).md",
+      "labels": ["nointro"],
+      "patchUrl": null
+    }
+  ]
+}
+```
+
 :::
 
 ## Source
@@ -82,4 +116,5 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameHashes.php                              |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameHashes.ts                                      |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
