@@ -10,7 +10,7 @@ A call to `API_GetTicketData` in this manner will retrieve the games on the site
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData?f=1</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData.php?f=1</SampleRequest>
 
 ### Query Parameters
 

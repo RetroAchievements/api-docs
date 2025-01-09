@@ -10,7 +10,7 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a ga
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData?g=1</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData.php?g=1</SampleRequest>
 
 ### Query Parameters
 
