@@ -10,7 +10,7 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a de
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData?u=Hexadigital</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData.php?u=Hexadigital</SampleRequest>
 
 ### Query Parameters
 
@@ -72,7 +72,7 @@ if (response is NetworkResponse.Success) {
   "Closed": 17,
   "Resolved": 27,
   "Total": 44,
-  "URL": "https://retroachievements.org/ticketmanager.php?u=MockUser"
+  "URL": "https://retroachievements.org/user/MockUser/tickets"
 }
 ```
 
@@ -83,7 +83,7 @@ if (response is NetworkResponse.Success) {
   "closed": 17,
   "resolved": 27,
   "total": 44,
-  "url": "https://retroachievements.org/ticketmanager.php?u=MockUser"
+  "url": "https://retroachievements.org/user/MockUser/tickets"
 }
 ```
 

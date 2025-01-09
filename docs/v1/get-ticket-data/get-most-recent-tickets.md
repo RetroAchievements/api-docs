@@ -10,7 +10,7 @@ A call to `API_GetTicketData` in this manner will retrieve ticket metadata infor
 
 ## HTTP Request
 
-<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData?o=0&c=10</SampleRequest>
+<SampleRequest httpVerb="GET">https://retroachievements.org/API/API_GetTicketData.php?o=0&c=10</SampleRequest>
 
 ### Query Parameters
 
