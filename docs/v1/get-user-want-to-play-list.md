@@ -31,7 +31,25 @@ The user's Want to Play Games list page looks like:
 
 ::: code-group
 
-```Kotlin
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getUserWantToPlayList,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const game = await getUserWantToPlayList(authorization, {
+  username: "MaxMilyin",
+});
+```
+
+```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
 
@@ -77,6 +95,25 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "count": 100,
+  "total": 1287,
+  "results": [
+    {
+      "id": 20246,
+      "title": "~Hack~ Knuckles the Echidna in Sonic the Hedgehog",
+      "imageIcon": "/Images/074560.png",
+      "consoleID": 1,
+      "consoleName": "Genesis/Mega Drive",
+      "pointsTotal": 1500,
+      "achievementsPublished": 50
+    }
+    // ...
+  ]
+}
+```
+
 :::
 
 ## Source
@@ -84,4 +121,5 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserWantToPlayList.php                      |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserWantToPlayList.ts                              |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
