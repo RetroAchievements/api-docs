@@ -32,7 +32,10 @@ The user's Want to Play Games list page looks like:
 ::: code-group
 
 ```ts [NodeJS]
-import { buildAuthorization, getGameHashes } from "@retroachievements/api";
+import {
+  buildAuthorization,
+  getUserWantToPlayList,
+} from "@retroachievements/api";
 
 // First, build your authorization object.
 const username = "<your username on RA>";
