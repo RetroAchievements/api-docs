@@ -82,6 +82,7 @@ How entities are ordered in this response should be noted. For `latest-masters`,
 [
   {
     "User": "Arekdias",
+    "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "NumAchievements": 15,
     "TotalScore": 219,
     "LastAward": "2023-06-07 14:43:18"
@@ -94,6 +95,7 @@ How entities are ordered in this response should be noted. For `latest-masters`,
 [
   {
     "user": "BruceLee1255",
+    "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "totalScore": 0,
     "lastAward": "2019-07-30 23:19:43",
     "rank": 27

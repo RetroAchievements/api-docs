@@ -20,10 +20,13 @@ A user's unlocks by a date range can be found manually via the user history:
 
 ### Query Parameters
 
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                        |
 | :--- | :-------- | :--------------------------------- |
 | `y`  | Yes       | Your web API key.                  |
-| `u`  | Yes       | The target username.               |
+| `u`  |           | The target username.               |
+| `i`  |           | The target user's ULID.            |
 | `f`  | Yes       | Epoch timestamp. Time range start. |
 | `t`  | Yes       | Epoch timestamp. Time range end.   |
 
@@ -98,6 +101,7 @@ if (response is NetworkResponse.Success) {
     "TrueRatio": 25,
     "Type": "missable",
     "Author": "Altomar",
+    "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameTitle": "Persona 3 Portable",
     "GameIcon": "/Images/065205.png",
     "GameID": 3164,
@@ -123,6 +127,7 @@ if (response is NetworkResponse.Success) {
     "trueRatio": 25,
     "type": null,
     "author": "pinguupinguu",
+    "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameTitle": "SpongeBob SquarePants: The Movie",
     "gameIcon": "/Images/059007.png",
     "gameId": 19018,
