@@ -92,7 +92,7 @@ if (response is NetworkResponse.Success) {
   "Genre": "",
   "Released": "1992-06-02 00:00:00",
   "ReleasedAtGranularity": "day",
-  "IsFinal": 0,
+  "IsFinal": false, // this field is deprecated, and will always return false
   "RichPresencePatch": "cce60593880d25c97797446ed33eaffb",
   "GuideURL": null,
   "ConsoleName": "Mega Drive",
