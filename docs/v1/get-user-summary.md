@@ -176,7 +176,8 @@ if (response is NetworkResponse.Success) {
     "Publisher": "Falcon",
     "Developer": "Falcon",
     "Genre": "2D Platforming, Arcade",
-    "Released": "1981",
+    "Released": "1981-01-01",
+    "ReleasedAtGranularity": "year",
     "IsFinal": 0
   },
   "UserPic": "/UserPic/xelnia.png",
