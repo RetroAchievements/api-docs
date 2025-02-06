@@ -20,10 +20,13 @@ This information can be found near the top of [any user page](https://retroachie
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
+| Name | Required? | Description             |
+| :--- | :-------- | :---------------------- |
+| `y`  | Yes       | Your web API key.       |
+| `u`  |           | The target username.    |
+| `i`  |           | The target user's ULID. |
 
 ## Client Library
 
@@ -74,6 +77,7 @@ if (response is NetworkResponse.Success) {
 ```json [HTTP Response]
 {
   "User": "MaxMilyin",
+  "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "UserPic": "/UserPic/MaxMilyin.png",
   "MemberSince": "2016-01-02 00:43:04",
   "RichPresenceMsg": "Playing ~Hack~ 11th Annual Vanilla Level Design Contest, The",
@@ -94,6 +98,7 @@ if (response is NetworkResponse.Success) {
 ```json [NodeJS]
 {
   "user": "MaxMilyin",
+  "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "userPic": "/UserPic/MaxMilyin.png",
   "memberSince": "2016-01-02 00:43:04",
   "richPresenceMsg": "Playing ~Hack~ 11th Annual Vanilla Level Design Contest, The",
