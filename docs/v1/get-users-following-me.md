@@ -62,6 +62,7 @@ if (response is NetworkResponse.Success) {
   "Results": [
     {
       "User": "zuliman92",
+      "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "Points": 1882,
       "PointsSoftcore": 258,
       "AmIFollowing": true

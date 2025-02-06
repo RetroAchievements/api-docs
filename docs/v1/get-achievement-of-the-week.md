@@ -79,6 +79,7 @@ if (response is NetworkResponse.Success) {
     "TrueRatio": 11,
     "Type": null,
     "Author": "StingX2",
+    "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "DateCreated": "2021-10-16 23:53:32",
     "DateModified": "2021-10-17 19:26:09"
   },
@@ -98,6 +99,7 @@ if (response is NetworkResponse.Success) {
   "Unlocks": [
     {
       "User": "Agnam",
+      "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "RAPoints": 56120,
       "RASoftcorePoints": 1267,
       "DateAwarded": "2023-10-26T22:13:34.000000Z",
@@ -119,6 +121,7 @@ if (response is NetworkResponse.Success) {
     "points": "10",
     "trueRatio": "22",
     "author": "BigWeedSmokerMan",
+    "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "dateCreated": "2021-08-08 17:47:46",
     "dateModified": "2021-08-09 12:20:05"
   },
@@ -130,6 +133,7 @@ if (response is NetworkResponse.Success) {
   "unlocks": [
     {
       "user": "Tirbaba2",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "rAPoints": "72",
       "rASoftcorePoints": "150",
       "dateAwarded": "2022-10-10 01:42:19",

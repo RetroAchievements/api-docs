@@ -20,10 +20,13 @@ This endpoint is known to be slow, and often results in over-fetching. For basic
 
 ### Query Parameters
 
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                                               |
 | :--- | :-------- | :-------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                         |
-| `u`  | Yes       | The target username.                                      |
+| `u`  |           | The target username.                                      |
+| `i`  |           | The target user's ULID.                                   |
 | `g`  |           | The number of recent games to return (default: 0).        |
 | `a`  |           | The number of recent achievements to return (default: 10) |
 
@@ -84,6 +87,7 @@ if (response is NetworkResponse.Success) {
 ```json [HTTP Response]
 {
   "User": "xelnia",
+  "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "MemberSince": "2021-12-20 03:13:20",
   "LastActivity": {
     "ID": 0,
@@ -188,6 +192,7 @@ if (response is NetworkResponse.Success) {
 ```json [NodeJS]
 {
   "user": "xelnia",
+  "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "memberSince": "2021-12-20 03:13:20",
   "lastActivity": {
     "id": 0,

@@ -22,11 +22,14 @@ This endpoint will only return the leaderboards for the user given in the reques
 
 ### Query Parameters
 
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                            |
 | `i`  | Yes       | The target game ID.                                          |
-| `u`  | Yes       | The target username.                                         |
+| `u`  |           | The target username.                                         |
+| `i`  |           | The target user's ULID.                                      |
 | `c`  |           | Count, number of records to return (default: 200, max: 500). |
 | `o`  |           | Offset, number of entries to skip (default: 0).              |
 
@@ -51,6 +54,7 @@ Not yet supported.
       "Format": "MILLISECS",
       "UserEntry": {
         "User": "zuliman92",
+        "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
         "Score": 12620,
         "FormattedScore": "2:06.20",
         "Rank": 2,

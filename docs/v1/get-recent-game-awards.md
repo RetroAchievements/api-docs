@@ -80,6 +80,7 @@ if (response is NetworkResponse.Success) {
   "Results": [
     {
       "User": "renanbrj",
+      "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "AwardKind": "mastered",
       "AwardDate": "2022-01-01T23:48:04+00:00",
       "GameID": 14284,
@@ -99,6 +100,7 @@ if (response is NetworkResponse.Success) {
   "results": [
     {
       "user": "renanbrj",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "awardKind": "mastered",
       "awardDate": "2022-01-01T23:48:04+00:00",
       "gameId": 14_284,

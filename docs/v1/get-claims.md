@@ -68,6 +68,7 @@ if (response is NetworkResponse.Success) {
   {
     "ID": 11245,
     "User": "kmpers",
+    "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameID": 24541,
     "GameTitle": "GP World",
     "GameIcon": "/Images/076324.png",
@@ -93,6 +94,7 @@ if (response is NetworkResponse.Success) {
   {
     "id": 11245,
     "user": "kmpers",
+    "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameId": 24541,
     "gameTitle": "GP World",
     "gameIcon": "/Images/076324.png",

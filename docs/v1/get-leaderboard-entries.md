@@ -66,6 +66,7 @@ if (response is NetworkResponse.Success) {
     {
       "Rank": 1,
       "User": "vani11a",
+      "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "Score": 390490,
       "FormattedScore": "390,490",
       "DateSubmitted": "2024-07-25T15:51:00+00:00"

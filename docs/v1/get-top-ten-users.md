@@ -65,7 +65,8 @@ if (response is NetworkResponse.Success) {
   {
     "1": "MaxMilyin",
     "2": 399597, // the user's hardcore points
-    "3": 1599212 // the user's RetroPoints (white points)
+    "3": 1599212, // the user's RetroPoints (white points)
+    "4": "00003EMFWR7XB8SDPEHB3K56ZQ" // the user's unique queryable ULID
   }
   // ...
 ]
