@@ -16,7 +16,6 @@ A call to this endpoint will retrieve extended metadata about a game, in additio
 
 | Name | Required? | Description                                                        |
 | :--- | :-------- | :----------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                     |
 | `y`  | Yes       | Your web API key.                                                  |
 | `u`  | Yes       | The target username.                                               |
 | `g`  | Yes       | The target game ID.                                                |

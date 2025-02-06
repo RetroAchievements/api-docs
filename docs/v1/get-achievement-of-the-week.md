@@ -79,8 +79,8 @@ if (response is NetworkResponse.Success) {
     "TrueRatio": 11,
     "Type": null,
     "Author": "StingX2",
-    "DateCreated": "2021-10-16 23:53:32",
-    "DateModified": "2021-10-17 19:26:09"
+    "DateCreated": "2021-10-16",
+    "DateModified": "2021-10-17"
   },
   "Console": {
     "ID": 3,
