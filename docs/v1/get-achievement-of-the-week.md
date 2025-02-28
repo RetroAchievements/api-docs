@@ -80,8 +80,8 @@ if (response is NetworkResponse.Success) {
     "Type": null,
     "Author": "StingX2",
     "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
-    "DateCreated": "2021-10-16 23:53:32",
-    "DateModified": "2021-10-17 19:26:09"
+    "DateCreated": "2021-10-16",
+    "DateModified": "2021-10-17"
   },
   "Console": {
     "ID": 3,

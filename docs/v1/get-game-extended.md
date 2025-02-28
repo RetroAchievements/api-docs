@@ -22,7 +22,6 @@ Most of this data can be found on the game page, for example, [Sonic the Hedgeho
 
 | Name | Required? | Description                                                       |
 | :--- | :-------- | :---------------------------------------------------------------- |
-| `z`  | Yes       | Your username.                                                    |
 | `y`  | Yes       | Your web API key.                                                 |
 | `i`  | Yes       | The target game ID.                                               |
 | `f`  |           | Defaults to 3. Set to 5 to see Unofficial / demoted achievements. |
@@ -87,9 +86,9 @@ if (response is NetworkResponse.Success) {
   "Publisher": "",
   "Developer": "",
   "Genre": "",
-  "Released": "1992-06-02 00:00:00",
+  "Released": "1992-06-02",
   "ReleasedAtGranularity": "day",
-  "IsFinal": 0,
+  "IsFinal": false, // this field is deprecated, and will always return false
   "RichPresencePatch": "cce60593880d25c97797446ed33eaffb",
   "GuideURL": null,
   "Updated": "2023-12-27T13:51:14.000000Z",
