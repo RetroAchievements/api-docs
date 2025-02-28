@@ -22,12 +22,11 @@ A user's unlocks by date can be found via the user history:
 
 You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
 
-| Name | Required? | Description                |
-| :--- | :-------- | :------------------------- |
-| `y`  | Yes       | Your web API key.          |
-| `u`  |           | The target username.       |
-| `i`  |           | The target user's ULID.    |
-| `d`  | Yes       | Date in YYYY-MM-DD format. |
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
+| `d`  | Yes       | Date in YYYY-MM-DD format.   |
 
 ## Client Library
 

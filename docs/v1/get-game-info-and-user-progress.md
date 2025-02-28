@@ -20,8 +20,7 @@ You must query the user by either their username or their ULID. Please note the 
 | :--- | :-------- | :----------------------------------------------------------------- |
 | `z`  | Yes       | Your username.                                                     |
 | `y`  | Yes       | Your web API key.                                                  |
-| `u`  |           | The target username.                                               |
-| `i`  |           | The target user's ULID.                                            |
+| `u`  |           | The target username or ULID.                                       |
 | `g`  | Yes       | The target game ID.                                                |
 | `a`  |           | Set to "1" if user award metadata should be included (default: 0). |
 

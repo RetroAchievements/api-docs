@@ -25,8 +25,7 @@ You must query the user by either their username or their ULID. Please note the 
 | Name | Required? | Description                                      |
 | :--- | :-------- | :----------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                |
-| `u`  |           | The target username.                             |
-| `i`  |           | The target user's ULID.                          |
+| `u`  |           | The target username or ULID.                     |
 | `i`  | Yes       | The target game IDs, as a comma-separated value. |
 
 ## Client Library

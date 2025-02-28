@@ -23,8 +23,7 @@ You must query the user by either their username or their ULID. Please note the 
 | Name | Required? | Description                                                                  |
 | :--- | :-------- | :--------------------------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                                            |
-| `u`  |           | The target username.                                                         |
-| `i`  |           | The target user's ULID.                                                      |
+| `u`  |           | The target username or ULID.                                                 |
 | `t`  | No        | Request List Type: 0 for active requests, 1 for all requests. Defaults to 0. |
 
 ## Client Library

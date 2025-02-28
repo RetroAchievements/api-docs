@@ -25,8 +25,7 @@ You must query the user by either their username or their ULID. Please note the 
 | Name | Required? | Description                                                  |
 | :--- | :-------- | :----------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                            |
-| `u`  |           | The target username.                                         |
-| `i`  |           | The target user's ULID.                                      |
+| `u`  |           | The target username or ULID.                                 |
 | `c`  |           | Count, number of records to return (default: 100, max: 500). |
 | `o`  |           | Offset, number of entries to skip (default: 0).              |
 

@@ -16,12 +16,11 @@ A call to this endpoint will retrieve metadata about how a given user has perfor
 
 You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
 
-| Name | Required? | Description             |
-| :--- | :-------- | :---------------------- |
-| `y`  | Yes       | Your web API key.       |
-| `u`  |           | The target username.    |
-| `i`  |           | The target user's ULID. |
-| `g`  | Yes       | The target game ID.     |
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
+| `g`  | Yes       | The target game ID.          |
 
 ## Client Library
 
