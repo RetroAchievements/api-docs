@@ -65,6 +65,7 @@ if (response is NetworkResponse.Success) {
   {
     "ID": 11246,
     "User": "WanderingHeiho",
+    "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameID": 26971,
     "GameTitle": "~Homebrew~ No Place To Hide",
     "GameIcon": "/Images/084916.png",
@@ -90,6 +91,7 @@ if (response is NetworkResponse.Success) {
   {
     "id": 11246,
     "user": "WanderingHeiho",
+    "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameId": 26971,
     "gameTitle": "~Homebrew~ No Place To Hide",
     "gameIcon": "/Images/084916.png",

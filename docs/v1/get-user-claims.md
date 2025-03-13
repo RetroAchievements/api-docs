@@ -14,10 +14,12 @@ A call to this endpoint will retrieve a list of achievement set claims made over
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
 
 ## Client Library
 
@@ -70,6 +72,7 @@ if (response is NetworkResponse.Success) {
   {
     "ID": 11161,
     "User": "Jamiras",
+    "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameID": 18644,
     "GameTitle": "~Unlicensed~ Hi-Leg Fantasy",
     "GameIcon": "/Images/083201.png",
@@ -94,6 +97,7 @@ if (response is NetworkResponse.Success) {
   {
     "id": 7779,
     "user": "Jamiras",
+    "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameId": 11592,
     "gameTitle": "Mary-Kate & Ashley: Get a Clue!",
     "gameIcon": "/Images/065909.png",

@@ -79,6 +79,7 @@ if (response is NetworkResponse.Success) {
     "Points": 4,
     "TrueRatio": 4,
     "Author": "Scott",
+    "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "DateCreated": "2012-11-02 00:03:12",
     "DateModified": "2023-08-08 00:36:59",
     "Type": "progression"
@@ -97,6 +98,7 @@ if (response is NetworkResponse.Success) {
   "Unlocks": [
     {
       "User": "vipotaenko02",
+      "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "RAPoints": 0,
       "RASoftcorePoints": 0,
       "DateAwarded": "2023-10-27T00:19:05.000000Z",
@@ -116,6 +118,7 @@ if (response is NetworkResponse.Success) {
     "points": 4,
     "trueRatio": 4,
     "author": "Scott",
+    "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "dateCreated": "2012-11-02 00:03:12",
     "dateModified": "2023-08-08 00:36:59",
     "type": "progression"
@@ -128,6 +131,7 @@ if (response is NetworkResponse.Success) {
   "unlocks": [
     {
       "user": "vipotaenko02",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
       "raPoints": 0,
       "raSoftcorePoints": 0,
       "dateAwarded": "2023-10-27T00:19:05.000000Z",

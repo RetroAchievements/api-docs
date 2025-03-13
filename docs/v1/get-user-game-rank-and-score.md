@@ -14,11 +14,13 @@ A call to this endpoint will retrieve metadata about how a given user has perfor
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
-| `g`  | Yes       | The target game ID.  |
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
+| `g`  | Yes       | The target game ID.          |
 
 ## Client Library
 
@@ -76,6 +78,7 @@ if (response is NetworkResponse.Success) {
 [
   {
     "User": "WCopeland",
+    "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "UserRank": 9,
     "TotalScore": 199,
     "LastAward": "2023-06-07 14:44:00"
@@ -88,6 +91,7 @@ if (response is NetworkResponse.Success) {
 [
   {
     "user": "WCopeland",
+    "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "totalScore": 199,
     "lastAward": "2023-06-07 14:44:00",
     "userRank": 9

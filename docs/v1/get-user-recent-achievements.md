@@ -24,10 +24,12 @@ The recent unlocks can also be found on the "Unlocked Achievements" page:
 
 ### Query Parameters
 
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                           |
 | :--- | :-------- | :------------------------------------ |
 | `y`  | Yes       | Your web API key.                     |
-| `u`  | Yes       | The target username.                  |
+| `u`  |           | The target username or ULID.          |
 | `m`  |           | Minutes to look back. Defaults to 60. |
 
 ## Client Library
@@ -92,6 +94,7 @@ if (response is NetworkResponse.Success) {
     "TrueRatio": 25,
     "Type": null,
     "Author": "jos",
+    "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameTitle": "Pokemon Pinball mini",
     "GameIcon": "/Images/028399.png",
     "GameID": 14715,
@@ -115,6 +118,7 @@ if (response is NetworkResponse.Success) {
     "trueRatio": 100,
     "type": null,
     "author": "Som1",
+    "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameTitle": "WWF King of the Ring",
     "gameIcon": "/Images/062599.png",
     "gameId": 6316,

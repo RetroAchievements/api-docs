@@ -14,10 +14,13 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a de
 
 ### Query Parameters
 
+You must query the developer by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                      |
 | :--- | :-------- | :------------------------------- |
 | `y`  | Yes       | Your web API key.                |
-| `u`  | Yes       | The target developer's username. |
+| `u`  |           | The target developer's username. |
+| `i`  |           | The target developer's ULID.     |
 
 ## Client Library
 
@@ -68,6 +71,7 @@ if (response is NetworkResponse.Success) {
 ```json [HTTP Response]
 {
   "User": "MockUser",
+  "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "Open": 0,
   "Closed": 17,
   "Resolved": 27,
@@ -79,6 +83,7 @@ if (response is NetworkResponse.Success) {
 ```json [NodeJS]
 {
   "user": "MockUser",
+  "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
   "open": 0,
   "closed": 17,
   "resolved": 27,

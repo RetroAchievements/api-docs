@@ -20,11 +20,13 @@ A user's unlocks by date can be found via the user history:
 
 ### Query Parameters
 
-| Name | Required? | Description                |
-| :--- | :-------- | :------------------------- |
-| `y`  | Yes       | Your web API key.          |
-| `u`  | Yes       | The target username.       |
-| `d`  | Yes       | Date in YYYY-MM-DD format. |
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
+| `d`  | Yes       | Date in YYYY-MM-DD format.   |
 
 ## Client Library
 
@@ -93,6 +95,7 @@ if (response is NetworkResponse.Success) {
     "Points": 5,
     "Type": null,
     "Author": "TheMysticalOne",
+    "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "GameTitle": "Dragon Quest VIII: Journey of the Cursed King",
     "GameIcon": "/Images/038649.png",
     "GameID": 2721,
@@ -117,6 +120,7 @@ if (response is NetworkResponse.Success) {
     "points": 5,
     "type": null,
     "author": "pinguupinguu",
+    "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZQ",
     "gameTitle": "SpongeBob SquarePants: The Movie",
     "gameIcon": "/Images/059007.png",
     "gameId": 19018,

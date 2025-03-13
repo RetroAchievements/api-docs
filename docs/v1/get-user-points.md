@@ -14,10 +14,12 @@ A call to this endpoint will retrieve a given user's hardcore and softcore point
 
 ### Query Parameters
 
-| Name | Required? | Description          |
-| :--- | :-------- | :------------------- |
-| `y`  | Yes       | Your web API key.    |
-| `u`  | Yes       | The target username. |
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
+| Name | Required? | Description                  |
+| :--- | :-------- | :--------------------------- |
+| `y`  | Yes       | Your web API key.            |
+| `u`  |           | The target username or ULID. |
 
 ## Client Library
 

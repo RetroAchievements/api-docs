@@ -14,10 +14,12 @@ A call to this endpoint will retrieve a list of a target user's recently played 
 
 ### Query Parameters
 
+You must query the user by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
+
 | Name | Required? | Description                                                |
 | :--- | :-------- | :--------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                          |
-| `u`  | Yes       | The target username.                                       |
+| `u`  |           | The target username or ULID.                               |
 | `c`  |           | Count, number of records to return (default: 10, max: 50). |
 | `o`  |           | Offset, number of entries to skip (default: 0).            |
 
