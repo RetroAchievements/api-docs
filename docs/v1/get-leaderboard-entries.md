@@ -31,6 +31,24 @@ A leaderboards's entries can be found on the leaderboard info page:
 
 ::: code-group
 
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getLeaderboardEntries,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const entries = await getLeaderboardEntries(authorization, {
+  leaderboardId: 14402,
+});
+```
+
 ```Kotlin
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
@@ -76,6 +94,24 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "count": 100,
+  "total": 1287,
+  "results": [
+    {
+      "rank": 1,
+      "user": "vani11a",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
+      "score": 390490,
+      "formattedScore": "390,490",
+      "dateSubmitted": "2024-07-25T15:51:00+00:00"
+    }
+    // ...
+  ]
+}
+```
+
 :::
 
 ## Source
@@ -83,4 +119,5 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetLeaderboardEntries.php                      |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/leaderboard/getLeaderboardEntries.ts                       |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
