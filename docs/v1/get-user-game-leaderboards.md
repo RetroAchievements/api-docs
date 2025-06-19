@@ -34,7 +34,27 @@ You must query the user by either their username or their ULID. Please note the 
 
 ## Client Library
 
-Not yet supported.
+::: code-group
+
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getUserGameLeaderboards,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const gameLeaderboards = await getUserGameLeaderboards(authorization, {
+  gameId: 14402,
+});
+```
+
+:::
 
 ## Response
 
@@ -59,8 +79,33 @@ Not yet supported.
         "Rank": 2,
         "DateUpdated": "2024-12-12T16:40:59+00:00"
       }
-    },
-    ...
+    }
+    // ...
+  ]
+}
+```
+
+```json [NodeJS]
+{
+  "count": 10,
+  "total": 64,
+  "results": [
+    {
+      "id": 19062,
+      "rankAsc": true,
+      "title": "New Zealand One",
+      "description": "Complete New Zealand S1 in least time",
+      "format": "MILLISECS",
+      "userEntry": {
+        "user": "zuliman92",
+        "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
+        "score": 12620,
+        "formattedScore": "2:06.20",
+        "rank": 2,
+        "dateUpdated": "2024-12-12T16:40:59+00:00"
+      }
+    }
+    // ...
   ]
 }
 ```
@@ -69,6 +114,7 @@ Not yet supported.
 
 ## Source
 
-| Repo  | URL                                                                                               |
-| :---- | :------------------------------------------------------------------------------------------------ |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserGameLeaderboards.php |
+| Repo   | URL                                                                                               |
+| :----- | :------------------------------------------------------------------------------------------------ |
+| RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserGameLeaderboards.php |
+| api-js | https://github.com/RetroAchievements/api-js/blob/main/src/leaderboard/getUserGameLeaderboards.ts  |
