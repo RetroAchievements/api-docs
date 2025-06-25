@@ -69,6 +69,8 @@ if (response is NetworkResponse.Success) {
       "Title": " South Island Conqueror",
       "Description": "Complete the game with the highest score possible",
       "Format": "VALUE",
+      "Author": "Scott",
+      "AuthorULID": "00003EMFWR7XB8SDPEHB3K56ZA",
       "TopEntry": {
         "User": "vani11a",
         "ULID": "00003EMFWR7XB8SDPEHB3K56ZQ",
