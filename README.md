@@ -56,6 +56,7 @@ Click the function names to open their complete docs on the docs site.
 - [Achievement IDs](https://api-docs.retroachievements.org/v1/get-achievement-count.html) - Get the list of achievement IDs for a game.
 - [Unlocks Distribution](https://api-docs.retroachievements.org/v1/get-achievement-distribution.html) - Get how many players have unlocked how many achievements for a game.
 - [High Scores](https://api-docs.retroachievements.org/v1/get-game-rank-and-score.html) - Get a list of either the latest masters or highest hardcore points earners for a game.
+- [Progression](https://api-docs.retroachievements.org/v1/get-game-progression.html) - Get information about average time to unlock achievements for a game.
 
 ### Leaderboards
 

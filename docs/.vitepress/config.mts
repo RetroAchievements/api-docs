@@ -152,6 +152,10 @@ export default defineConfig({
             text: "High Scores",
             link: "/v1/get-game-rank-and-score",
           },
+          {
+            text: "Progression",
+            link: "/v1/get-game-progression",
+          },
         ],
       },
       {
