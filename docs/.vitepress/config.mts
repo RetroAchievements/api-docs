@@ -1,4 +1,6 @@
 import { defineConfig } from "vitepress";
+import llmstxt from "vitepress-plugin-llms";
+import { copyOrDownloadAsMarkdownButtons } from "vitepress-plugin-llms";
 
 /**
  * Try your best not to have any sidebar page titles wrap to a 2nd line.
@@ -9,6 +11,16 @@ export default defineConfig({
   title: "RetroAchievements API",
   description:
     "The official documentation for how to get achievement, user, and game data from RetroAchievements.",
+
+  vite: {
+    plugins: [llmstxt()],
+  },
+
+  markdown: {
+    config(md) {
+      md.use(copyOrDownloadAsMarkdownButtons);
+    },
+  },
 
   themeConfig: {
     siteTitle: "API",
