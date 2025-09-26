@@ -16,11 +16,10 @@ A call to `API_GetTicketData` in this manner will retrieve ticket stats for a de
 
 You must query the developer by either their username or their ULID. Please note the username is not considered a stable value. As of 2025, users can change their usernames. Initially querying by username is a good way to fetch a ULID.
 
-| Name | Required? | Description                      |
-| :--- | :-------- | :------------------------------- |
-| `y`  | Yes       | Your web API key.                |
-| `u`  |           | The target developer's username. |
-| `i`  |           | The target developer's ULID.     |
+| Name | Required? | Description                              |
+| :--- | :-------- | :--------------------------------------- |
+| `y`  | Yes       | Your web API key.                        |
+| `u`  |           | The target developer's username or ULID. |
 
 ## Client Library
 
