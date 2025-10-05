@@ -119,4 +119,6 @@ Put your work on a branch and push it to your fork. When you are ready to contri
 
 ## Projects Using the RetroAchievements API
 
+- [Public Postman Collection](https://www.postman.com/supply-technologist-52279785/workspace/my-public-api-docs/collection/25383510-c0a78a56-fca3-459b-ad1c-02df298b3414?action=share&source=copy-link&creator=25383510)
+
 Let us know about yours by [opening an issue](https://github.com/RetroAchievements/api-docs/issues/new)!
