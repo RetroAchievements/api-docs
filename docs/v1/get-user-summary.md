@@ -98,6 +98,7 @@ if (response is NetworkResponse.Success) {
     "data2": null
   },
   "RichPresenceMsg": "L=08-1 | 1 lives | 189300 points",
+  "RichPresenceMsgDate": "2025-11-19 12:05:04",
   "LastGameID": 15758,
   "ContribCount": 0,
   "ContribYield": 0,
@@ -204,6 +205,7 @@ if (response is NetworkResponse.Success) {
     "data2": null
   },
   "richPresenceMsg": "L=08-1 | 1 lives | 189300 points",
+  "richPresenceMsgDate": "2025-11-19 12:05:04",
   "lastGameId": 15758,
   "contribCount": 0,
   "contribYield": 0,
