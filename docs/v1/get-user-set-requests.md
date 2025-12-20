@@ -28,7 +28,30 @@ You must query the user by either their username or their ULID. Please note the 
 
 ## Client Library
 
-Not Yet Supported
+::: code-group
+
+```kotlin [Kotlin]
+val credentials = RetroCredentials("<username>", "<web api key>")
+val api: RetroInterface = RetroClient(credentials).api
+
+val response: NetworkResponse<GetUserSetRequests.Response, ErrorResponse> = api.getUserSetRequests(
+     userId = "MaxMilyin"
+)
+
+if (response is NetworkResponse.Success) {
+    // handle the data
+    val userSetRequests: GetUserSetRequests.Response = response.body
+
+} else if (response is NetworkResponse.Error) {
+    // if the server returns an error it be found here
+    val errorResponse: ErrorResponse? = response.body
+
+    // if the api (locally) had an internal error, it'll be found here
+    val internalError: Throwable? = response.error
+}
+```
+
+:::
 
 ## Response
 
