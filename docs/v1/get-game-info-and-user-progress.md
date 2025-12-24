@@ -128,6 +128,7 @@ if (response is NetworkResponse.Success) {
   "NumDistinctPlayersHardcore": 27080,
   "UserCompletion": "100.00%",
   "UserCompletionHardcore": "100.00%",
+  "UserTotalPlaytime": 60,
   "HighestAwardKind": "mastered",
   "HighestAwardDate": "2024-04-23T21:28:49+00:00"
 }
@@ -186,6 +187,7 @@ if (response is NetworkResponse.Success) {
   "numAwardedToUserHardcore": 4,
   "userCompletion": "12.00%",
   "userCompletionHardcore": "12.00%",
+  "userTotalPlaytime": 60,
   "highestAwardKind": "mastered",
   "highestAwardDate": "2024-04-23T21:28:49+00:00"
 }
