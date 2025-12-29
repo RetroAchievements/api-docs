@@ -121,7 +121,7 @@ When a player begins playing your game (or logs in to your server), you must sen
 
 ## Heartbeat Pings
 
-Emulators generally send a ping to RetroAchievements every 5 minutes. This has multiple benefits:
+Emulators generally send a ping to RetroAchievements every 2 minutes. This has multiple benefits:
 
 - It keeps the game page's player list active.
 - It keeps the game on the user's on-site profile.
