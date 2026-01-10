@@ -28,7 +28,7 @@ You must query the user by either their username or their ULID. Please note the 
 | :--- | :-------- | :----------------------------------------------------------- |
 | `y`  | Yes       | Your web API key.                                            |
 | `i`  | Yes       | The target game ID.                                          |
-| `u`  |           | The target username or ULID.                                 |
+| `u`  | Yes       | The target username or ULID.                                 |
 | `c`  |           | Count, number of records to return (default: 200, max: 500). |
 | `o`  |           | Offset, number of entries to skip (default: 0).              |
 
@@ -51,6 +51,7 @@ const authorization = buildAuthorization({ username, webApiKey });
 // Then, make the API call.
 const gameLeaderboards = await getUserGameLeaderboards(authorization, {
   gameId: 14402,
+  username: "zuliman92",
 });
 ```
 
