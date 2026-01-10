@@ -24,6 +24,21 @@ A call to this endpoint will retrieve information about the average time to unlo
 
 ::: code-group
 
+```ts [NodeJS]
+import { buildAuthorization, getGameProgression } from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const gameProgression = await getGameProgression(authorization, {
+  gameId: 14402,
+});
+```
+
 ```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
@@ -104,10 +119,65 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "id": 228,
+  "title": "Super Mario World",
+  "consoleId": 3,
+  "consoleName": "SNES/Super Famicom",
+  "imageIcon": "/Images/112443.png",
+  "numDistinctPlayers": 79281,
+  "timesUsedInBeatMedian": 4493,
+  "timesUsedInHardcoreBeatMedian": 8249,
+  "medianTimeToBeat": 17878,
+  "medianTimeToBeatHardcore": 19224,
+  "timesUsedInCompletionMedian": 155,
+  "timesUsedInMasteryMedian": 1091,
+  "medianTimeToComplete": 67017,
+  "medianTimeToMaster": 79744,
+  "numAchievements": 89,
+  "achievements": [
+    {
+      "id": 342,
+      "title": "Giddy Up!",
+      "description": "Catch a ride with a friend",
+      "points": 1,
+      "trueRatio": 1,
+      "type": null,
+      "badgeName": "46580",
+      "numAwarded": 75168,
+      "numAwardedHardcore": 37024,
+      "timesUsedInUnlockMedian": 63,
+      "timesUsedInHardcoreUnlockMedian": 69,
+      "medianTimeToUnlock": 274,
+      "medianTimeToUnlockHardcore": 323
+    },
+    {
+      "id": 341,
+      "title": "Unleash The Dragon",
+      "description": "Collect 5 Dragon Coins in a level",
+      "points": 2,
+      "trueRatio": 2,
+      "type": null,
+      "badgeName": "46591",
+      "numAwarded": 66647,
+      "numAwardedHardcore": 34051,
+      "timesUsedInUnlockMedian": 66,
+      "timesUsedInHardcoreUnlockMedian": 70,
+      "medianTimeToUnlock": 290,
+      "medianTimeToUnlockHardcore": 333
+    }
+    // ... additional achievements
+  ]
+}
+```
+
 :::
 
 ## Source
 
-| Repo  | URL                                                                                          |
-| :---- | :------------------------------------------------------------------------------------------- |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameProgression.php |
+| Repo       | URL                                                                                                                  |
+| :--------- | :------------------------------------------------------------------------------------------------------------------- |
+| RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameProgression.php                         |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/game/getGameProgression.ts                                 |
+| api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
