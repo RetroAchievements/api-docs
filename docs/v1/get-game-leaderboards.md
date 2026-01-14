@@ -31,6 +31,24 @@ A games's list of leaderboards can be found on on the game's page:
 
 ::: code-group
 
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getGameLeaderboards,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const gameLeaderboards = await getGameLeaderboards(authorization, {
+  gameId: 14402,
+});
+```
+
 ```Kotlin
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
@@ -83,6 +101,32 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "count": 29,
+  "total": 29,
+  "results": [
+    {
+      "id": 104370,
+      "rankAsc": false,
+      "title": " South Island Conqueror",
+      "description": "Complete the game with the highest score possible",
+      "format": "VALUE",
+      "author": "Scott",
+      "authorUlid": "00003EMFWR7XB8SDPEHB3K56ZA",
+      "state": "active",
+      "topEntry": {
+        "user": "vani11a",
+        "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
+        "score": 390490,
+        "formattedScore": "390,490"
+      }
+    }
+    // ...
+  ]
+}
+```
+
 :::
 
 ## Source
@@ -90,4 +134,5 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetGameLeaderboards.php                        |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/leaderboard/getGameLeaderboards.ts                         |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
