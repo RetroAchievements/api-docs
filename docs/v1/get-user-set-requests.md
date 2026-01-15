@@ -30,6 +30,26 @@ You must query the user by either their username or their ULID. Please note the 
 
 ::: code-group
 
+```ts [NodeJS]
+import { buildAuthorization, getUserSetRequests } from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const userSetRequests = await getUserSetRequests(authorization, {
+  username: "MaxMilyin",
+});
+
+// Note: the payload object can contain an additional property called
+// `requestListType` to return a tailored list of set requests. To use
+// this property, import `RequestListType` from `@retroachievements/api`
+// to use the enums.
+```
+
 ```kotlin [Kotlin]
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
@@ -87,10 +107,41 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "requestedSets": [
+    {
+      "gameId": 8149,
+      "title": "Jurassic Park Institute Tour: Dinosaur Rescue",
+      "consoleId": 5,
+      "consoleName": "Game Boy Advance",
+      "imageIcon": "/Images/000001.png"
+    },
+    {
+      "gameId": 600,
+      "title": "Psycho Pinball",
+      "consoleId": 1,
+      "consoleName": "Genesis/Mega Drive",
+      "imageIcon": "/Images/039797.png"
+    },
+    {
+      "gameId": 1,
+      "title": "Sonic the Hedgehog",
+      "consoleId": 1,
+      "consoleName": "Genesis/Mega Drive",
+      "imageIcon": "/Images/085573.png"
+    }
+  ],
+  "totalRequests": 5,
+  "pointsForNext": 5000
+}
+```
+
 :::
 
 ## Source
 
-| Repo  | URL                                                                                          |
-| :---- | :------------------------------------------------------------------------------------------- |
-| RAWeb | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSetRequests.php |
+| Repo   | URL                                                                                          |
+| :----- | :------------------------------------------------------------------------------------------- |
+| RAWeb  | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUserSetRequests.php |
+| api-js | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUserSetRequests.ts         |
