@@ -114,17 +114,17 @@ if (response is NetworkResponse.Success) {
 
 ```json [NodeJS]
 {
-    "count": 4,
-    "total": 4,
-    "results": [
-        {
-            "user": "PlayTester",
-            "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
-            "submitted": "2024-07-31T11:22:23.000000Z",
-            "commentText": "Comment 1"
-        },
-        // ...
-    ]
+  "count": 4,
+  "total": 4,
+  "results": [
+    {
+      "user": "PlayTester",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
+      "submitted": "2024-07-31T11:22:23.000000Z",
+      "commentText": "Comment 1"
+    }
+    // ...
+  ]
 }
 ```
 
