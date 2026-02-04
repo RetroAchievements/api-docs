@@ -125,7 +125,7 @@ if (response is NetworkResponse.Success) {
         },
         // ...
     ]
-]
+}
 ```
 
 :::
