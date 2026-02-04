@@ -1,0 +1,2053 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "RetroAchievements",
+    "description": "JSON:API built using Laravel",
+    "version": "2.0"
+  },
+  "servers": [
+    {
+      "url": "https://api.retroachievements.org/v2",
+      "description": "Primary server"
+    }
+  ],
+  "paths": {
+    "/achievements": {
+      "get": {
+        "tags": ["Achievements"],
+        "summary": "Get all achievements",
+        "description": "",
+        "operationId": "achievements.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "title",
+                  "-title",
+                  "points",
+                  "-points",
+                  "pointsWeighted",
+                  "-pointsWeighted",
+                  "type",
+                  "-type",
+                  "orderColumn",
+                  "-orderColumn",
+                  "unlocksTotal",
+                  "-unlocksTotal",
+                  "unlocksHardcore",
+                  "-unlocksHardcore",
+                  "unlockPercentage",
+                  "-unlockPercentage",
+                  "unlockHardcorePercentage",
+                  "-unlockHardcorePercentage"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[id]",
+            "in": "query",
+            "description": "A list of ids to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "empty": {
+                "value": []
+              },
+              "1": {
+                "value": ["1"]
+              },
+              "2": {
+                "value": ["2"]
+              },
+              "3": {
+                "value": ["3"]
+              }
+            }
+          },
+          {
+            "name": "filter[state]",
+            "in": "query",
+            "description": "Applies the state scope.",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "filter[gameId]",
+            "in": "query",
+            "description": "Applies the gameId scope.",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "filter[type]",
+            "in": "query",
+            "description": "A list of types to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "default": {
+                "value": []
+              },
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "progression": {
+                "value": "progression"
+              },
+              "missable": {
+                "value": "missable"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index achievements",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.achievements.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      }
+    },
+    "/achievements/{achievement}": {
+      "get": {
+        "tags": ["Achievements"],
+        "summary": "Show one achievement",
+        "description": "",
+        "operationId": "achievements.show",
+        "parameters": [
+          {
+            "name": "achievement",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show achievements",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.achievements.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/achievement-sets/{achievement_set}": {
+      "get": {
+        "tags": ["Achievement-sets"],
+        "summary": "Show one achievement-set",
+        "description": "",
+        "operationId": "achievement-sets.show",
+        "parameters": [
+          {
+            "name": "achievement_set",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show achievement-sets",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.achievement-sets.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/games": {
+      "get": {
+        "tags": ["Games"],
+        "summary": "Get all games",
+        "description": "",
+        "operationId": "games.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "title",
+                  "-title",
+                  "sortTitle",
+                  "-sortTitle",
+                  "releasedAt",
+                  "-releasedAt",
+                  "playersTotal",
+                  "-playersTotal",
+                  "playersHardcore",
+                  "-playersHardcore",
+                  "achievementsPublished",
+                  "-achievementsPublished",
+                  "pointsTotal",
+                  "-pointsTotal",
+                  "pointsWeighted",
+                  "-pointsWeighted"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[id]",
+            "in": "query",
+            "description": "A list of ids to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "empty": {
+                "value": []
+              },
+              "1": {
+                "value": ["1"]
+              },
+              "2": {
+                "value": ["2"]
+              },
+              "3": {
+                "value": ["3"]
+              }
+            }
+          },
+          {
+            "name": "filter[systemId]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": 1
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index games",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.games.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      }
+    },
+    "/games/{game}": {
+      "get": {
+        "tags": ["Games"],
+        "summary": "Show one game",
+        "description": "",
+        "operationId": "games.show",
+        "parameters": [
+          {
+            "name": "game",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show games",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.games.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/leaderboards": {
+      "get": {
+        "tags": ["Leaderboards"],
+        "summary": "Get all leaderboards",
+        "description": "",
+        "operationId": "leaderboards.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "title",
+                  "-title",
+                  "orderColumn",
+                  "-orderColumn",
+                  "createdAt",
+                  "-createdAt",
+                  "updatedAt",
+                  "-updatedAt"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[id]",
+            "in": "query",
+            "description": "A list of ids to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "empty": {
+                "value": []
+              },
+              "1": {
+                "value": ["1"]
+              },
+              "2": {
+                "value": ["2"]
+              },
+              "3": {
+                "value": ["3"]
+              }
+            }
+          },
+          {
+            "name": "filter[gameId]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": 1
+              }
+            }
+          },
+          {
+            "name": "filter[state]",
+            "in": "query",
+            "description": "Applies the state scope.",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index leaderboards",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.leaderboards.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      }
+    },
+    "/leaderboards/{leaderboard}": {
+      "get": {
+        "tags": ["Leaderboards"],
+        "summary": "Show one leaderboard",
+        "description": "",
+        "operationId": "leaderboards.show",
+        "parameters": [
+          {
+            "name": "leaderboard",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show leaderboards",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.leaderboards.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/systems": {
+      "get": {
+        "tags": ["Systems"],
+        "summary": "Get All Systems",
+        "description": "Views a list of all systems on the site",
+        "operationId": "systems.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "name",
+                  "-name",
+                  "nameFull",
+                  "-nameFull",
+                  "nameShort",
+                  "-nameShort"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[id]",
+            "in": "query",
+            "description": "A list of ids to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": false,
+            "schema": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "empty": {
+                "value": []
+              },
+              "1": {
+                "value": ["1"]
+              },
+              "2": {
+                "value": ["2"]
+              },
+              "3": {
+                "value": ["3"]
+              }
+            }
+          },
+          {
+            "name": "filter[active]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": true
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index systems",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.systems.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      }
+    },
+    "/systems/{system}": {
+      "get": {
+        "tags": ["Systems"],
+        "summary": "Show one system",
+        "description": "",
+        "operationId": "systems.show",
+        "parameters": [
+          {
+            "name": "system",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show systems",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.systems.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Get all users",
+        "description": "",
+        "operationId": "users.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "points",
+                  "-points",
+                  "pointsHardcore",
+                  "-pointsHardcore",
+                  "pointsWeighted",
+                  "-pointsWeighted",
+                  "yieldUnlocks",
+                  "-yieldUnlocks",
+                  "yieldPoints",
+                  "-yieldPoints",
+                  "joinedAt",
+                  "-joinedAt",
+                  "lastActivityAt",
+                  "-lastActivityAt"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[role]",
+            "in": "query",
+            "description": "Applies the role scope.",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.users.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          }
+        }
+      }
+    },
+    "/users/{user}": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Show one user",
+        "description": "",
+        "operationId": "users.show",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "01K4Y87MWZ3Q9WC9EFFT6JKSNP": {
+                "value": "01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+              },
+              "01K4Y87VCKZ0HCW9M95BPVZ2T8": {
+                "value": "01K4Y87VCKZ0HCW9M95BPVZ2T8"
+              },
+              "01K4Y87BXTWJWX795ZTVS0FQBF": {
+                "value": "01K4Y87BXTWJWX795ZTVS0FQBF"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/resources.users.resource.fetch"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "helper.errors": {
+        "title": "Helper/Errors",
+        "type": "array",
+        "items": {
+          "title": "Error",
+          "type": "object",
+          "required": ["status", "title"],
+          "properties": {
+            "detail": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "source": {
+              "type": "object",
+              "properties": {
+                "pointer": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "helper.jsonapi": {
+        "title": "Helper/JSONAPI",
+        "type": "object",
+        "required": ["version"],
+        "properties": {
+          "version": {
+            "title": "version",
+            "type": "string",
+            "example": "1.0"
+          }
+        }
+      },
+      "resources.achievement-sets.resource.fetch": {
+        "title": "Resource/Achievement-set/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "achievement-sets",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "title",
+                "type": "string",
+                "readOnly": true,
+                "example": "Quia Impedit Libero Quam"
+              },
+              "pointsTotal": {
+                "title": "pointsTotal",
+                "type": "number",
+                "readOnly": true,
+                "example": 189
+              },
+              "pointsWeighted": {
+                "title": "pointsWeighted",
+                "type": "number",
+                "readOnly": true,
+                "example": 341
+              },
+              "achievementsPublished": {
+                "title": "achievementsPublished",
+                "type": "number",
+                "readOnly": true,
+                "example": 20
+              },
+              "achievementsUnpublished": {
+                "title": "achievementsUnpublished",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "badgeUrl": {
+                "title": "badgeUrl",
+                "type": "string",
+                "readOnly": true
+              },
+              "achievementsFirstPublishedAt": {
+                "title": "achievementsFirstPublishedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-03T07:20:03.000000Z"
+              },
+              "types": {
+                "title": "types",
+                "type": "array",
+                "readOnly": true
+              },
+              "createdAt": {
+                "title": "createdAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:01:58.000000Z"
+              },
+              "updatedAt": {
+                "title": "updatedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2026-01-09T02:06:22.000000Z"
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "games": {
+                "title": "games",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "resources.achievements.resource.fetch": {
+        "title": "Resource/Achievement/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "achievements",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "title",
+                "type": "string",
+                "readOnly": true,
+                "example": "Soluta Quasi!"
+              },
+              "description": {
+                "title": "description",
+                "type": "string",
+                "readOnly": true,
+                "example": "Nisi et sit labore reprehenderit aliquam aspernatur explicabo. True."
+              },
+              "points": {
+                "title": "points",
+                "type": "number",
+                "readOnly": true,
+                "example": 1
+              },
+              "pointsWeighted": {
+                "title": "pointsWeighted",
+                "type": "number",
+                "readOnly": true,
+                "example": 1
+              },
+              "badgeUrl": {
+                "title": "badgeUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Badge/00001.png"
+              },
+              "badgeLockedUrl": {
+                "title": "badgeLockedUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Badge/00001_lock.png"
+              },
+              "type": {
+                "title": "type",
+                "type": "string",
+                "readOnly": true
+              },
+              "state": {
+                "title": "state",
+                "type": "string",
+                "readOnly": true
+              },
+              "orderColumn": {
+                "title": "orderColumn",
+                "type": "number",
+                "readOnly": true,
+                "example": 1
+              },
+              "unlocksTotal": {
+                "title": "unlocksTotal",
+                "type": "number",
+                "readOnly": true,
+                "example": 81
+              },
+              "unlocksHardcore": {
+                "title": "unlocksHardcore",
+                "type": "number",
+                "readOnly": true,
+                "example": 81
+              },
+              "unlockPercentage": {
+                "title": "unlockPercentage",
+                "type": "number",
+                "readOnly": true,
+                "example": 0.987804878
+              },
+              "unlockHardcorePercentage": {
+                "title": "unlockHardcorePercentage",
+                "type": "number",
+                "readOnly": true,
+                "example": 0.987804878
+              },
+              "createdAt": {
+                "title": "createdAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:01:58.000000Z"
+              },
+              "modifiedAt": {
+                "title": "modifiedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:01:58.000000Z"
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "developer": {
+                "title": "developer",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/developers/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/developers/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "achievementSet": {
+                "title": "achievementSet",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/achievement-sets/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/achievement-sets/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "games": {
+                "title": "games",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "resources.games.resource.fetch": {
+        "title": "Resource/Game/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "games",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "title",
+                "type": "string",
+                "example": "Quia Impedit Libero Quam"
+              },
+              "sortTitle": {
+                "title": "sortTitle",
+                "type": "string",
+                "example": "quia impedit libero quam"
+              },
+              "badgeUrl": {
+                "title": "badgeUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Images/000002.png"
+              },
+              "imageBoxArtUrl": {
+                "title": "imageBoxArtUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Images/000002.png"
+              },
+              "imageTitleUrl": {
+                "title": "imageTitleUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Images/000002.png"
+              },
+              "imageIngameUrl": {
+                "title": "imageIngameUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/Images/000002.png"
+              },
+              "releasedAt": {
+                "title": "releasedAt",
+                "type": "string"
+              },
+              "releasedAtGranularity": {
+                "title": "releasedAtGranularity",
+                "type": "string"
+              },
+              "playersTotal": {
+                "title": "playersTotal",
+                "type": "number",
+                "example": 82
+              },
+              "playersHardcore": {
+                "title": "playersHardcore",
+                "type": "number",
+                "example": 82
+              },
+              "achievementsPublished": {
+                "title": "achievementsPublished",
+                "type": "number",
+                "example": 20
+              },
+              "achievementsUnpublished": {
+                "title": "achievementsUnpublished",
+                "type": "number",
+                "example": 0
+              },
+              "pointsTotal": {
+                "title": "pointsTotal",
+                "type": "number",
+                "example": 189
+              },
+              "pointsWeighted": {
+                "title": "pointsWeighted",
+                "type": "number",
+                "example": 341
+              },
+              "timesBeaten": {
+                "title": "timesBeaten",
+                "type": "number",
+                "example": 0
+              },
+              "timesBeatenHardcore": {
+                "title": "timesBeatenHardcore",
+                "type": "number",
+                "example": 1
+              },
+              "medianTimeToBeatMinutes": {
+                "title": "medianTimeToBeatMinutes",
+                "type": "number"
+              },
+              "medianTimeToBeatHardcoreMinutes": {
+                "title": "medianTimeToBeatHardcoreMinutes",
+                "type": "number",
+                "example": 5153
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "system": {
+                "title": "system",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/systems/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/systems/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "achievementSets": {
+                "title": "achievementSets",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/achievement-sets/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/achievement-sets/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "resources.leaderboards.resource.fetch": {
+        "title": "Resource/Leaderboard/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "leaderboards",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "title": "title",
+                "type": "string",
+                "readOnly": true,
+                "example": "Totam Unde"
+              },
+              "description": {
+                "title": "description",
+                "type": "string",
+                "readOnly": true,
+                "example": "Modi vitae commodi possimus animi."
+              },
+              "format": {
+                "title": "format",
+                "type": "string",
+                "readOnly": true,
+                "example": "VALUE"
+              },
+              "rankAsc": {
+                "title": "rankAsc",
+                "type": "boolean",
+                "readOnly": true,
+                "example": false
+              },
+              "state": {
+                "title": "state",
+                "type": "string",
+                "readOnly": true,
+                "example": "active"
+              },
+              "orderColumn": {
+                "title": "orderColumn",
+                "type": "number",
+                "readOnly": true,
+                "example": 64
+              },
+              "createdAt": {
+                "title": "createdAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:04:12.000000Z"
+              },
+              "updatedAt": {
+                "title": "updatedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:04:12.000000Z"
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "games": {
+                "title": "games",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/games/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "developer": {
+                "title": "developer",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/developers/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://retroachievements.org/api/v2/developers/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "resources.systems.resource.fetch": {
+        "title": "Resource/System/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "systems",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "title": "name",
+                "type": "string",
+                "example": "Genesis/Mega Drive"
+              },
+              "nameFull": {
+                "title": "nameFull",
+                "type": "string",
+                "example": "Sega Genesis/Mega Drive"
+              },
+              "nameShort": {
+                "title": "nameShort",
+                "type": "string",
+                "example": "MD"
+              },
+              "manufacturer": {
+                "title": "manufacturer",
+                "type": "string",
+                "example": "Sega"
+              },
+              "iconUrl": {
+                "title": "iconUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/assets/images/system/md.png"
+              },
+              "active": {
+                "title": "active",
+                "type": "boolean",
+                "example": true
+              }
+            }
+          }
+        }
+      },
+      "resources.users.resource.fetch": {
+        "title": "Resource/User/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "users",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "displayName": {
+                "title": "displayName",
+                "type": "string",
+                "readOnly": true,
+                "example": "claireboehm"
+              },
+              "avatarUrl": {
+                "title": "avatarUrl",
+                "type": "string",
+                "readOnly": true,
+                "example": "https://retroachievements.org/media/UserPic/claireboehm.png"
+              },
+              "motto": {
+                "title": "motto",
+                "type": "string",
+                "readOnly": true,
+                "example": ""
+              },
+              "points": {
+                "title": "points",
+                "type": "number",
+                "readOnly": true,
+                "example": 1250
+              },
+              "pointsHardcore": {
+                "title": "pointsHardcore",
+                "type": "number",
+                "readOnly": true,
+                "example": 9019
+              },
+              "pointsWeighted": {
+                "title": "pointsWeighted",
+                "type": "number",
+                "readOnly": true,
+                "example": 19902
+              },
+              "yieldUnlocks": {
+                "title": "yieldUnlocks",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "yieldPoints": {
+                "title": "yieldPoints",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "joinedAt": {
+                "title": "joinedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:01:51.000000Z"
+              },
+              "lastActivityAt": {
+                "title": "lastActivityAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:24:12.000000Z"
+              },
+              "deletedAt": {
+                "title": "deletedAt",
+                "type": "string",
+                "readOnly": true
+              },
+              "isUnranked": {
+                "title": "isUnranked",
+                "type": "boolean",
+                "readOnly": true,
+                "example": false
+              },
+              "isUserWallActive": {
+                "title": "isUserWallActive",
+                "type": "boolean",
+                "readOnly": true,
+                "example": true
+              },
+              "richPresence": {
+                "title": "richPresence",
+                "type": "string",
+                "readOnly": true,
+                "example": "Playing Alias Et"
+              },
+              "richPresenceUpdatedAt": {
+                "title": "richPresenceUpdatedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:24:12.000000Z"
+              },
+              "visibleRole": {
+                "title": "visibleRole",
+                "type": "string",
+                "readOnly": true
+              },
+              "displayableRoles": {
+                "title": "displayableRoles",
+                "type": "array",
+                "readOnly": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad request",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "helper.jsonapi": {
+                  "$ref": "#/components/schemas/helper.jsonapi"
+                },
+                "helper.errors": {
+                  "$ref": "#/components/schemas/helper.errors"
+                }
+              }
+            },
+            "examples": {
+              "-": {
+                "value": {
+                  "jsonapi": {
+                    "version": "1.0"
+                  },
+                  "errors": [
+                    {
+                      "detail": "The member id is required.",
+                      "source": {
+                        "pointer": "/data"
+                      },
+                      "status": "400",
+                      "title": "Non-Compliant JSON:API Document"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized Action",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "helper.jsonapi": {
+                  "$ref": "#/components/schemas/helper.jsonapi"
+                },
+                "helper.errors": {
+                  "$ref": "#/components/schemas/helper.errors"
+                }
+              }
+            },
+            "examples": {
+              "-": {
+                "value": {
+                  "jsonapi": {
+                    "version": "1.0"
+                  },
+                  "errors": [
+                    {
+                      "title": "Unauthorized.",
+                      "status": "401",
+                      "detail": "Unauthenticated."
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Content Not Found",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "helper.jsonapi": {
+                  "$ref": "#/components/schemas/helper.jsonapi"
+                },
+                "helper.errors": {
+                  "$ref": "#/components/schemas/helper.errors"
+                }
+              }
+            },
+            "examples": {
+              "-": {
+                "value": {
+                  "jsonapi": {
+                    "version": "1.0"
+                  },
+                  "errors": [
+                    {
+                      "title": "Not Found",
+                      "status": "404"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "422": {
+        "description": "Unprocessable Entity",
+        "content": {
+          "application/vnd.api+json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "helper.jsonapi": {
+                  "$ref": "#/components/schemas/helper.jsonapi"
+                },
+                "helper.errors": {
+                  "$ref": "#/components/schemas/helper.errors"
+                }
+              }
+            },
+            "examples": {
+              "-": {
+                "value": {
+                  "jsonapi": {
+                    "version": "1.0"
+                  },
+                  "errors": [
+                    {
+                      "detail": "Lorem Ipsum",
+                      "source": {
+                        "pointer": "/data/attributes/lorem"
+                      },
+                      "title": "Unprocessable Entity",
+                      "status": "422"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
