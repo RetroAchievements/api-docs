@@ -10,7 +10,7 @@ A call to this endpoint will retrieve a given game's list of leaderboards, targe
 
 ## On-site Representation
 
-A games's list of leaderboards can be found on on the game's page:
+A game's list of leaderboards can be found on the game's page:
 
 ![Game Leaderboards](/game-leaderboards.png)
 
