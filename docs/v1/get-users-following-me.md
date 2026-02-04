@@ -30,6 +30,31 @@ The user's Followers Users List page looks like:
 
 ::: code-group
 
+```ts [NodeJS]
+import {
+  buildAuthorization,
+  getUsersFollowingMe,
+} from "@retroachievements/api";
+
+// First, build your authorization object.
+const username = "<your username on RA>";
+const webApiKey = "<your web API key>";
+
+const authorization = buildAuthorization({ username, webApiKey });
+
+// Then, make the API call.
+const usersFollowingMe = await getUsersFollowingMe(authorization);
+
+// Note: a payload object can be specified as a second argument to alter
+// the number of users returned and/or the starting offset.
+//
+// Example:
+// const anotherSetOfUsersFollowingMe = await getUsersFollowingMe(authorization, {
+//   offset: 60,
+//   count: 20
+// });
+```
+
 ```Kotlin
 val credentials = RetroCredentials("<username>", "<web api key>")
 val api: RetroInterface = RetroClient(credentials).api
@@ -72,6 +97,23 @@ if (response is NetworkResponse.Success) {
 }
 ```
 
+```json [NodeJS]
+{
+  "count": 20,
+  "total": 120,
+  "results": [
+    {
+      "user": "zuliman92",
+      "ulid": "00003EMFWR7XB8SDPEHB3K56ZQ",
+      "points": 1882,
+      "pointsSoftcore": 258,
+      "amIFollowing": true
+    }
+    // ...
+  ]
+}
+```
+
 :::
 
 ## Source
@@ -79,4 +121,5 @@ if (response is NetworkResponse.Success) {
 | Repo       | URL                                                                                                                  |
 | :--------- | :------------------------------------------------------------------------------------------------------------------- |
 | RAWeb      | https://github.com/RetroAchievements/RAWeb/blob/master/public/API/API_GetUsersFollowingMe.php                        |
+| api-js     | https://github.com/RetroAchievements/api-js/blob/main/src/user/getUsersFollowingMe.ts                                |
 | api-kotlin | https://github.com/RetroAchievements/api-kotlin/blob/main/src/main/kotlin/org/retroachivements/api/RetroInterface.kt |
