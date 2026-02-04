@@ -113,7 +113,7 @@ if (response is NetworkResponse.Success) {
 ```
 
 ```json [NodeJS]
-[
+{
     "count": 4,
     "total": 4,
     "results": [
