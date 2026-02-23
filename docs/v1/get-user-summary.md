@@ -215,7 +215,7 @@ if (response is NetworkResponse.Success) {
   "permissions": 1,
   "untracked": false,
   "id": 224958,
-  "userWallActive": true,
+  "userWallActive": 1,
   "motto": "",
   "rank": 4616,
   "recentlyPlayedCount": 1,
