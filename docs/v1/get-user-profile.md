@@ -89,7 +89,7 @@ if (response is NetworkResponse.Success) {
   "Permissions": 1,
   "Untracked": 0,
   "ID": 16446,
-  "UserWallActive": true,
+  "UserWallActive": 1,
   "Motto": "Join me on Twitch! GameSquadSquad for live RA"
 }
 ```
@@ -110,7 +110,7 @@ if (response is NetworkResponse.Success) {
   "permissions": 1,
   "untracked": false,
   "id": 16446,
-  "userWallActive": true,
+  "userWallActive": 1,
   "motto": "Join me on Twitch! GameSquadSquad for live RA"
 }
 ```
