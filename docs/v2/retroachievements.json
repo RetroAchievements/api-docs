@@ -1899,6 +1899,146 @@
           }
         }
       }
+    },
+    "/users/{user}/player-achievement-sets": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Show playerAchievementSets",
+        "description": "",
+        "operationId": "users.playerAchievementSets",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "01K4Y87MWZ3Q9WC9EFFT6JKSNP": {
+                "value": "01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+              },
+              "01K4Y87VCKZ0HCW9M95BPVZ2T8": {
+                "value": "01K4Y87VCKZ0HCW9M95BPVZ2T8"
+              },
+              "01K4Y87BXTWJWX795ZTVS0FQBF": {
+                "value": "01K4Y87BXTWJWX795ZTVS0FQBF"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ShowRelated users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.player-achievement-sets.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/users/{user}/relationships/player-achievement-sets": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Show playerAchievementSets relation",
+        "description": "",
+        "operationId": "users.playerAchievementSets.show",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "01K4Y87MWZ3Q9WC9EFFT6JKSNP": {
+                "value": "01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+              },
+              "01K4Y87VCKZ0HCW9M95BPVZ2T8": {
+                "value": "01K4Y87VCKZ0HCW9M95BPVZ2T8"
+              },
+              "01K4Y87BXTWJWX795ZTVS0FQBF": {
+                "value": "01K4Y87BXTWJWX795ZTVS0FQBF"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.users.relationship.playerAchievementSets.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2272,7 +2412,7 @@
                 "title": "imageTitleUrl",
                 "type": "string",
                 "readOnly": true,
-                "example": "https://raweb.test/media/Images/000002.png"
+                "example": "https://raweb.test/media/Images/000010.png"
               },
               "imageIngameUrl": {
                 "title": "imageIngameUrl",
@@ -2795,6 +2935,157 @@
           }
         }
       },
+      "resources.player-achievement-sets.resource.fetch": {
+        "title": "Resource/Player-achievement-set/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "player-achievement-sets",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "17595"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "achievementsUnlocked": {
+                "title": "achievementsUnlocked",
+                "type": "number",
+                "readOnly": true,
+                "example": 2
+              },
+              "achievementsUnlockedHardcore": {
+                "title": "achievementsUnlockedHardcore",
+                "type": "number",
+                "readOnly": true,
+                "example": 2
+              },
+              "points": {
+                "title": "points",
+                "type": "number",
+                "readOnly": true,
+                "example": 2
+              },
+              "pointsHardcore": {
+                "title": "pointsHardcore",
+                "type": "number",
+                "readOnly": true,
+                "example": 2
+              },
+              "pointsWeighted": {
+                "title": "pointsWeighted",
+                "type": "number",
+                "readOnly": true,
+                "example": 82
+              },
+              "completionPercentage": {
+                "title": "completionPercentage",
+                "type": "number",
+                "readOnly": true,
+                "example": "0.500000000"
+              },
+              "completionPercentageHardcore": {
+                "title": "completionPercentageHardcore",
+                "type": "number",
+                "readOnly": true,
+                "example": "0.500000000"
+              },
+              "lastUnlockAt": {
+                "title": "lastUnlockAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2026-02-16T07:58:33.000000Z"
+              },
+              "lastUnlockHardcoreAt": {
+                "title": "lastUnlockHardcoreAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2026-02-16T07:58:33.000000Z"
+              },
+              "completedAt": {
+                "title": "completedAt",
+                "type": "string",
+                "readOnly": true
+              },
+              "completedHardcoreAt": {
+                "title": "completedHardcoreAt",
+                "type": "string",
+                "readOnly": true
+              },
+              "timeTakenSeconds": {
+                "title": "timeTakenSeconds",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "timeTakenHardcoreSeconds": {
+                "title": "timeTakenHardcoreSeconds",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "setContext": {
+                "title": "setContext",
+                "type": "array",
+                "readOnly": true
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "achievementSet": {
+                "title": "achievementSet",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-sets/17595"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-sets/17595"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "game": {
+                "title": "game",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/games/17595"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/games/17595"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "resources.player-games.resource.fetch": {
         "title": "Resource/Player-game/Fetch",
         "type": "object",
@@ -2846,19 +3137,19 @@
                 "type": "string",
                 "readOnly": true
               },
-              "playtimeTotal": {
-                "title": "playtimeTotal",
+              "playtimeTotalSeconds": {
+                "title": "playtimeTotalSeconds",
                 "type": "number",
                 "readOnly": true,
                 "example": 8758
               },
-              "timeToBeat": {
-                "title": "timeToBeat",
+              "timeToBeatSeconds": {
+                "title": "timeToBeatSeconds",
                 "type": "number",
                 "readOnly": true
               },
-              "timeToBeatHardcore": {
-                "title": "timeToBeatHardcore",
+              "timeToBeatHardcoreSeconds": {
+                "title": "timeToBeatHardcoreSeconds",
                 "type": "number",
                 "readOnly": true
               }
@@ -2905,6 +3196,28 @@
                         "title": "self",
                         "type": "string",
                         "example": "https://api.retroachievements.org/v2/games/9166"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "playerAchievementSets": {
+                "title": "playerAchievementSets",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/player-achievement-sets/9166"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/player-achievement-sets/9166"
                       }
                     },
                     "readOnly": true
@@ -2964,6 +3277,23 @@
                 "example": true
               }
             }
+          }
+        }
+      },
+      "resources.users.relationship.playerAchievementSets.fetch": {
+        "title": "Resource/User/Relationship/PlayerAchievementSets/Fetch",
+        "type": "object",
+        "required": ["type", "id"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "player-achievement-sets",
+            "type": "string"
+          },
+          "id": {
+            "title": "id",
+            "type": "string",
+            "example": "17595"
           }
         }
       },
@@ -3105,6 +3435,28 @@
           "relationships": {
             "type": "object",
             "properties": {
+              "playerAchievementSets": {
+                "title": "playerAchievementSets",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/player-achievement-sets/01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/player-achievement-sets/01K4Y87MWZ3Q9WC9EFFT6JKSNP"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
               "playerGames": {
                 "title": "playerGames",
                 "type": "object",
