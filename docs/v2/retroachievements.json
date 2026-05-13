@@ -314,6 +314,29 @@
                               "relationships": {
                                 "type": "object",
                                 "properties": {
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "playerAchievements": {
                                     "title": "playerAchievements",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -778,6 +801,29 @@
                                             "title": "self",
                                             "type": "string",
                                             "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
                                           }
                                         },
                                         "readOnly": true
@@ -1148,6 +1194,29 @@
                               "relationships": {
                                 "type": "object",
                                 "properties": {
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "playerAchievements": {
                                     "title": "playerAchievements",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -1612,6 +1681,29 @@
                                             "title": "self",
                                             "type": "string",
                                             "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
                                           }
                                         },
                                         "readOnly": true
@@ -2290,6 +2382,29 @@
                                       }
                                     }
                                   },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "comments": {
                                     "title": "comments",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"comments\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -2356,6 +2471,736 @@
           },
           "404": {
             "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/achievement-set-claims": {
+      "get": {
+        "tags": ["Achievement-set-claims"],
+        "summary": "Get all achievement-set-claims",
+        "description": "",
+        "operationId": "achievement-set-claims.index",
+        "parameters": [
+          {
+            "name": "page[size]",
+            "in": "query",
+            "description": "The page size for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "page[number]",
+            "in": "query",
+            "description": "The page number for paginated results",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "id",
+                  "-id",
+                  "claimedAt",
+                  "-claimedAt",
+                  "finishedAt",
+                  "-finishedAt",
+                  "updatedAt",
+                  "-updatedAt",
+                  "status",
+                  "-status",
+                  "claimType",
+                  "-claimType",
+                  "setType",
+                  "-setType",
+                  "specialType",
+                  "-specialType",
+                  "extensionsCount",
+                  "-extensionsCount",
+                  "gameTitle",
+                  "-gameTitle",
+                  "userDisplayName",
+                  "-userDisplayName",
+                  "gameTitle",
+                  "-gameTitle",
+                  "userDisplayName",
+                  "-userDisplayName"
+                ],
+                "type": "string"
+              }
+            }
+          },
+          {
+            "name": "filter[id][]",
+            "in": "query",
+            "description": "A list of ids to filter by.",
+            "required": false,
+            "allowEmptyValue": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "default": [],
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "examples": {
+              "empty": {
+                "value": []
+              },
+              "1": {
+                "value": ["1"]
+              },
+              "2": {
+                "value": ["2"]
+              },
+              "3": {
+                "value": ["3"]
+              }
+            }
+          },
+          {
+            "name": "filter[gameId]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "default": "",
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": 1
+              }
+            }
+          },
+          {
+            "name": "filter[status]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[claimType]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[setType]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[specialType]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[expired]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter[user]",
+            "in": "query",
+            "description": "Filters the records",
+            "required": false,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Index achievement-set-claims",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.achievement-set-claims.resource.fetch"
+                      }
+                    },
+                    "included": {
+                      "type": "array",
+                      "items": {
+                        "oneOf": [
+                          {
+                            "title": "Resource/User/Fetch",
+                            "description": "May not be present unless \"user\" is in the \"include\" header. See `.data[].relationships.user.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "users",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "01K4Y876RZ4XVE4JA3X9ARV95P"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "displayName": {
+                                    "title": "displayName",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "Root"
+                                  },
+                                  "avatarUrl": {
+                                    "title": "avatarUrl",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "https://retroachievements.org/media/UserPic/Root.png"
+                                  },
+                                  "motto": {
+                                    "title": "motto",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": ""
+                                  },
+                                  "points": {
+                                    "title": "points",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 1236
+                                  },
+                                  "pointsHardcore": {
+                                    "title": "pointsHardcore",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 7155
+                                  },
+                                  "pointsWeighted": {
+                                    "title": "pointsWeighted",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 19749
+                                  },
+                                  "yieldUnlocks": {
+                                    "title": "yieldUnlocks",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "yieldPoints": {
+                                    "title": "yieldPoints",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "joinedAt": {
+                                    "title": "joinedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:01:22.000000Z"
+                                  },
+                                  "lastActivityAt": {
+                                    "title": "lastActivityAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2026-04-18T03:30:13.000000Z"
+                                  },
+                                  "deletedAt": {
+                                    "title": "deletedAt",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "isUnranked": {
+                                    "title": "isUnranked",
+                                    "type": "boolean",
+                                    "readOnly": true,
+                                    "example": false
+                                  },
+                                  "isUserWallActive": {
+                                    "title": "isUserWallActive",
+                                    "type": "boolean",
+                                    "readOnly": true,
+                                    "example": true
+                                  },
+                                  "richPresence": {
+                                    "title": "richPresence",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "Playing Assumenda Pariatur"
+                                  },
+                                  "richPresenceUpdatedAt": {
+                                    "title": "richPresenceUpdatedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2026-04-18T04:34:36.000000Z"
+                                  },
+                                  "visibleRole": {
+                                    "title": "visibleRole",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": {
+                                      "id": 4,
+                                      "name": "game-hash-manager",
+                                      "display": 3,
+                                      "guard_name": "web",
+                                      "created_at": "2025-09-12T06:01:21.000000Z",
+                                      "updated_at": "2025-09-12T06:01:21.000000Z",
+                                      "pivot": {
+                                        "model_type": "user",
+                                        "model_id": 1,
+                                        "role_id": 4
+                                      }
+                                    }
+                                  },
+                                  "displayableRoles": {
+                                    "title": "displayableRoles",
+                                    "type": "array",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "playerAchievements": {
+                                    "title": "playerAchievements",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-achievements/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-achievements/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "playerAchievementSets": {
+                                    "title": "playerAchievementSets",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievementSets\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-achievement-sets/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-achievement-sets/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "playerGames": {
+                                    "title": "playerGames",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerGames\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-games/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/player-games/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "wallComments": {
+                                    "title": "wallComments",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"wallComments\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/wall-comments/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/wall-comments/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "awards": {
+                                    "title": "awards",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"awards\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/awards/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/awards/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "title": "Resource/Game/Fetch",
+                            "description": "May not be present unless \"game\" is in the \"include\" header. See `.data[].relationships.game.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "games",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "1"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "title": {
+                                    "title": "title",
+                                    "type": "string",
+                                    "example": "Quia Impedit Libero Quam"
+                                  },
+                                  "sortTitle": {
+                                    "title": "sortTitle",
+                                    "type": "string",
+                                    "example": "quia impedit libero quam"
+                                  },
+                                  "badgeUrl": {
+                                    "title": "badgeUrl",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "https://retroachievements.org/media/Images/000002.png"
+                                  },
+                                  "imageBoxArtUrl": {
+                                    "title": "imageBoxArtUrl",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "https://retroachievements.org/media/Images/000002.png"
+                                  },
+                                  "imageTitleUrl": {
+                                    "title": "imageTitleUrl",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "https://retroachievements.org/media/Images/000010.png"
+                                  },
+                                  "imageIngameUrl": {
+                                    "title": "imageIngameUrl",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "https://retroachievements.org/media/Images/000002.png"
+                                  },
+                                  "releasedAt": {
+                                    "title": "releasedAt",
+                                    "type": "string"
+                                  },
+                                  "releasedAtGranularity": {
+                                    "title": "releasedAtGranularity",
+                                    "type": "string"
+                                  },
+                                  "playersTotal": {
+                                    "title": "playersTotal",
+                                    "type": "number",
+                                    "example": 82
+                                  },
+                                  "playersHardcore": {
+                                    "title": "playersHardcore",
+                                    "type": "number",
+                                    "example": 82
+                                  },
+                                  "achievementsPublished": {
+                                    "title": "achievementsPublished",
+                                    "type": "number",
+                                    "example": 20
+                                  },
+                                  "achievementsUnpublished": {
+                                    "title": "achievementsUnpublished",
+                                    "type": "number",
+                                    "example": 0
+                                  },
+                                  "pointsTotal": {
+                                    "title": "pointsTotal",
+                                    "type": "number",
+                                    "example": 189
+                                  },
+                                  "pointsWeighted": {
+                                    "title": "pointsWeighted",
+                                    "type": "number",
+                                    "example": 341
+                                  },
+                                  "timesBeaten": {
+                                    "title": "timesBeaten",
+                                    "type": "number",
+                                    "example": 0
+                                  },
+                                  "timesBeatenHardcore": {
+                                    "title": "timesBeatenHardcore",
+                                    "type": "number",
+                                    "example": 1
+                                  },
+                                  "medianTimeToBeatMinutes": {
+                                    "title": "medianTimeToBeatMinutes",
+                                    "type": "number"
+                                  },
+                                  "medianTimeToBeatHardcoreMinutes": {
+                                    "title": "medianTimeToBeatHardcoreMinutes",
+                                    "type": "number",
+                                    "example": 5153
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "system": {
+                                    "title": "system",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"system\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/systems/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/systems/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "achievementSets": {
+                                    "title": "achievementSets",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSets\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "comments": {
+                                    "title": "comments",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"comments\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/comments/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/comments/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "hashes": {
+                                    "title": "hashes",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"hashes\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/hashes/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/hashes/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
           }
         }
       }
@@ -2993,6 +3838,170 @@
                             }
                           },
                           {
+                            "title": "Resource/AchievementSetClaims/Fetch",
+                            "description": "May not be present unless \"achievementSetClaims\" is in the \"include\" header. See `.data[].relationships.achievementSetClaims.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "achievement-set-claims",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "1"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "claimedAt": {
+                                    "title": "claimedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "finishedAt": {
+                                    "title": "finishedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-12-12T06:24:26.000000Z"
+                                  },
+                                  "updatedAt": {
+                                    "title": "updatedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "status": {
+                                    "title": "status",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "complete"
+                                  },
+                                  "claimType": {
+                                    "title": "claimType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "primary"
+                                  },
+                                  "setType": {
+                                    "title": "setType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "new_set"
+                                  },
+                                  "specialType": {
+                                    "title": "specialType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "none"
+                                  },
+                                  "extensionsCount": {
+                                    "title": "extensionsCount",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "minutesLeft": {
+                                    "title": "minutesLeft",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 219849
+                                  },
+                                  "userId": {
+                                    "title": "userId",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": 91
+                                  },
+                                  "userDisplayName": {
+                                    "title": "userDisplayName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameId": {
+                                    "title": "gameId",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 1
+                                  },
+                                  "gameTitle": {
+                                    "title": "gameTitle",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameIconUrl": {
+                                    "title": "gameIconUrl",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "systemId": {
+                                    "title": "systemId",
+                                    "type": "number",
+                                    "readOnly": true
+                                  },
+                                  "systemName": {
+                                    "title": "systemName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "user": {
+                                    "title": "user",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"user\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "game": {
+                                    "title": "game",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"game\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
                             "title": "Resource/Comments/Fetch",
                             "description": "May not be present unless \"comments\" is in the \"include\" header. See `.data[].relationships.comments.data` for the lists of IDs which have been included here.",
                             "type": "object",
@@ -3393,6 +4402,170 @@
                             }
                           },
                           {
+                            "title": "Resource/AchievementSetClaims/Fetch",
+                            "description": "May not be present unless \"achievementSetClaims\" is in the \"include\" header. See `.data[].relationships.achievementSetClaims.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "achievement-set-claims",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "1"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "claimedAt": {
+                                    "title": "claimedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "finishedAt": {
+                                    "title": "finishedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-12-12T06:24:26.000000Z"
+                                  },
+                                  "updatedAt": {
+                                    "title": "updatedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "status": {
+                                    "title": "status",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "complete"
+                                  },
+                                  "claimType": {
+                                    "title": "claimType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "primary"
+                                  },
+                                  "setType": {
+                                    "title": "setType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "new_set"
+                                  },
+                                  "specialType": {
+                                    "title": "specialType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "none"
+                                  },
+                                  "extensionsCount": {
+                                    "title": "extensionsCount",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "minutesLeft": {
+                                    "title": "minutesLeft",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 219849
+                                  },
+                                  "userId": {
+                                    "title": "userId",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": 91
+                                  },
+                                  "userDisplayName": {
+                                    "title": "userDisplayName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameId": {
+                                    "title": "gameId",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 1
+                                  },
+                                  "gameTitle": {
+                                    "title": "gameTitle",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameIconUrl": {
+                                    "title": "gameIconUrl",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "systemId": {
+                                    "title": "systemId",
+                                    "type": "number",
+                                    "readOnly": true
+                                  },
+                                  "systemName": {
+                                    "title": "systemName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "user": {
+                                    "title": "user",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"user\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "game": {
+                                    "title": "game",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"game\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
                             "title": "Resource/Comments/Fetch",
                             "description": "May not be present unless \"comments\" is in the \"include\" header. See `.data[].relationships.comments.data` for the lists of IDs which have been included here.",
                             "type": "object",
@@ -3561,6 +4734,146 @@
                             }
                           }
                         ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/games/{game}/achievement-set-claims": {
+      "get": {
+        "tags": ["Games"],
+        "summary": "Show achievementSetClaims",
+        "description": "",
+        "operationId": "games.achievementSetClaims",
+        "parameters": [
+          {
+            "name": "game",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ShowRelated games",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.achievement-set-claims.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/games/{game}/relationships/achievement-set-claims": {
+      "get": {
+        "tags": ["Games"],
+        "summary": "Show achievementSetClaims relation",
+        "description": "",
+        "operationId": "games.achievementSetClaims.show",
+        "parameters": [
+          {
+            "name": "game",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "1": {
+                "value": "1"
+              },
+              "2": {
+                "value": "2"
+              },
+              "3": {
+                "value": "3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show games",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.games.relationship.achievementSetClaims.fetch"
                       }
                     }
                   }
@@ -4159,6 +5472,29 @@
                                       }
                                     }
                                   },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "comments": {
                                     "title": "comments",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"comments\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -4434,6 +5770,29 @@
                                             "title": "self",
                                             "type": "string",
                                             "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
                                           }
                                         },
                                         "readOnly": true
@@ -5087,6 +6446,29 @@
                                       }
                                     }
                                   },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "comments": {
                                     "title": "comments",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"comments\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -5272,6 +6654,29 @@
                               "relationships": {
                                 "type": "object",
                                 "properties": {
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "playerAchievements": {
                                     "title": "playerAchievements",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -5716,6 +7121,29 @@
                                       }
                                     }
                                   },
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "comments": {
                                     "title": "comments",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"comments\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -5901,6 +7329,29 @@
                               "relationships": {
                                 "type": "object",
                                 "properties": {
+                                  "achievementSetClaims": {
+                                    "title": "achievementSetClaims",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
                                   "playerAchievements": {
                                     "title": "playerAchievements",
                                     "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
@@ -6573,6 +8024,170 @@
                       "type": "array",
                       "items": {
                         "oneOf": [
+                          {
+                            "title": "Resource/AchievementSetClaims/Fetch",
+                            "description": "May not be present unless \"achievementSetClaims\" is in the \"include\" header. See `.data[].relationships.achievementSetClaims.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "achievement-set-claims",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "1"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "claimedAt": {
+                                    "title": "claimedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "finishedAt": {
+                                    "title": "finishedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-12-12T06:24:26.000000Z"
+                                  },
+                                  "updatedAt": {
+                                    "title": "updatedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "status": {
+                                    "title": "status",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "complete"
+                                  },
+                                  "claimType": {
+                                    "title": "claimType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "primary"
+                                  },
+                                  "setType": {
+                                    "title": "setType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "new_set"
+                                  },
+                                  "specialType": {
+                                    "title": "specialType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "none"
+                                  },
+                                  "extensionsCount": {
+                                    "title": "extensionsCount",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "minutesLeft": {
+                                    "title": "minutesLeft",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 219849
+                                  },
+                                  "userId": {
+                                    "title": "userId",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": 91
+                                  },
+                                  "userDisplayName": {
+                                    "title": "userDisplayName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameId": {
+                                    "title": "gameId",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 1
+                                  },
+                                  "gameTitle": {
+                                    "title": "gameTitle",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameIconUrl": {
+                                    "title": "gameIconUrl",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "systemId": {
+                                    "title": "systemId",
+                                    "type": "number",
+                                    "readOnly": true
+                                  },
+                                  "systemName": {
+                                    "title": "systemName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "user": {
+                                    "title": "user",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"user\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "game": {
+                                    "title": "game",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"game\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
                           {
                             "title": "Resource/PlayerAchievements/Fetch",
                             "description": "May not be present unless \"playerAchievements\" is in the \"include\" header. See `.data[].relationships.playerAchievements.data` for the lists of IDs which have been included here.",
@@ -7251,6 +8866,170 @@
                       "items": {
                         "oneOf": [
                           {
+                            "title": "Resource/AchievementSetClaims/Fetch",
+                            "description": "May not be present unless \"achievementSetClaims\" is in the \"include\" header. See `.data[].relationships.achievementSetClaims.data` for the lists of IDs which have been included here.",
+                            "type": "object",
+                            "required": ["type", "id", "attributes"],
+                            "properties": {
+                              "type": {
+                                "title": "type",
+                                "default": "achievement-set-claims",
+                                "type": "string"
+                              },
+                              "id": {
+                                "type": "string",
+                                "example": "1"
+                              },
+                              "attributes": {
+                                "type": "object",
+                                "properties": {
+                                  "claimedAt": {
+                                    "title": "claimedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "finishedAt": {
+                                    "title": "finishedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-12-12T06:24:26.000000Z"
+                                  },
+                                  "updatedAt": {
+                                    "title": "updatedAt",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "2025-09-12T06:24:26.000000Z"
+                                  },
+                                  "status": {
+                                    "title": "status",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "complete"
+                                  },
+                                  "claimType": {
+                                    "title": "claimType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "primary"
+                                  },
+                                  "setType": {
+                                    "title": "setType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "new_set"
+                                  },
+                                  "specialType": {
+                                    "title": "specialType",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": "none"
+                                  },
+                                  "extensionsCount": {
+                                    "title": "extensionsCount",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 0
+                                  },
+                                  "minutesLeft": {
+                                    "title": "minutesLeft",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 219849
+                                  },
+                                  "userId": {
+                                    "title": "userId",
+                                    "type": "string",
+                                    "readOnly": true,
+                                    "example": 91
+                                  },
+                                  "userDisplayName": {
+                                    "title": "userDisplayName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameId": {
+                                    "title": "gameId",
+                                    "type": "number",
+                                    "readOnly": true,
+                                    "example": 1
+                                  },
+                                  "gameTitle": {
+                                    "title": "gameTitle",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "gameIconUrl": {
+                                    "title": "gameIconUrl",
+                                    "type": "string",
+                                    "readOnly": true
+                                  },
+                                  "systemId": {
+                                    "title": "systemId",
+                                    "type": "number",
+                                    "readOnly": true
+                                  },
+                                  "systemName": {
+                                    "title": "systemName",
+                                    "type": "string",
+                                    "readOnly": true
+                                  }
+                                }
+                              },
+                              "relationships": {
+                                "type": "object",
+                                "properties": {
+                                  "user": {
+                                    "title": "user",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"user\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/users/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  },
+                                  "game": {
+                                    "title": "game",
+                                    "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"game\" to the \"include\" query parameter; results will be found in `.included`.",
+                                    "type": "object",
+                                    "properties": {
+                                      "links": {
+                                        "type": "object",
+                                        "properties": {
+                                          "related": {
+                                            "title": "related",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          },
+                                          "self": {
+                                            "title": "self",
+                                            "type": "string",
+                                            "example": "https://api.retroachievements.org/v2/games/1"
+                                          }
+                                        },
+                                        "readOnly": true
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
                             "title": "Resource/PlayerAchievements/Fetch",
                             "description": "May not be present unless \"playerAchievements\" is in the \"include\" header. See `.data[].relationships.playerAchievements.data` for the lists of IDs which have been included here.",
                             "type": "object",
@@ -7857,6 +9636,146 @@
                             }
                           }
                         ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/users/{user}/achievement-set-claims": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Show achievementSetClaims",
+        "description": "",
+        "operationId": "users.achievementSetClaims",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "01K4Y876RZ4XVE4JA3X9ARV95P": {
+                "value": "01K4Y876RZ4XVE4JA3X9ARV95P"
+              },
+              "01K4Y8770YSVFGWM6C38BCDQ5F": {
+                "value": "01K4Y8770YSVFGWM6C38BCDQ5F"
+              },
+              "01K4Y8776Y34QHTCSZ1DEFAEB3": {
+                "value": "01K4Y8776Y34QHTCSZ1DEFAEB3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "ShowRelated users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.achievement-set-claims.resource.fetch"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          }
+        }
+      }
+    },
+    "/users/{user}/relationships/achievement-set-claims": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Show achievementSetClaims relation",
+        "description": "",
+        "operationId": "users.achievementSetClaims.show",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "required": true,
+            "allowEmptyValue": false,
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "01K4Y876RZ4XVE4JA3X9ARV95P": {
+                "value": "01K4Y876RZ4XVE4JA3X9ARV95P"
+              },
+              "01K4Y8770YSVFGWM6C38BCDQ5F": {
+                "value": "01K4Y8770YSVFGWM6C38BCDQ5F"
+              },
+              "01K4Y8776Y34QHTCSZ1DEFAEB3": {
+                "value": "01K4Y8776Y34QHTCSZ1DEFAEB3"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Show users",
+            "content": {
+              "application/vnd.api+json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["jsonapi", "data"],
+                  "properties": {
+                    "jsonapi": {
+                      "type": "object",
+                      "properties": {
+                        "version": {
+                          "title": "version",
+                          "type": "string",
+                          "example": "1.0"
+                        }
+                      }
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/resources.users.relationship.achievementSetClaims.fetch"
                       }
                     }
                   }
@@ -8619,6 +10538,169 @@
           }
         }
       },
+      "resources.achievement-set-claims.resource.fetch": {
+        "title": "Resource/Achievement-set-claim/Fetch",
+        "type": "object",
+        "required": ["type", "id", "attributes"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "achievement-set-claims",
+            "type": "string"
+          },
+          "id": {
+            "type": "string",
+            "example": "1"
+          },
+          "attributes": {
+            "type": "object",
+            "properties": {
+              "claimedAt": {
+                "title": "claimedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:24:26.000000Z"
+              },
+              "finishedAt": {
+                "title": "finishedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-12-12T06:24:26.000000Z"
+              },
+              "updatedAt": {
+                "title": "updatedAt",
+                "type": "string",
+                "readOnly": true,
+                "example": "2025-09-12T06:24:26.000000Z"
+              },
+              "status": {
+                "title": "status",
+                "type": "string",
+                "readOnly": true,
+                "example": "complete"
+              },
+              "claimType": {
+                "title": "claimType",
+                "type": "string",
+                "readOnly": true,
+                "example": "primary"
+              },
+              "setType": {
+                "title": "setType",
+                "type": "string",
+                "readOnly": true,
+                "example": "new_set"
+              },
+              "specialType": {
+                "title": "specialType",
+                "type": "string",
+                "readOnly": true,
+                "example": "none"
+              },
+              "extensionsCount": {
+                "title": "extensionsCount",
+                "type": "number",
+                "readOnly": true,
+                "example": 0
+              },
+              "minutesLeft": {
+                "title": "minutesLeft",
+                "type": "number",
+                "readOnly": true,
+                "example": 219849
+              },
+              "userId": {
+                "title": "userId",
+                "type": "string",
+                "readOnly": true,
+                "example": 91
+              },
+              "userDisplayName": {
+                "title": "userDisplayName",
+                "type": "string",
+                "readOnly": true
+              },
+              "gameId": {
+                "title": "gameId",
+                "type": "number",
+                "readOnly": true,
+                "example": 1
+              },
+              "gameTitle": {
+                "title": "gameTitle",
+                "type": "string",
+                "readOnly": true
+              },
+              "gameIconUrl": {
+                "title": "gameIconUrl",
+                "type": "string",
+                "readOnly": true
+              },
+              "systemId": {
+                "title": "systemId",
+                "type": "number",
+                "readOnly": true
+              },
+              "systemName": {
+                "title": "systemName",
+                "type": "string",
+                "readOnly": true
+              }
+            }
+          },
+          "relationships": {
+            "type": "object",
+            "properties": {
+              "user": {
+                "title": "user",
+                "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"user\" to the \"include\" query parameter; results will be found in `.included`.",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/users/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/users/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "game": {
+                "title": "game",
+                "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"game\" to the \"include\" query parameter; results will be found in `.included`.",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/games/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/games/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "resources.achievement-sets.resource.fetch": {
         "title": "Resource/Achievement-set/Fetch",
         "type": "object",
@@ -9248,6 +11330,23 @@
           }
         }
       },
+      "resources.games.relationship.achievementSetClaims.fetch": {
+        "title": "Resource/Game/Relationship/AchievementSetClaims/Fetch",
+        "type": "object",
+        "required": ["type", "id"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "achievement-set-claims",
+            "type": "string"
+          },
+          "id": {
+            "title": "id",
+            "type": "string",
+            "example": "1"
+          }
+        }
+      },
       "resources.games.relationship.comments.fetch": {
         "title": "Resource/Game/Relationship/Comments/Fetch",
         "type": "object",
@@ -9435,6 +11534,29 @@
                         "title": "self",
                         "type": "string",
                         "example": "https://api.retroachievements.org/v2/achievement-sets/1"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
+              "achievementSetClaims": {
+                "title": "achievementSetClaims",
+                "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-set-claims/1"
                       }
                     },
                     "readOnly": true
@@ -10472,6 +12594,23 @@
           }
         }
       },
+      "resources.users.relationship.achievementSetClaims.fetch": {
+        "title": "Resource/User/Relationship/AchievementSetClaims/Fetch",
+        "type": "object",
+        "required": ["type", "id"],
+        "properties": {
+          "type": {
+            "title": "type",
+            "default": "achievement-set-claims",
+            "type": "string"
+          },
+          "id": {
+            "title": "id",
+            "type": "string",
+            "example": "1"
+          }
+        }
+      },
       "resources.users.relationship.awards.fetch": {
         "title": "Resource/User/Relationship/Awards/Fetch",
         "type": "object",
@@ -10691,6 +12830,29 @@
           "relationships": {
             "type": "object",
             "properties": {
+              "achievementSetClaims": {
+                "title": "achievementSetClaims",
+                "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"achievementSetClaims\" to the \"include\" query parameter; results will be found in `.included`.",
+                "type": "object",
+                "properties": {
+                  "links": {
+                    "type": "object",
+                    "properties": {
+                      "related": {
+                        "title": "related",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                      },
+                      "self": {
+                        "title": "self",
+                        "type": "string",
+                        "example": "https://api.retroachievements.org/v2/achievement-set-claims/01K4Y876RZ4XVE4JA3X9ARV95P"
+                      }
+                    },
+                    "readOnly": true
+                  }
+                }
+              },
               "playerAchievements": {
                 "title": "playerAchievements",
                 "description": "May include a list of IDs of relevant items in the `data` field. To retrieve these listed items as well, add \"playerAchievements\" to the \"include\" query parameter; results will be found in `.included`.",
