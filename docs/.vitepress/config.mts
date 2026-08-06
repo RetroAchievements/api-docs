@@ -1,6 +1,8 @@
 import { defineConfig } from "vitepress";
 import llmstxt from "vitepress-plugin-llms";
 import { copyOrDownloadAsMarkdownButtons } from "vitepress-plugin-llms";
+import { useSidebar } from 'vitepress-openapi'
+import spec from '../v2/retroachievements.json' with { type: "json" };
 
 /**
  * Try your best not to have any sidebar page titles wrap to a 2nd line.
@@ -47,243 +49,273 @@ export default defineConfig({
       },
     ],
 
-    nav: [{ text: "Quick Start", link: "/getting-started" }],
-
-    sidebar: [
-      {
-        text: "About",
-        link: "/",
-      },
-      {
-        text: "Getting Started",
-        link: "/getting-started",
-      },
-      {
-        text: "User",
-        collapsible: true,
-        items: [
-          {
-            text: "Profile",
-            link: "/v1/get-user-profile",
-          },
-          {
-            text: "Unlocks (most recent)",
-            link: "/v1/get-user-recent-achievements",
-          },
-          {
-            text: "Unlocks (by date range)",
-            link: "/v1/get-achievements-earned-between",
-          },
-          {
-            text: "Unlocks (on date)",
-            link: "/v1/get-achievements-earned-on-day",
-          },
-          {
-            text: "Game Progress",
-            link: "/v1/get-game-info-and-user-progress",
-          },
-          {
-            text: "All Completion Progress",
-            link: "/v1/get-user-completion-progress",
-          },
-          {
-            text: "Awards / Badges",
-            link: "/v1/get-user-awards",
-          },
-          {
-            text: "Set Development Claims",
-            link: "/v1/get-user-claims",
-          },
-          {
-            text: "Game Rank and Score",
-            link: "/v1/get-user-game-rank-and-score",
-          },
-          {
-            text: "Point Totals",
-            link: "/v1/get-user-points",
-          },
-          {
-            text: "Specific Games Progress",
-            link: "/v1/get-user-progress",
-          },
-          {
-            text: "Recently Played Games",
-            link: "/v1/get-user-recently-played-games",
-          },
-          {
-            text: "Summary",
-            link: "/v1/get-user-summary",
-          },
-          {
-            text: "Completed Games",
-            link: "/v1/get-user-completed-games",
-          },
-          {
-            text: "Want to Play Games List",
-            link: "/v1/get-user-want-to-play-list",
-          },
-          {
-            text: "Users I Follow",
-            link: "/v1/get-users-i-follow",
-          },
-          {
-            text: "Users Following Me",
-            link: "/v1/get-users-following-me",
-          },
-          {
-            text: "User Set Requests",
-            link: "/v1/get-user-set-requests",
-          },
-        ],
-      },
-      {
-        text: "Game",
-        collapsible: true,
-        items: [
-          {
-            text: "Summary",
-            link: "/v1/get-game",
-          },
-          {
-            text: "Extended Details",
-            link: "/v1/get-game-extended",
-          },
-          {
-            text: "Hashes",
-            link: "/v1/get-game-hashes",
-          },
-          {
-            text: "Achievement IDs",
-            link: "/v1/get-achievement-count",
-          },
-          {
-            text: "Unlocks Distribution",
-            link: "/v1/get-achievement-distribution",
-          },
-          {
-            text: "High Scores",
-            link: "/v1/get-game-rank-and-score",
-          },
-          {
-            text: "Progression",
-            link: "/v1/get-game-progression",
-          },
-        ],
-      },
-      {
-        text: "Leaderboards",
-        collapsible: true,
-        items: [
-          {
-            text: "Leaderboards (by gameID)",
-            link: "/v1/get-game-leaderboards",
-          },
-          {
-            text: "Entries",
-            link: "/v1/get-leaderboard-entries",
-          },
-          {
-            text: "User Leaderboards (by gameID)",
-            link: "/v1/get-user-game-leaderboards",
-          },
-        ],
-      },
-      {
-        text: "System",
-        collapsible: true,
-        items: [
-          {
-            text: "All Systems",
-            link: "/v1/get-console-ids",
-          },
-          {
-            text: "All Games and Hashes",
-            link: "/v1/get-game-list",
-          },
-        ],
-      },
-      {
-        text: "Achievement",
-        collapsible: true,
-        items: [
-          {
-            text: "All Unlocks",
-            link: "/v1/get-achievement-unlocks",
-          },
-        ],
-      },
-      {
-        text: "Comment",
-        collapsible: true,
-        items: [
-          {
-            text: "Comments",
-            link: "/v1/get-comments",
-          },
-        ],
-      },
-      {
-        text: "Feed",
-        collapsible: true,
-        items: [
-          {
-            text: "All Recent Game Awards",
-            link: "/v1/get-recent-game-awards",
-          },
-          {
-            text: "Active Claims",
-            link: "/v1/get-active-claims",
-          },
-          {
-            text: "Inactive Claims",
-            link: "/v1/get-claims",
-          },
-          {
-            text: "Top Ten Ranked Users",
-            link: "/v1/get-top-ten-users",
-          },
-        ],
-      },
-      {
-        text: "Event",
-        items: [
-          {
-            text: "Achievement of the Week",
-            link: "/v1/get-achievement-of-the-week",
-          },
-        ],
-      },
-      {
-        text: "Ticket",
-        collapsible: true,
-        items: [
-          {
-            text: "Get Ticket by ID",
-            link: "/v1/get-ticket-data/get-ticket-by-id",
-          },
-          {
-            text: "Get Most Ticketed Games",
-            link: "/v1/get-ticket-data/get-most-ticketed-games",
-          },
-          {
-            text: "Get Most Recent Tickets",
-            link: "/v1/get-ticket-data/get-most-recent-tickets",
-          },
-          {
-            text: "Get Game Ticket Stats",
-            link: "/v1/get-ticket-data/get-game-ticket-stats",
-          },
-          {
-            text: "Get Developer Ticket Stats",
-            link: "/v1/get-ticket-data/get-developer-ticket-stats",
-          },
-          {
-            text: "Get Achievement Ticket Stats",
-            link: "/v1/get-ticket-data/get-achievement-ticket-stats",
-          },
-        ],
-      },
+    nav: [
+        { text: "Quick Start", link: "/getting-started" },
+        { text: "Version 1", link: "/v1" },
+        { text: "Version 2", link: "/v2" },
     ],
+
+    sidebar: {
+        '/': [
+            {
+                text: "Home",
+                items: [
+                    {
+                        text: "About",
+                        link: "/",
+                    },
+                    {
+                        text: "Getting Started",
+                        link: "/getting-started",
+                    },
+                ]
+            }
+        ],
+        '/v1/': [
+            {
+                text: 'v1',
+                items: [{
+                    text: "API v2",
+                    link: "/v2"
+                },
+                    {
+                        text: "User",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "Profile",
+                                link: "/v1/get-user-profile",
+                            },
+                            {
+                                text: "Unlocks (most recent)",
+                                link: "/v1/get-user-recent-achievements",
+                            },
+                            {
+                                text: "Unlocks (by date range)",
+                                link: "/v1/get-achievements-earned-between",
+                            },
+                            {
+                                text: "Unlocks (on date)",
+                                link: "/v1/get-achievements-earned-on-day",
+                            },
+                            {
+                                text: "Game Progress",
+                                link: "/v1/get-game-info-and-user-progress",
+                            },
+                            {
+                                text: "All Completion Progress",
+                                link: "/v1/get-user-completion-progress",
+                            },
+                            {
+                                text: "Awards / Badges",
+                                link: "/v1/get-user-awards",
+                            },
+                            {
+                                text: "Set Development Claims",
+                                link: "/v1/get-user-claims",
+                            },
+                            {
+                                text: "Game Rank and Score",
+                                link: "/v1/get-user-game-rank-and-score",
+                            },
+                            {
+                                text: "Point Totals",
+                                link: "/v1/get-user-points",
+                            },
+                            {
+                                text: "Specific Games Progress",
+                                link: "/v1/get-user-progress",
+                            },
+                            {
+                                text: "Recently Played Games",
+                                link: "/v1/get-user-recently-played-games",
+                            },
+                            {
+                                text: "Summary",
+                                link: "/v1/get-user-summary",
+                            },
+                            {
+                                text: "Completed Games",
+                                link: "/v1/get-user-completed-games",
+                            },
+                            {
+                                text: "Want to Play Games List",
+                                link: "/v1/get-user-want-to-play-list",
+                            },
+                            {
+                                text: "Users I Follow",
+                                link: "/v1/get-users-i-follow",
+                            },
+                            {
+                                text: "Users Following Me",
+                                link: "/v1/get-users-following-me",
+                            },
+                            {
+                                text: "User Set Requests",
+                                link: "/v1/get-user-set-requests",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Game",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "Summary",
+                                link: "/v1/get-game",
+                            },
+                            {
+                                text: "Extended Details",
+                                link: "/v1/get-game-extended",
+                            },
+                            {
+                                text: "Hashes",
+                                link: "/v1/get-game-hashes",
+                            },
+                            {
+                                text: "Achievement IDs",
+                                link: "/v1/get-achievement-count",
+                            },
+                            {
+                                text: "Unlocks Distribution",
+                                link: "/v1/get-achievement-distribution",
+                            },
+                            {
+                                text: "High Scores",
+                                link: "/v1/get-game-rank-and-score",
+                            },
+                            {
+                                text: "Progression",
+                                link: "/v1/get-game-progression",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Leaderboards",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "Leaderboards (by gameID)",
+                                link: "/v1/get-game-leaderboards",
+                            },
+                            {
+                                text: "Entries",
+                                link: "/v1/get-leaderboard-entries",
+                            },
+                            {
+                                text: "User Leaderboards (by gameID)",
+                                link: "/v1/get-user-game-leaderboards",
+                            },
+                        ],
+                    },
+                    {
+                        text: "System",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "All Systems",
+                                link: "/v1/get-console-ids",
+                            },
+                            {
+                                text: "All Games and Hashes",
+                                link: "/v1/get-game-list",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Achievement",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "All Unlocks",
+                                link: "/v1/get-achievement-unlocks",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Comment",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "Comments",
+                                link: "/v1/get-comments",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Feed",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "All Recent Game Awards",
+                                link: "/v1/get-recent-game-awards",
+                            },
+                            {
+                                text: "Active Claims",
+                                link: "/v1/get-active-claims",
+                            },
+                            {
+                                text: "Inactive Claims",
+                                link: "/v1/get-claims",
+                            },
+                            {
+                                text: "Top Ten Ranked Users",
+                                link: "/v1/get-top-ten-users",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Event",
+                        items: [
+                            {
+                                text: "Achievement of the Week",
+                                link: "/v1/get-achievement-of-the-week",
+                            },
+                        ],
+                    },
+                    {
+                        text: "Ticket",
+                        collapsible: true,
+                        items: [
+                            {
+                                text: "Get Ticket by ID",
+                                link: "/v1/get-ticket-data/get-ticket-by-id",
+                            },
+                            {
+                                text: "Get Most Ticketed Games",
+                                link: "/v1/get-ticket-data/get-most-ticketed-games",
+                            },
+                            {
+                                text: "Get Most Recent Tickets",
+                                link: "/v1/get-ticket-data/get-most-recent-tickets",
+                            },
+                            {
+                                text: "Get Game Ticket Stats",
+                                link: "/v1/get-ticket-data/get-game-ticket-stats",
+                            },
+                            {
+                                text: "Get Developer Ticket Stats",
+                                link: "/v1/get-ticket-data/get-developer-ticket-stats",
+                            },
+                            {
+                                text: "Get Achievement Ticket Stats",
+                                link: "/v1/get-ticket-data/get-achievement-ticket-stats",
+                            },
+                        ],
+                    }]
+            }
+        ],
+        '/v2/': useSidebar({spec}).generateSidebarGroups({
+            linkPrefix: "/v2/",
+            sidebarItemTemplate: ({
+                                      title
+                                  }) => {
+
+                return title;
+            }
+        }),
+    },
+
 
     editLink: {
       pattern:
